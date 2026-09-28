@@ -1,0 +1,112 @@
+{
+  "commute_date": "2026-09-17",
+  "route": "Desasiswa Restu -> Dewan Tuanku Syed Putra (DTSP), Universiti Sains Malaysia (USM)",
+  "commute_timeline": [
+    {
+      "time": "06:30:00",
+      "source": "User statement",
+      "stage": "Pre-departure",
+      "event": "Woke up at Desasiswa Restu hostel, prepped for orientation morning induction.",
+      "cumulative_minutes": 0.0
+    },
+    {
+      "time": "06:47:10",
+      "source": "Sensor Logger (Metadata.csv & Location.csv)",
+      "stage": "Logging Start / Hostel Staging",
+      "event": "Sensor Logger session initialized. Coordinates: (5.357277, 100.289808). Stationary at Restu.",
+      "cumulative_minutes": 17.2,
+      "pedometer_steps": 0,
+      "speed_kmh": 1.4
+    },
+    {
+      "time": "07:34:23",
+      "source": "Location.csv & Activity.csv",
+      "stage": "Hostel Road Departure",
+      "event": "Departed hostel compound on foot, moved along perimeter road towards bus pickup zone.",
+      "cumulative_minutes": 64.4,
+      "pedometer_steps": 420,
+      "speed_kmh": 4.1
+    },
+    {
+      "time": "07:37:46",
+      "source": "Media: video_15608a256edc.mp4 & img_9edf946ea34d.jpg",
+      "stage": "Road Shoulder Queueing",
+      "event": "Captured video and photo of student line (~100-150 students) waiting along guardrail approaching elevated walkway.",
+      "cumulative_minutes": 67.8,
+      "speed_kmh": 2.8
+    },
+    {
+      "time": "07:47:38",
+      "source": "Media: video_d9bffd781295.mp4",
+      "stage": "Pavilion Staging Pulse",
+      "event": "70-100 students moving in guided batch from covered pavilion towards boarding tarmac, marshaled by staff in purple shirts.",
+      "cumulative_minutes": 77.6,
+      "speed_kmh": 1.3
+    },
+    {
+      "time": "07:49:10",
+      "source": "Media: video_904e64840a87.mp4",
+      "stage": "Bus Boarding Queue",
+      "event": "Strict single-file boarding queue (55-80 students) alongside official USM coach bus.",
+      "cumulative_minutes": 79.2,
+      "speed_kmh": 0.5
+    },
+    {
+      "time": "07:58:33",
+      "source": "Location.csv",
+      "stage": "Vehicular Transit Ingestion",
+      "event": "Shuttle bus departs boarding stop; vehicle accelerates rapidly across campus corridor.",
+      "cumulative_minutes": 88.5,
+      "speed_kmh": 18.0
+    },
+    {
+      "time": "07:59:45",
+      "source": "Location.csv",
+      "stage": "Peak Transit Speed",
+      "event": "Peak vehicle transit velocity recorded on campus corridor (34.6 km/h).",
+      "cumulative_minutes": 89.7,
+      "speed_kmh": 34.6
+    },
+    {
+      "time": "08:01:35",
+      "source": "Location.csv",
+      "stage": "Transit Alight & Reservoir Injection",
+      "event": "Alighted from bus near DTSP perimeter: (5.357570, 100.301225). Joined massive exterior holding line.",
+      "cumulative_minutes": 91.6,
+      "speed_kmh": 0.5
+    },
+    {
+      "time": "08:06:43",
+      "source": "Media: video_fedd16a3e55d.mp4",
+      "stage": "Exterior DTSP Holding Reservoir",
+      "event": "Captured 300-400+ student holding reservoir in Batik/formal attire stalled on roadway under sun. Waiting on next-station clearance.",
+      "cumulative_minutes": 96.7,
+      "speed_kmh": 0.2
+    },
+    {
+      "time": "08:33:32",
+      "source": "Location.csv & Activity.csv",
+      "stage": "Next-Station Gate Clearance",
+      "event": "Hall doors open / batch released into DTSP entrance doors. Movement resumes toward building interior.",
+      "cumulative_minutes": 123.5,
+      "speed_kmh": 3.3
+    },
+    {
+      "time": "08:37:42",
+      "source": "Location.csv",
+      "stage": "DTSP Entry & Seating",
+      "event": "Arrived inside DTSP hall: (5.356892, 100.303119). Velocity drops to stationary.",
+      "cumulative_minutes": 127.7,
+      "pedometer_steps": 1867,
+      "speed_kmh": 0.2
+    },
+    {
+      "time": "09:18:57",
+      "source": "Location.csv & Metadata.csv",
+      "stage": "Session Termination",
+      "event": "Sensor logging finalized inside DTSP. Total session length: 151.8 minutes.",
+      "cumulative_minutes": 168.9,
+      "speed_kmh": 0.4
+    }
+  ]
+}

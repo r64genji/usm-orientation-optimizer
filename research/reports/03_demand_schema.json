@@ -1,0 +1,397 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "USMOrientationDemandModelSchema",
+  "description": "Standardized input demand schema for the USM Orientation Movement discrete-event simulation and batch release optimizer. Defines cohort sizes, hostel hierarchy (Hostel -> Block -> Floor), special populations, and batching constraints.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "academic_session",
+    "campus",
+    "cohort",
+    "hostels",
+    "batches"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "enum": ["1.0.0"],
+      "_comment": "Schema specification version"
+    },
+    "academic_session": {
+      "type": "string",
+      "pattern": "^20[2-3][0-9]/20[2-3][0-9]$",
+      "examples": ["2025/2026", "2026/2027"],
+      "_comment": "Malayan university academic session format (YYYY/YYYY)"
+    },
+    "campus": {
+      "type": "string",
+      "enum": ["Kampus Induk (Penang)", "Kampus Kejuruteraan (Nibong Tebal)", "Kampus Kesihatan (Kubang Kerian)"],
+      "default": "Kampus Induk (Penang)",
+      "_comment": "Target university campus"
+    },
+    "destination": {
+      "type": "object",
+      "required": ["venue_id", "venue_name", "coordinates", "assembly_time", "capacity_seats", "intake_rate_pax_min"],
+      "properties": {
+        "venue_id": { "type": "string", "example": "DTSP" },
+        "venue_name": { "type": "string", "example": "Dewan Tuanku Syed Putra" },
+        "coordinates": {
+          "type": "object",
+          "required": ["latitude", "longitude"],
+          "properties": {
+            "latitude": { "type": "number", "minimum": -90, "maximum": 90, "example": 5.3568866 },
+            "longitude": { "type": "number", "minimum": -180, "maximum": 180, "example": 100.3030831 }
+          }
+        },
+        "assembly_time": {
+          "type": "string",
+          "pattern": "^([01]?[0-9]|2[0-3]):[0-5][0-9]$",
+          "example": "08:30",
+          "_comment": "Scheduled plenary event start time (HH:MM 24h format)"
+        },
+        "target_arrival_window": {
+          "type": "object",
+          "required": ["start_time", "end_time"],
+          "properties": {
+            "start_time": { "type": "string", "example": "07:50", "_comment": "Earliest recommended arrival time" },
+            "end_time": { "type": "string", "example": "08:25", "_comment": "Hard cutoff time for seating before event start" }
+          }
+        },
+        "capacity_seats": { "type": "integer", "minimum": 1, "example": 3500 },
+        "active_doors_count": { "type": "integer", "minimum": 1, "default": 2, "example": 2 },
+        "intake_rate_pax_min": {
+          "type": "number",
+          "minimum": 0,
+          "example": 60.0,
+          "_comment": "Maximum sustained student ingestion rate through open entrance doors (pax/minute) [ELI5: Door bottleneck speed]"
+        }
+      }
+    },
+    "cohort": {
+      "type": "object",
+      "required": [
+        "total_intake_university_wide",
+        "kampus_induk_intake",
+        "kampus_induk_freshmen_in_hostels",
+        "compulsory_attendance_rate"
+      ],
+      "properties": {
+        "total_intake_university_wide": {
+          "type": "integer",
+          "minimum": 1,
+          "example": 4236,
+          "_comment": "Total enrolled undergraduate students across all USM campuses (Induk, Engineering, Health)"
+        },
+        "kampus_induk_intake": {
+          "type": "integer",
+          "minimum": 1,
+          "example": 3378,
+          "_comment": "Total new undergraduate students registered on Kampus Induk"
+        },
+        "kampus_induk_freshmen_in_hostels": {
+          "type": "integer",
+          "minimum": 1,
+          "example": 3050,
+          "_comment": "First-year students assigned to residential desasiswa on Kampus Induk"
+        },
+        "non_resident_commuters": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 328,
+          "example": 328,
+          "_comment": "Students commuting from off-campus residences"
+        },
+        "international_undergraduates": {
+          "type": "integer",
+          "minimum": 0,
+          "example": 469,
+          "_comment": "International undergraduate intake cohort"
+        },
+        "oku_special_needs_students": {
+          "type": "integer",
+          "minimum": 0,
+          "example": 15,
+          "_comment": "Disabled/wheelchair-reliant students requiring special barrier-free transit routing"
+        },
+        "compulsory_attendance_rate": {
+          "type": "number",
+          "minimum": 0.0,
+          "maximum": 1.0,
+          "default": 0.95,
+          "example": 0.95,
+          "_comment": "Expected fraction of freshies physically attending the morning session [ELI5: Turnout percentage]"
+        }
+      }
+    },
+    "hostels": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/Hostel"
+      }
+    },
+    "batches": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/definitions/Batch"
+      },
+      "_comment": "Collection of discrete movement units released across the staging timeline"
+    }
+  },
+  "definitions": {
+    "Hostel": {
+      "type": "object",
+      "required": [
+        "hostel_id",
+        "hostel_name",
+        "cluster",
+        "coordinates",
+        "total_bed_capacity",
+        "gender_mix",
+        "primary_commute_mode",
+        "distance_to_dtsp_meters",
+        "blocks"
+      ],
+      "properties": {
+        "hostel_id": {
+          "type": "string",
+          "enum": ["RESTU", "TEKUN", "SAUJANA", "AMAN_DAMAI", "INDAH_KEMBARA", "CAHAYA_GEMILANG", "FAJAR_HARAPAN", "BAKTI_PERMAI"],
+          "example": "RESTU"
+        },
+        "hostel_name": { "type": "string", "example": "Desasiswa Restu" },
+        "cluster": {
+          "type": "string",
+          "enum": ["RST_COMPLEX", "ADFH_CENTRAL", "IK_CAMPUS_SOUTH", "PERMAI_EAST", "OFF_CAMPUS"],
+          "example": "RST_COMPLEX",
+          "_comment": "Geographic clustering of hostel complexes"
+        },
+        "coordinates": {
+          "type": "object",
+          "required": ["latitude", "longitude"],
+          "properties": {
+            "latitude": { "type": "number", "example": 5.3572768 },
+            "longitude": { "type": "number", "example": 100.2898076 }
+          }
+        },
+        "elevation_meters_asl": {
+          "type": "number",
+          "example": 38.5,
+          "_comment": "Elevation above sea level in meters (critical for grade & energy expenditure)"
+        },
+        "total_bed_capacity": {
+          "type": "integer",
+          "minimum": 1,
+          "example": 1687,
+          "_comment": "Official total resident capacity from UPPU/HAC audit"
+        },
+        "active_freshmen_count": {
+          "type": "integer",
+          "minimum": 0,
+          "example": 780,
+          "_comment": "Count of first-year residents occupying beds during orientation week"
+        },
+        "gender_mix": {
+          "type": "object",
+          "required": ["male_beds", "female_beds"],
+          "properties": {
+            "male_beds": { "type": "integer", "minimum": 0, "example": 688 },
+            "female_beds": { "type": "integer", "minimum": 0, "example": 999 }
+          }
+        },
+        "primary_commute_mode": {
+          "type": "string",
+          "enum": ["BUS", "WALK", "HYBRID"],
+          "example": "BUS",
+          "_comment": "Predominant transit modal choice for orientation hall assembly"
+        },
+        "distance_to_dtsp_meters": {
+          "type": "integer",
+          "minimum": 1,
+          "example": 1700,
+          "_comment": "Pedestrian road route distance to destination hall in meters"
+        },
+        "baseline_walk_time_minutes": {
+          "type": "number",
+          "minimum": 0.1,
+          "example": 24.5,
+          "_comment": "Nominal walking duration at 1.15 m/s free-flow speed"
+        },
+        "muster_point_name": {
+          "type": "string",
+          "example": "Foyer M01 / RST Bus Stop Terminal",
+          "_comment": "Designated staging reservoir for hostel batches"
+        },
+        "blocks": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/Block"
+          }
+        }
+      }
+    },
+    "Block": {
+      "type": "object",
+      "required": [
+        "block_id",
+        "gender_occupancy",
+        "floor_count",
+        "floors"
+      ],
+      "properties": {
+        "block_id": {
+          "type": "string",
+          "example": "M01",
+          "_comment": "Official university building identifier code (e.g. M01, M02, M06, K02)"
+        },
+        "building_name": { "type": "string", "example": "Blok M01 Lelaki" },
+        "gender_occupancy": {
+          "type": "string",
+          "enum": ["MALE", "FEMALE", "COED"],
+          "example": "MALE"
+        },
+        "floor_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 25,
+          "example": 10,
+          "_comment": "Total above-ground storeys (e.g. 10 for RST towers)"
+        },
+        "has_operational_elevators": {
+          "type": "boolean",
+          "default": false,
+          "example": true,
+          "_comment": "Whether operational passenger elevators exist in block"
+        },
+        "stairwell_count": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2,
+          "example": 2,
+          "_comment": "Number of egress stair cores"
+        },
+        "stair_discharge_capacity_pax_min": {
+          "type": "number",
+          "default": 60.0,
+          "example": 60.0,
+          "_comment": "Maximum rate students can descend per stairwell core (pax/min)"
+        },
+        "floors": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/definitions/Floor"
+          }
+        }
+      }
+    },
+    "Floor": {
+      "type": "object",
+      "required": [
+        "floor_number",
+        "floor_label",
+        "freshmen_count"
+      ],
+      "properties": {
+        "floor_number": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 25,
+          "example": 3,
+          "_comment": "Zero or one-indexed integer floor level (e.g. 3 = Aras 3)"
+        },
+        "floor_label": {
+          "type": "string",
+          "example": "Aras 3",
+          "_comment": "Display label matching local USM signage"
+        },
+        "room_count": { "type": "integer", "minimum": 1, "example": 24 },
+        "freshmen_count": {
+          "type": "integer",
+          "minimum": 0,
+          "example": 48,
+          "_comment": "Count of freshie students residing on this specific floor"
+        },
+        "batch_key": {
+          "type": "string",
+          "example": "RESTU_M01_L03",
+          "_comment": "Deterministic primary key used by optimizer: [HOSTEL]_[BLOCK]_L[FLOOR]"
+        }
+      }
+    },
+    "Batch": {
+      "type": "object",
+      "required": [
+        "batch_id",
+        "origin_hostel_id",
+        "origin_block_id",
+        "origin_floor_level",
+        "pax_count",
+        "assigned_mode",
+        "scheduled_departure_time",
+        "assigned_route_id",
+        "destination_id"
+      ],
+      "properties": {
+        "batch_id": {
+          "type": "string",
+          "example": "BATCH_RESTU_M01_L03_01",
+          "_comment": "Unique identifier for this discrete movement package"
+        },
+        "origin_hostel_id": { "type": "string", "example": "RESTU" },
+        "origin_block_id": { "type": "string", "example": "M01" },
+        "origin_floor_level": { "type": "integer", "example": 3 },
+        "batch_key": { "type": "string", "example": "RESTU_M01_L03" },
+        "pax_count": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 120,
+          "example": 44,
+          "_comment": "Headcount of students in batch. For bus batches, matches vehicle capacity (e.g. 44 seats)."
+        },
+        "assigned_mode": {
+          "type": "string",
+          "enum": ["BUS", "WALK", "ACCESSIBLE_VAN"],
+          "example": "BUS"
+        },
+        "ppsl_marshals_assigned": {
+          "type": "integer",
+          "minimum": 1,
+          "default": 2,
+          "example": 2,
+          "_comment": "Number of PPSL student leaders escorting this batch [ELI5: Chaperones]"
+        },
+        "muster_time": {
+          "type": "string",
+          "pattern": "^([01]?[0-9]|2[0-3]):[0-5][0-9]$",
+          "example": "07:15",
+          "_comment": "Time students assemble at hostel staging foyer (HH:MM)"
+        },
+        "scheduled_departure_time": {
+          "type": "string",
+          "pattern": "^([01]?[0-9]|2[0-3]):[0-5][0-9]$",
+          "example": "07:22",
+          "_comment": "Optimizer decision variable: timestamp when batch is released onto transit pipeline (HH:MM)"
+        },
+        "assigned_route_id": {
+          "type": "string",
+          "example": "ROUTE_RST_BUS_MAIN",
+          "_comment": "Identifier of designated transit path"
+        },
+        "destination_id": { "type": "string", "default": "DTSP", "example": "DTSP" },
+        "expected_travel_duration_minutes": {
+          "type": "number",
+          "example": 14.5,
+          "_comment": "Predicted transit elapsed time including boarding, movement, and hall ingestion"
+        },
+        "priority_level": {
+          "type": "string",
+          "enum": ["STANDARD", "OKU_PRIORITY", "EARLY_STAGING"],
+          "default": "STANDARD",
+          "example": "STANDARD"
+        }
+      }
+    }
+  }
+}

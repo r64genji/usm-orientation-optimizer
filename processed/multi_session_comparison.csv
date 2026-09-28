@@ -1,0 +1,4 @@
+session_id,date,direction,condition,total_min,straight_m,raw_dist_m,filt_dist_m,jitter_reduction_pct,steps,max_kmh,stat_min,shuffle_min,walk_min,vehicle_min,idle_to_motion_ratio
+session_1_2026-09-17_morning_M08_to_DTSP,2026-09-17,TO_DTSP,Sunny morning induction transit (queue bottleneck),151.78,1470.8,4310.3,2224.0,48.4,1867,1073.3,126.51,10.99,11.53,2.73,9.64x
+session_2_2026-09-17_evening_Persiaran_Sains_from_DTSP,2026-09-17,FROM_DTSP,Evening post-induction dispersal walk,1.39,6.2,110.9,56.0,49.5,88,80.1,0.82,0.07,0.5,0.0,1.78x
+session_3_2026-09-18_morning_M01_Rainy_to_DTSP,2026-09-18,TO_DTSP,"Rainy morning delay: 118-min weather shelter in cafeteria, then transit",144.85,1529.1,4884.0,2468.9,49.4,2063,1794.7,121.29,3.58,17.67,2.31,6.25x

@@ -1,0 +1,127 @@
+{
+  "note": "Full GPS DUD\u2192DTSP vs OSRM. Speed from Sensor Logger is typically m/s.",
+  "full_cumulative_track_m": 4310.3,
+  "corridor_length_m": 2707.2,
+  "moving_length_m": 1981.5,
+  "fast_length_m": 1041.5,
+  "leave_dud": {
+    "t": 1789601594.2337213,
+    "lat": 5.3585377,
+    "lon": 100.29224
+  },
+  "arrive_dtsp": {
+    "t": 1789605280.557284,
+    "lat": 5.3570615,
+    "lon": 100.3027738
+  },
+  "closest_to_jejantas_all": {
+    "min_m": 3.6,
+    "t": 1789602364.7001836,
+    "lat": 5.3564201,
+    "lon": 100.2928741,
+    "speed": 0.7574905157089233
+  },
+  "closest_to_jejantas_corridor": {
+    "min_m": 3.6,
+    "t": 1789602364.7001836,
+    "lat": 5.3564201,
+    "lon": 100.2928741,
+    "speed": 0.7574905157089233
+  },
+  "closest_to_jejantas_moving": {
+    "min_m": 3.6,
+    "t": 1789602364.7001836,
+    "lat": 5.3564201,
+    "lon": 100.2928741,
+    "speed": 0.7574905157089233
+  },
+  "speed_buckets_if_ms_as_kmh": {
+    "<1 kmh": 3582,
+    "1-5 walk": 2027,
+    "5-12 fast walk/jog": 57,
+    "12-25 slow vehicle": 86,
+    ">=25 vehicle": 70
+  },
+  "speed_buckets_raw": {
+    "<1": 5218,
+    "1-5": 493,
+    "5-12": 111
+  },
+  "comparisons": {
+    "full_corridor_vs_osrm_foot": {
+      "n": 208,
+      "mean_m": 102.1,
+      "p50_m": 68.2,
+      "p90_m": 236.8,
+      "max_m": 368.7
+    },
+    "full_corridor_vs_osrm_drive": {
+      "n": 208,
+      "mean_m": 115.1,
+      "p50_m": 94.6,
+      "p90_m": 189.3,
+      "max_m": 259.6
+    },
+    "full_corridor_vs_osrm_foot_via_bridge": {
+      "n": 208,
+      "mean_m": 77.2,
+      "p50_m": 45.5,
+      "p90_m": 231.3,
+      "max_m": 264.5
+    },
+    "moving_vs_osrm_foot": {
+      "n": 126,
+      "mean_m": 121.2,
+      "p50_m": 113.7,
+      "p90_m": 251.5,
+      "max_m": 267.7
+    },
+    "moving_vs_osrm_drive": {
+      "n": 126,
+      "mean_m": 76.0,
+      "p50_m": 76.0,
+      "p90_m": 174.5,
+      "max_m": 259.6
+    },
+    "fast_vs_osrm_drive": {
+      "n": 32,
+      "mean_m": 80.4,
+      "p50_m": 58.0,
+      "p90_m": 168.8,
+      "max_m": 255.2
+    },
+    "fast_vs_osrm_foot": {
+      "n": 32,
+      "mean_m": 46.9,
+      "p50_m": 33.2,
+      "p90_m": 86.3,
+      "max_m": 112.6
+    }
+  },
+  "coverage": {
+    "foot_covered_by_gps": {
+      "pct_osrm_within_40m_of_gps": 52.4,
+      "n": 21
+    },
+    "drive_covered_by_gps": {
+      "pct_osrm_within_40m_of_gps": 39.1,
+      "n": 23
+    },
+    "via_covered_by_gps": {
+      "pct_osrm_within_40m_of_gps": 64.3,
+      "n": 28
+    },
+    "foot_covered_by_moving": {
+      "pct_osrm_within_40m_of_gps": 47.6,
+      "n": 21
+    },
+    "drive_covered_by_moving": {
+      "pct_osrm_within_40m_of_gps": 39.1,
+      "n": 23
+    },
+    "drive_covered_by_fast": {
+      "pct_osrm_within_40m_of_gps": 21.7,
+      "n": 23
+    }
+  }
+}

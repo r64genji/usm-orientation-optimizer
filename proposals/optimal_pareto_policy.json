@@ -1,0 +1,79 @@
+{
+  "proposal_id": "pareto_optimal_70pax_2berth",
+  "grouping": {
+    "mode": "from_source_units",
+    "basis": "target_size",
+    "target_students": 70,
+    "split_policy": "permit_supervised_split",
+    "mixing_policy": "same_hostel",
+    "adaptation_rule": {
+      "type": "fixed"
+    },
+    "regroup_policy": {
+      "required": false
+    },
+    "escorts_per_group": 1
+  },
+  "regroup_policy": {
+    "required": false
+  },
+  "release_rule": {
+    "type": "fixed_interval",
+    "interval_s": 5,
+    "start_s": 0.0
+  },
+  "counting": {
+    "assignments": {},
+    "placement": "none",
+    "method": null
+  },
+  "worker_allocation": {
+    "assignments": [],
+    "count": 0
+  },
+  "vehicle_dispatch_rule": {
+    "type": "shared_fleet",
+    "fleet_id": "rst_fleet",
+    "simultaneous_boarding_berths": 2
+  },
+  "destination_rule": {
+    "type": "complete_after_stages"
+  },
+  "fixed_choices": {
+    "required_endpoint": "hall_area_arrival"
+  },
+  "tunable": {
+    "grouping.basis": {
+      "allowed": [
+        "floor",
+        "wing",
+        "building",
+        "target_size",
+        "mixed"
+      ]
+    },
+    "grouping.units_per_group": {
+      "lower": 1,
+      "upper": 4,
+      "unit": "units"
+    },
+    "grouping.maximum_assembly_wait_s": {
+      "lower": 0,
+      "upper": 300,
+      "unit": "s"
+    },
+    "release_rule.interval_s": {
+      "lower": 0,
+      "upper": 120,
+      "unit": "s"
+    }
+  },
+  "assumptions": [
+    {
+      "id": "loop_fixture_assumption",
+      "label": "Loop fixture proposal assumption",
+      "kind": "grouping_choice",
+      "status": "stated"
+    }
+  ]
+}

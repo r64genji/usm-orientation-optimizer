@@ -1,0 +1,6 @@
+stage_id,name,start,end,duration_minutes,location,mode,description
+1,Hostel Preparation & Departure Queue,06:47:10,07:34:00,46.8,Desasiswa Restu,stationary/gathering,"Waking up (~06:30), prep, gathering with students at Desasiswa Restu hostel grounds."
+2,Walk & Wait at Bus Stop,07:34:00,07:58:30,24.5,Restu Perimeter Road to Bus Stop,walking & static queue,"Slow walk along hostel road shoulder, queueing at boarding pavilion for shuttle bus."
+3,Bus Shuttle Transit,07:58:30,08:01:35,3.1,Campus Transit Corridor,automotive (bus),Rapid vehicular transit on campus shuttle bus (speeds up to 34.6 km/h).
+4,Exterior DTSP Queue & Batching Reservoir,08:01:35,08:33:00,31.4,Roadway outside Dewan Tuanku Syed Putra (DTSP),static queue (open sun),Massive holding queue on road shoulder outside DTSP hall. 300-400+ students held in batches awaiting hall clearance.
+5,Batch Admission & Hall Seating,08:33:00,09:18:57,46.0,Dewan Tuanku Syed Putra (DTSP) Interior,batch walk & seated,"Pulsed movement through entrance gates into hall, seated for orientation ceremonies."

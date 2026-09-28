@@ -1,0 +1,370 @@
+{
+  "timestamp": "2026-09-20T00:00:00+08:00",
+  "source": "OpenStreetMap via Overpass API (lz4.overpass-api.de & z.overpass-api.de)",
+  "bounding_box": {
+    "south": 5.348,
+    "west": 100.290,
+    "north": 5.365,
+    "east": 100.315
+  },
+  "overpass_queries": [
+    "[out:json][timeout:30];(way[\"building\"](5.348,100.290,5.365,100.315);relation[\"building\"](5.348,100.290,5.365,100.315););out body geom;",
+    "[out:json][timeout:30];(node[\"name\"~\"Restu|Saujana|Tekun|Indah|Kembara|Aman|Damai|Bakti|Fajar|Permai|Cahaya|Gemilang|Harapan|M01|M02|M03|M04|M05|M06|M07|M08|M09\",i](5.348,100.288,5.365,100.315);way[\"name\"~\"Restu|Saujana|Tekun|Indah|Kembara|Aman|Damai|Bakti|Fajar|Permai|Cahaya|Gemilang|Harapan|M01|M02|M03|M04|M05|M06|M07|M08|M09\",i](5.348,100.288,5.365,100.315);relation[\"name\"~\"Restu|Saujana|Tekun|Indah|Kembara|Aman|Damai|Bakti|Fajar|Permai|Cahaya|Gemilang|Harapan|M01|M02|M03|M04|M05|M06|M07|M08|M09\",i](5.348,100.288,5.365,100.315););out body geom;"
+  ],
+  "element_counts": {
+    "campus_bbox_buildings": 1295,
+    "named_query_elements": 85
+  },
+  "buildings": [
+    {
+      "hostel": "restu",
+      "building_code": "M01",
+      "osm_id": 139062076,
+      "osm_type": "way",
+      "name": "M01 Desasiswa Restu",
+      "levels": null,
+      "footprint_m2": 3144.12,
+      "centroid": {
+        "lat": 5.355843,
+        "lon": 100.289194
+      },
+      "tags": {
+        "building": "university",
+        "name": "M01 Desasiswa Restu"
+      },
+      "delta_to_master_pin_m": 173.7
+    },
+    {
+      "hostel": "restu",
+      "building_code": "M02",
+      "osm_id": 1031136419,
+      "osm_type": "way",
+      "name": "M02",
+      "levels": null,
+      "footprint_m2": 3144.12,
+      "centroid": {
+        "lat": 5.357214,
+        "lon": 100.289194
+      },
+      "tags": {
+        "building": "university",
+        "name": "M02"
+      },
+      "delta_to_master_pin_m": 68.6
+    },
+    {
+      "hostel": "restu",
+      "building_code": "M08",
+      "osm_id": 275415002,
+      "osm_type": "way",
+      "name": "M08 Dewan Utama (Restu)",
+      "levels": null,
+      "footprint_m2": 1669.24,
+      "centroid": {
+        "lat": 5.357268,
+        "lon": 100.290213
+      },
+      "tags": {
+        "building": "university",
+        "name": "M08 Dewan Utama (Restu)",
+        "name:en": "C08 Main Residences' Hall (Restu)"
+      },
+      "delta_to_master_pin_m": 44.6
+    },
+    {
+      "hostel": "rst_common",
+      "building_code": "M07",
+      "osm_id": 275415004,
+      "osm_type": "way",
+      "name": "M07",
+      "levels": null,
+      "footprint_m2": 878.76,
+      "centroid": {
+        "lat": 5.356544,
+        "lon": 100.289135
+      },
+      "tags": {
+        "building": "university",
+        "name": "M07"
+      },
+      "delta_to_master_pin_m": null
+    },
+    {
+      "hostel": "rst_common",
+      "building_code": "M09",
+      "osm_id": 275415001,
+      "osm_type": "way",
+      "name": "M09",
+      "levels": null,
+      "footprint_m2": 1233.59,
+      "centroid": {
+        "lat": 5.356241,
+        "lon": 100.291360
+      },
+      "tags": {
+        "building": "university",
+        "name": "M09"
+      },
+      "delta_to_master_pin_m": null
+    },
+    {
+      "hostel": "saujana",
+      "building_code": "M03",
+      "osm_id": 1031136418,
+      "osm_type": "way",
+      "name": "M03",
+      "levels": null,
+      "footprint_m2": 3144.07,
+      "centroid": {
+        "lat": 5.356536,
+        "lon": 100.289760
+      },
+      "tags": {
+        "building": "university",
+        "name": "M03"
+      },
+      "delta_to_master_pin_m": 83.3
+    },
+    {
+      "hostel": "saujana",
+      "building_code": "M04",
+      "osm_id": 275415000,
+      "osm_type": "way",
+      "name": "M04",
+      "levels": null,
+      "footprint_m2": 2173.00,
+      "centroid": {
+        "lat": 5.355781,
+        "lon": 100.290370
+      },
+      "tags": {
+        "building": "yes",
+        "name": "M04",
+        "tourism": "hostel"
+      },
+      "delta_to_master_pin_m": 70.3
+    },
+    {
+      "hostel": "tekun",
+      "building_code": "M05",
+      "osm_id": 275414999,
+      "osm_type": "way",
+      "name": "M05, Desasiswa Tekun, USM",
+      "levels": null,
+      "footprint_m2": 2481.32,
+      "centroid": {
+        "lat": 5.355640,
+        "lon": 100.291293
+      },
+      "tags": {
+        "building": "yes",
+        "name": "M05, Desasiswa Tekun, USM",
+        "tourism": "hostel"
+      },
+      "delta_to_master_pin_m": 1.2
+    },
+    {
+      "hostel": "tekun",
+      "building_code": "M06",
+      "osm_id": 275414998,
+      "osm_type": "way",
+      "name": "M06",
+      "levels": null,
+      "footprint_m2": 2206.53,
+      "centroid": {
+        "lat": 5.355997,
+        "lon": 100.292187
+      },
+      "tags": {
+        "building": "yes",
+        "name": "M06",
+        "tourism": "hostel"
+      },
+      "delta_to_master_pin_m": 107.4
+    },
+    {
+      "hostel": "indah_kembara",
+      "building_code": "L07",
+      "osm_id": 275404588,
+      "osm_type": "way",
+      "name": "Desasiswa Indah Kembara (L07)",
+      "levels": null,
+      "footprint_m2": 1500.82,
+      "centroid": {
+        "lat": 5.356031,
+        "lon": 100.296045
+      },
+      "tags": {
+        "building": "university",
+        "name": "Desasiswa Indah Kembara (L07)",
+        "name:ms": "Desasiswa Indah Kembara (L07)"
+      },
+      "delta_to_master_pin_m": 0.6
+    },
+    {
+      "hostel": "indah_kembara",
+      "building_code": "L06",
+      "osm_id": 275404589,
+      "osm_type": "way",
+      "name": "Desasiswa Indah Kembara (L06)",
+      "levels": null,
+      "footprint_m2": 1643.16,
+      "centroid": {
+        "lat": 5.355497,
+        "lon": 100.295988
+      },
+      "tags": {
+        "building": "university",
+        "name": "Desasiswa Indah Kembara (L06)",
+        "name:ms": "Desasiswa Indah Kembara (L06)"
+      },
+      "delta_to_master_pin_m": null
+    },
+    {
+      "hostel": "indah_kembara",
+      "building_code": "L05",
+      "osm_id": 275404590,
+      "osm_type": "way",
+      "name": "Desasiswa Indah Kembara (L05)",
+      "levels": null,
+      "footprint_m2": 1062.82,
+      "centroid": {
+        "lat": 5.355801,
+        "lon": 100.295609
+      },
+      "tags": {
+        "building": "university",
+        "name": "Desasiswa Indah Kembara (L05)",
+        "name:ms": "Desasiswa Indah Kembara (L05)"
+      },
+      "delta_to_master_pin_m": null
+    },
+    {
+      "hostel": "aman_damai",
+      "building_code": "K10",
+      "osm_id": 1030965779,
+      "osm_type": "way",
+      "name": "K10 Desasiswa Aman Damai",
+      "levels": "2",
+      "footprint_m2": 715.02,
+      "centroid": {
+        "lat": 5.354304,
+        "lon": 100.296202
+      },
+      "tags": {
+        "building": "university",
+        "building:levels": "2",
+        "name": "K10 Desasiswa Aman Damai",
+        "name:en": "K10 Aman Damai Students' Residence",
+        "name:ms": "K10 Desasiswa Aman Damai"
+      },
+      "delta_to_master_pin_m": 5.8
+    },
+    {
+      "hostel": "aman_damai",
+      "building_code": "K01",
+      "osm_id": 1030965775,
+      "osm_type": "way",
+      "name": "K01",
+      "levels": "3",
+      "footprint_m2": 1036.56,
+      "centroid": {
+        "lat": 5.354780,
+        "lon": 100.297032
+      },
+      "tags": {
+        "addr:housenumber": "1",
+        "addr:street": "jalan damai",
+        "building": "university",
+        "building:levels": "3",
+        "name": "K01",
+        "name:en": "K01",
+        "name:ms": "K01"
+      },
+      "delta_to_master_pin_m": null
+    },
+    {
+      "hostel": "aman_damai",
+      "building_code": "K02",
+      "osm_id": 275404573,
+      "osm_type": "way",
+      "name": "K02",
+      "levels": "3",
+      "footprint_m2": 1037.03,
+      "centroid": {
+        "lat": 5.354554,
+        "lon": 100.297116
+      },
+      "tags": {
+        "addr:housenumber": "1",
+        "addr:street": "jalan damai",
+        "building": "university",
+        "building:levels": "3",
+        "name": "K02",
+        "name:en": "K02",
+        "name:ms": "K02"
+      },
+      "delta_to_master_pin_m": null
+    },
+    {
+      "hostel": "bakti_fajar_permai",
+      "building_code": "H10",
+      "osm_id": 275403376,
+      "osm_type": "way",
+      "name": "H10 Desasiswa Bakti Permai",
+      "levels": "2",
+      "footprint_m2": 1264.92,
+      "centroid": {
+        "lat": 5.357763,
+        "lon": 100.300499
+      },
+      "tags": {
+        "building": "university",
+        "building:levels": "2",
+        "name": "H10 Desasiswa Bakti Permai",
+        "name:ms": "H10 Desasiswa Bakti Permai"
+      },
+      "delta_to_master_pin_m": 5.7
+    },
+    {
+      "hostel": "cahaya_gemilang",
+      "building_code": "H33",
+      "osm_id": 275403540,
+      "osm_type": "way",
+      "name": "H33 Desasiswa Cahaya Gemilang",
+      "levels": "2",
+      "footprint_m2": 813.06,
+      "centroid": {
+        "lat": 5.360424,
+        "lon": 100.303549
+      },
+      "tags": {
+        "building": "university",
+        "building:levels": "2",
+        "name": "H33 Desasiswa Cahaya Gemilang"
+      },
+      "delta_to_master_pin_m": 6.9
+    },
+    {
+      "hostel": "fajar_harapan",
+      "building_code": "F27",
+      "osm_id": 275403371,
+      "osm_type": "way",
+      "name": "F27 Desasiswa Harapan",
+      "levels": "2",
+      "footprint_m2": 794.45,
+      "centroid": {
+        "lat": 5.354996,
+        "lon": 100.299797
+      },
+      "tags": {
+        "building": "university",
+        "building:levels": "2",
+        "name": "F27 Desasiswa Harapan",
+        "name:en": "F27 Harapan Students' Residence",
+        "name:ms": "F27 Desasiswa Harapan"
+      },
+      "delta_to_master_pin_m": 3.0
+    }
+  ]
+}

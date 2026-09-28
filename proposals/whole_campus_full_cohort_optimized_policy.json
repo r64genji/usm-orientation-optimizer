@@ -1,0 +1,33 @@
+{
+  "proposal_id": "whole_campus_full_cohort_optimized_4berth",
+  "policy_id": "whole_campus_full_cohort_policy_v1",
+  "policy_version": "1",
+  "grouping": {
+    "mode": "from_source_units",
+    "basis": "target_size",
+    "target_students": 20,
+    "split_policy": "permit_supervised_split",
+    "mixing_policy": "same_hostel",
+    "adaptation_rule": {
+      "type": "fixed"
+    },
+    "regroup_policy": {
+      "required": false
+    },
+    "escorts_per_group": 1
+  },
+  "required_endpoint": "hall_area_arrival",
+  "release_rule": {
+    "type": "immediate"
+  },
+  "vehicle_dispatch_rule": {
+    "type": "shared_fleet",
+    "fleet_id": "rst_fleet",
+    "simultaneous_boarding_berths": 4
+  },
+  "destination_rule": {
+    "type": "complete_after_stages"
+  },
+  "random_seed": 0,
+  "numerical_rounding_limit_s": 0.001
+}

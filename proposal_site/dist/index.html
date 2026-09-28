@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>USM Orientation Transit Operations Proposal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Top Toolbar -->
+  <header class="toolbar-container no-print">
+    <div class="toolbar">
+      <div class="toolbar-brand toolbar-left">
+        <span class="toolbar-title">USM Transit Operations Proposal (A4 Editor)</span>
+        <span id="status-pill" class="status-pill status-saved">Ready (Canonical / Stored)</span>
+      </div>
+      <div class="toolbar-actions">
+        <button id="btn-edit-toggle" class="btn btn-secondary" type="button">Lock Edit Mode</button>
+        <button id="btn-save" class="btn btn-primary" type="button">Save Changes</button>
+        <button id="btn-reset" class="btn btn-secondary" type="button">Reset</button>
+        <button id="btn-export-data" class="btn btn-secondary" type="button">Export JSON</button>
+        <button id="btn-print" class="btn btn-secondary" type="button">Print / PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Document Container holding 12 A4 sheets -->
+  <main class="document-container">
+
+    <!-- PAGE 1: Title and Executive Summary -->
+    <section class="page a4-sheet" id="page-1">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 1 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h1 class="doc-title" data-editable-id="p1-title" contenteditable="true">USM Orientation Transit Operations Plan</h1>
+        <p class="doc-subtitle" data-editable-id="p1-sub" contenteditable="true">Official Staged Transit and Hall Ingress Operational Blueprint</p>
+        
+        <div class="callout callout-info" data-editable-id="p1-exec-callout" contenteditable="true">
+          <strong>Executive Summary:</strong> This plan coordinates student movements for orientation day. All student hostels release at 06:00:00 (t=0). The operational bus fleet contains exactly 8 buses: 5 coach buses and 3 electric buses. Desasiswa Tekun and Desasiswa Saujana receive priority staging. Restu students wait at the Restu cafe and depart last.
+        </div>
+
+        <h2 data-editable-id="p1-h2-1" contenteditable="true">1. Core Operational Directives</h2>
+        <p data-editable-id="p1-p1" contenteditable="true">
+          The transit system provides continuous loop service between hostel staging zones and Dewan Tuanku Syed Putra (DTSP). PPSL student leaders supervise headcount and queue lines. DTSP provides 3,000 full-hall seats. Dewan Budaya G03 provides 500 secondary overflow seats.
+        </p>
+
+        <div class="table-custom table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Operational Variable</th>
+                <th>Standard Specification</th>
+                <th>Operational Rule</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Total Bus Fleet</td>
+                <td>8 Vehicles (5 Coach, 3 Electric)</td>
+                <td>Fixed fleet; no additional vehicles permitted</td>
+              </tr>
+              <tr>
+                <td>Vehicle Doors</td>
+                <td>1 Usable Door per Bus</td>
+                <td>Controlled single-file ingress/egress</td>
+              </tr>
+              <tr>
+                <td>Hostel Release Time</td>
+                <td>06:00:00 (t=0)</td>
+                <td>Simultaneous release across all dormitories</td>
+              </tr>
+              <tr>
+                <td>Staging Priority</td>
+                <td>Tekun and Saujana First, Restu Last</td>
+                <td>Restu holds at Restu cafe until cleared</td>
+              </tr>
+              <tr>
+                <td>Primary Venue Capacity</td>
+                <td>DTSP: 3,000 Seats</td>
+                <td>Main assembly hall</td>
+              </tr>
+              <tr>
+                <td>Secondary Overflow</td>
+                <td>Dewan Budaya G03: 500 Seats</td>
+                <td>Secondary authorized overflow facility</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 data-editable-id="p1-h2-2" contenteditable="true">2. Operational Scope</h2>
+        <p data-editable-id="p1-p2" contenteditable="true">
+          This document outlines a candidate proposal pending simulation and field validation. It defines candidate route cycles, staff stations, and venue entry policies. Strict adherence ensures safe transit, reduced vehicle friction, and timely commencement of orientation ceremonies.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Document Ref: USM-OPS-2026-A</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 2: Problem Statement & Current Bottleneck Flow (Diagram 1) -->
+    <section class="page a4-sheet" id="page-2">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 2 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p2-h2-1" contenteditable="true">3. Current Baseline Bottlenecks</h2>
+        <p data-editable-id="p2-p1" contenteditable="true">
+          Historical orientation days created long queues and traffic delays. When all hostels surge onto roadways simultaneously, bus queues stall. Linear single-file holding causes severe crowding outside dormitories.
+        </p>
+
+        <div class="diagram-box">
+          <!-- DIAGRAM 1: Current State Bottleneck Flow -->
+          <svg viewBox="0 0 700 240" class="diagram-svg" aria-label="Current Bottleneck Flow Diagram">
+            <rect x="10" y="20" width="150" height="80" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+            <text x="85" y="55" text-anchor="middle" font-weight="bold" fill="#991b1b" font-size="14">Unstaged Surging</text>
+            <text x="85" y="75" text-anchor="middle" fill="#7f1d1d" font-size="11">Hostels release at t=0</text>
+
+            <path d="M 160 60 L 220 60" stroke="#ef4444" stroke-width="3" marker-end="url(#arrow-red)"/>
+
+            <rect x="230" y="20" width="160" height="80" rx="8" fill="#fef3c7" stroke="#f59e0b" stroke-width="2"/>
+            <text x="310" y="55" text-anchor="middle" font-weight="bold" fill="#92400e" font-size="14">Single Shared Queue</text>
+            <text x="310" y="75" text-anchor="middle" fill="#78350f" font-size="11">Restu blocks Tekun/Saujana</text>
+
+            <path d="M 390 60 L 450 60" stroke="#ef4444" stroke-width="3"/>
+
+            <rect x="460" y="20" width="220" height="80" rx="8" fill="#fee2e2" stroke="#ef4444" stroke-width="2"/>
+            <text x="570" y="50" text-anchor="middle" font-weight="bold" fill="#991b1b" font-size="14">Roadway Gridlock</text>
+            <text x="570" y="70" text-anchor="middle" fill="#7f1d1d" font-size="11">8 Buses trapped in queue</text>
+            <text x="570" y="85" text-anchor="middle" fill="#7f1d1d" font-size="10">Delays exceed 45 minutes</text>
+
+            <rect x="120" y="140" width="460" height="70" rx="6" fill="#f1f5f9" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="350" y="165" text-anchor="middle" font-weight="bold" fill="#334155" font-size="13">Observed Impact on Student Experience</text>
+            <text x="350" y="185" text-anchor="middle" fill="#475569" font-size="11">Severe sun exposure &bull; Delayed DTSP ceremony start &bull; Overworked PPSL crew</text>
+
+            <defs>
+              <marker id="arrow-red" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#ef4444"/>
+              </marker>
+            </defs>
+          </svg>
+          <div class="diagram-caption">Figure 1: Baseline Bottleneck Model showing uncoordinated surge and single queue collapse.</div>
+        </div>
+
+        <h3 data-editable-id="p2-h3-1" contenteditable="true">Root Failure Points</h3>
+        <p data-editable-id="p2-p2" contenteditable="true">
+          The main error in prior years was treating all hostels equally at boarding points. Restu has a large headcount. When Restu students enter boarding areas first, smaller cohorts cannot access transit, creating system-wide starvation.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 2 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 3: Target State Solution Architecture (Diagram 2) -->
+    <section class="page a4-sheet" id="page-3">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 3 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p3-h2-1" contenteditable="true">4. Target Optimized Flow Architecture</h2>
+        <p data-editable-id="p3-p1" contenteditable="true">
+          The revised architecture decouples arrival, holding, and boarding. Desasiswa Tekun and Saujana board immediately upon release. Restu holds at Restu cafe. This eliminates boarding starvation and stabilizes bus turnaround times.
+        </p>
+
+        <div class="diagram-box">
+          <!-- DIAGRAM 2: Target State Optimized Flow -->
+          <svg viewBox="0 0 700 240" class="diagram-svg" aria-label="Target State Optimized Flow Diagram">
+            <rect x="10" y="20" width="160" height="70" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+            <text x="90" y="50" text-anchor="middle" font-weight="bold" fill="#14532d" font-size="13">Hostel Release (06:00:00)</text>
+            <text x="90" y="70" text-anchor="middle" fill="#166534" font-size="11">t=0 synchronized start</text>
+
+            <path d="M 170 55 L 230 35" stroke="#16a34a" stroke-width="2.5" marker-end="url(#arrow-green)"/>
+            <path d="M 170 55 L 230 85" stroke="#0284c7" stroke-width="2.5" marker-end="url(#arrow-blue)"/>
+
+            <rect x="240" y="10" width="180" height="45" rx="6" fill="#dcfce7" stroke="#16a34a" stroke-width="1.5"/>
+            <text x="330" y="32" text-anchor="middle" font-weight="bold" fill="#14532d" font-size="12">Tekun &amp; Saujana Priority</text>
+            <text x="330" y="46" text-anchor="middle" fill="#166534" font-size="10">Direct Boarding Batch 1</text>
+
+            <rect x="240" y="65" width="180" height="45" rx="6" fill="#e0f2fe" stroke="#0284c7" stroke-width="1.5"/>
+            <text x="330" y="87" text-anchor="middle" font-weight="bold" fill="#075985" font-size="12">Restu Staged Hold</text>
+            <text x="330" y="101" text-anchor="middle" fill="#0369a1" font-size="10">Waiting inside Restu Cafe</text>
+
+            <path d="M 420 35 L 480 55" stroke="#16a34a" stroke-width="2.5"/>
+            <path d="M 420 85 L 480 65" stroke="#0284c7" stroke-width="2.5"/>
+
+            <rect x="490" y="25" width="190" height="60" rx="8" fill="#fef9c3" stroke="#ca8a04" stroke-width="2"/>
+            <text x="585" y="50" text-anchor="middle" font-weight="bold" fill="#713f12" font-size="13">8 Continuous Loop Buses</text>
+            <text x="585" y="68" text-anchor="middle" fill="#854d0e" font-size="11">5 Coach &bull; 3 Electric (1 door)</text>
+
+            <path d="M 585 85 L 585 130" stroke="#ca8a04" stroke-width="2.5"/>
+
+            <rect x="200" y="140" width="300" height="70" rx="8" fill="#f3e8ff" stroke="#9333ea" stroke-width="2"/>
+            <text x="350" y="168" text-anchor="middle" font-weight="bold" fill="#581c87" font-size="13">DTSP Drop-Off &amp; Pre-Wait Hall</text>
+            <text x="350" y="188" text-anchor="middle" fill="#6b21a8" font-size="11">Multiple parallel docking bays &bull; Direct seat walk-in</text>
+
+            <defs>
+              <marker id="arrow-green" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#16a34a"/>
+              </marker>
+              <marker id="arrow-blue" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+                <path d="M 0 0 L 10 5 L 0 10 z" fill="#0284c7"/>
+              </marker>
+            </defs>
+          </svg>
+          <div class="diagram-caption">Figure 2: Target Staged Architecture separating hostel staging from continuous vehicle loops.</div>
+        </div>
+
+        <h3 data-editable-id="p3-h3-1" contenteditable="true">System Improvements</h3>
+        <p data-editable-id="p3-p2" contenteditable="true">
+          This model prevents roadside queuing. Students remain seated in sheltered spaces. Continuous vehicle circulation reduces traffic congestion and boarding starvation.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 3 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 4: Cohort Grouping & Priority Sequencing (Diagram 3) -->
+    <section class="page a4-sheet" id="page-4">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 4 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p4-h2-1" contenteditable="true">5. Cohort Priority &amp; Cafe Holding</h2>
+        <p data-editable-id="p4-p1" contenteditable="true">
+          Hostels differ significantly in resident count. Tekun and Saujana have lower populations and clear rapidly. Restu has a large headcount. Sequencing smaller hostels first clears loading zones quickly.
+        </p>
+
+        <div class="diagram-box">
+          <!-- DIAGRAM 3: Cohort Grouping & Staging Sequencing -->
+          <svg viewBox="0 0 700 240" class="diagram-svg" aria-label="Cohort Grouping and Priority Sequencing Diagram">
+            <!-- Timeline Axis -->
+            <line x1="50" y1="190" x2="650" y2="190" stroke="#64748b" stroke-width="2"/>
+            <circle cx="80" cy="190" r="5" fill="#0f172a"/>
+            <text x="80" y="215" text-anchor="middle" font-size="11" fill="#334155">06:00 (t=0)</text>
+            <circle cx="280" cy="190" r="5" fill="#0f172a"/>
+            <text x="280" y="215" text-anchor="middle" font-size="11" fill="#334155">06:25</text>
+            <circle cx="520" cy="190" r="5" fill="#0f172a"/>
+            <text x="520" y="215" text-anchor="middle" font-size="11" fill="#334155">07:15</text>
+
+            <!-- Tekun & Saujana Block -->
+            <rect x="80" y="30" width="180" height="65" rx="6" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+            <text x="170" y="55" text-anchor="middle" font-weight="bold" fill="#065f46" font-size="13">Stage 1: Tekun &amp; Saujana</text>
+            <text x="170" y="75" text-anchor="middle" fill="#047857" font-size="11">Priority Direct Dispatch</text>
+
+            <!-- Restu Holding Block -->
+            <rect x="80" y="105" width="180" height="65" rx="6" fill="#fef3c7" stroke="#d97706" stroke-width="2"/>
+            <text x="170" y="130" text-anchor="middle" font-weight="bold" fill="#92400e" font-size="13">Restu Holding Period</text>
+            <text x="170" y="150" text-anchor="middle" fill="#b45309" font-size="11">Held at Restu Cafe</text>
+
+            <!-- Restu Dispatch Block -->
+            <rect x="280" y="105" width="240" height="65" rx="6" fill="#e0e7ff" stroke="#4f46e5" stroke-width="2"/>
+            <text x="400" y="130" text-anchor="middle" font-weight="bold" fill="#3730a3" font-size="13">Stage 2: Restu Main Dispatch</text>
+            <text x="400" y="150" text-anchor="middle" fill="#4338ca" font-size="11">Consecutive Bus Cycles (Restu Last)</text>
+
+            <!-- Connectors -->
+            <path d="M 260 62 L 550 62 L 550 100" stroke="#059669" stroke-width="2" stroke-dasharray="4"/>
+            <path d="M 520 137 L 550 137 L 550 110" stroke="#4f46e5" stroke-width="2"/>
+
+            <!-- Completed Hall -->
+            <rect x="560" y="70" width="120" height="70" rx="6" fill="#f1f5f9" stroke="#475569" stroke-width="2"/>
+            <text x="620" y="100" text-anchor="middle" font-weight="bold" fill="#1e293b" font-size="12">Hall Seated</text>
+            <text x="620" y="120" text-anchor="middle" fill="#475569" font-size="10">DTSP &amp; G03</text>
+          </svg>
+          <div class="diagram-caption">Figure 3: Hostel Dispatch Sequencing Timeline and Cafe Staging Protocol.</div>
+        </div>
+
+        <h3 data-editable-id="p4-h3-1" contenteditable="true">Restu Cafe Staging Protocol</h3>
+        <p data-editable-id="p4-p2" contenteditable="true">
+          Restu students assemble inside the sheltered Restu cafe at 06:00:00. PPSL marshals meter students toward the boarding bays only after Tekun and Saujana cohorts clear the pickup apron.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 4 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 5: PPSL Event Staffing & Station Allocation (Diagram 4) -->
+    <section class="page a4-sheet" id="page-5">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 5 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p5-h2-1" contenteditable="true">6. PPSL Staff Roles &amp; Station Deployment</h2>
+        <p data-editable-id="p5-p1" contenteditable="true">
+          PPSL (Program Pembimbing Siswa Lestari) workers are event facilitators and headcount controllers (154 total PPSL staff across campus duties). They do not drive vehicles or conduct security screenings. They supervise orderly queues and verify headcounts.
+        </p>
+
+        <div class="diagram-box">
+          <!-- DIAGRAM 4: PPSL Station Staffing Structure -->
+          <svg viewBox="0 0 700 240" class="diagram-svg" aria-label="PPSL Staffing Structure Diagram">
+            <!-- Central Command -->
+            <rect x="250" y="15" width="200" height="55" rx="8" fill="#1e293b" stroke="#0f172a" stroke-width="2"/>
+            <text x="350" y="40" text-anchor="middle" font-weight="bold" fill="#ffffff" font-size="13">PPSL Central Operations Lead</text>
+            <text x="350" y="56" text-anchor="middle" fill="#94a3b8" font-size="10">Radio Command &bull; Fleet Coordination</text>
+
+            <!-- Lines to Stations -->
+            <path d="M 270 70 L 120 110" stroke="#64748b" stroke-width="2"/>
+            <path d="M 350 70 L 350 110" stroke="#64748b" stroke-width="2"/>
+            <path d="M 430 70 L 580 110" stroke="#64748b" stroke-width="2"/>
+
+            <!-- Station 1: Hostels -->
+            <rect x="30" y="110" width="180" height="95" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+            <text x="120" y="132" text-anchor="middle" font-weight="bold" fill="#0f172a" font-size="12">Station Alpha: Hostels</text>
+            <text x="120" y="150" text-anchor="middle" fill="#334155" font-size="10">&bull; 8 PPSL Marshals</text>
+            <text x="120" y="167" text-anchor="middle" fill="#334155" font-size="10">&bull; Restu Cafe Holding Monitor</text>
+            <text x="120" y="184" text-anchor="middle" fill="#334155" font-size="10">&bull; Tekun/Saujana Headcount</text>
+
+            <!-- Station 2: Transit Loading -->
+            <rect x="260" y="110" width="180" height="95" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+            <text x="350" y="132" text-anchor="middle" font-weight="bold" fill="#0f172a" font-size="12">Station Bravo: Pickup Apron</text>
+            <text x="350" y="150" text-anchor="middle" fill="#334155" font-size="10">&bull; 6 PPSL Queue Controllers</text>
+            <text x="350" y="167" text-anchor="middle" fill="#334155" font-size="10">&bull; Single-Door Bus Ingress</text>
+            <text x="350" y="184" text-anchor="middle" fill="#334155" font-size="10">&bull; Dispatch Release Signals</text>
+
+            <!-- Station 3: DTSP & Overflow -->
+            <rect x="490" y="110" width="180" height="95" rx="6" fill="#f8fafc" stroke="#cbd5e1" stroke-width="2"/>
+            <text x="580" y="132" text-anchor="middle" font-weight="bold" fill="#0f172a" font-size="12">Station Charlie: DTSP / G03</text>
+            <text x="580" y="150" text-anchor="middle" fill="#334155" font-size="10">&bull; 10 PPSL Ushers</text>
+            <text x="580" y="167" text-anchor="middle" fill="#334155" font-size="10">&bull; Drop-Off Multi-Bay Unload</text>
+            <text x="580" y="184" text-anchor="middle" fill="#334155" font-size="10">&bull; Pre-Wait Hall &amp; G03 Fill</text>
+          </svg>
+          <div class="diagram-caption">Figure 4: PPSL Command Hierarchy, Station Allocations, and Operational Responsibilities.</div>
+        </div>
+
+        <h3 data-editable-id="p5-h3-1" contenteditable="true">Operational Mandate</h3>
+        <p data-editable-id="p5-p2" contenteditable="true">
+          Radio channel allocation is unverified; operations will use the approved event communications plan. Station Alpha confirms student readiness before Station Bravo calls buses from the staging queue.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 5 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 6: Campus Route Topography & Elevation Profile (Diagram 5) -->
+    <section class="page a4-sheet" id="page-6">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 6 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p6-h2-1" contenteditable="true">7. Route Topography &amp; Gradient Profile</h2>
+        <p data-editable-id="p6-p1" contenteditable="true">
+          The transit corridor connects the hostel complex to DTSP. The route map is schematic based on repository coordinates.
+        </p>
+
+        <div class="diagram-box">
+          <!-- DIAGRAM 5: Route Topography and Elevation Profile -->
+          <svg viewBox="0 0 700 240" class="diagram-svg" aria-label="Campus Route Elevation Profile Diagram">
+            <!-- Elevation Grid -->
+            <line x1="60" y1="30" x2="60" y2="180" stroke="#94a3b8" stroke-width="1.5"/>
+            <line x1="60" y1="180" x2="650" y2="180" stroke="#94a3b8" stroke-width="1.5"/>
+            <text x="45" y="40" font-size="10" fill="#64748b" text-anchor="end">45m</text>
+            <text x="45" y="110" font-size="10" fill="#64748b" text-anchor="end">25m</text>
+            <text x="45" y="180" font-size="10" fill="#64748b" text-anchor="end">10m</text>
+
+            <!-- Elevation Curve -->
+            <path d="M 60 160 Q 200 170 300 120 T 520 70 L 630 65" fill="none" stroke="#2563eb" stroke-width="3"/>
+            <path d="M 60 160 Q 200 170 300 120 T 520 70 L 630 65 L 630 180 L 60 180 Z" fill="#eff6ff" opacity="0.6"/>
+
+            <!-- Landmark Markers -->
+            <circle cx="80" cy="160" r="5" fill="#ef4444"/>
+            <text x="80" y="150" font-size="11" font-weight="bold" fill="#991b1b" text-anchor="middle">Restu / DUP (12m)</text>
+
+            <circle cx="280" cy="125" r="5" fill="#f59e0b"/>
+            <text x="280" y="115" font-size="11" font-weight="bold" fill="#92400e" text-anchor="middle">Midway Spine Road (28m)</text>
+
+            <circle cx="580" cy="68" r="5" fill="#10b981"/>
+            <text x="580" y="55" font-size="11" font-weight="bold" fill="#065f46" text-anchor="middle">DTSP Drop-Off (42m)</text>
+
+            <!-- Technical Note Box -->
+            <rect x="100" y="195" width="500" height="35" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+            <text x="350" y="217" text-anchor="middle" font-size="11" fill="#475569">Corridor profile based on repository coordinates &bull; Exact cycle times unmeasured</text>
+          </svg>
+          <div class="diagram-caption">Figure 5: Campus Route Elevation Profile showing 30m climb from DUP/Restu to DTSP.</div>
+        </div>
+
+        <h3 data-editable-id="p6-h3-1" contenteditable="true">Vehicle Physics &amp; Speed Bounds</h3>
+        <p data-editable-id="p6-p2" contenteditable="true">
+          Route elevations and distances represent schematic geometry from repository coordinates. Exact vehicle cycle times, operating speeds, and grade-climb dynamics remain unmeasured pending field validation.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 6 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 7: 8-Bus Continuous Loop Mechanics (Diagram 6) -->
+    <section class="page a4-sheet" id="page-7">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 7 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p7-h2-1" contenteditable="true">8. Eight-Bus Continuous Loop Mechanics</h2>
+        <p data-editable-id="p7-p1" contenteditable="true">
+          The operational fleet consists of exactly 8 buses: 5 coach buses and 3 electric buses. Each vehicle has one usable door for student entry. The candidate proposal models continuous loop cycles between DUP staging and DTSP.
+        </p>
+
+        <div class="diagram-box">
+          <!-- DIAGRAM 6: 8-Bus Continuous Loop Mechanics -->
+          <svg viewBox="0 0 700 240" class="diagram-svg" aria-label="8-Bus Continuous Loop Mechanics Diagram">
+            <!-- Loop Oval Track -->
+            <rect x="80" y="30" width="540" height="150" rx="75" fill="none" stroke="#cbd5e1" stroke-width="6"/>
+
+            <!-- Stations -->
+            <rect x="40" y="75" width="130" height="60" rx="8" fill="#dbeafe" stroke="#2563eb" stroke-width="2"/>
+            <text x="105" y="102" text-anchor="middle" font-weight="bold" fill="#1e40af" font-size="12">Gathering / DUP</text>
+            <text x="105" y="120" text-anchor="middle" fill="#1d4ed8" font-size="10">Loading Apron</text>
+
+            <rect x="530" y="75" width="130" height="60" rx="8" fill="#dcfce7" stroke="#16a34a" stroke-width="2"/>
+            <text x="595" y="102" text-anchor="middle" font-weight="bold" fill="#14532d" font-size="12">DTSP Terminal</text>
+            <text x="595" y="120" text-anchor="middle" fill="#15803d" font-size="10">Multi-Bay Drop</text>
+
+            <!-- 8 Buses on Path -->
+            <!-- 5 Coaches (Orange) -->
+            <rect x="200" y="15" width="35" height="25" rx="4" fill="#f97316"/>
+            <text x="217" y="32" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">C1</text>
+
+            <rect x="320" y="15" width="35" height="25" rx="4" fill="#f97316"/>
+            <text x="337" y="32" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">C2</text>
+
+            <rect x="440" y="15" width="35" height="25" rx="4" fill="#f97316"/>
+            <text x="457" y="32" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">C3</text>
+
+            <rect x="480" y="165" width="35" height="25" rx="4" fill="#f97316"/>
+            <text x="497" y="182" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">C4</text>
+
+            <rect x="360" y="165" width="35" height="25" rx="4" fill="#f97316"/>
+            <text x="377" y="182" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">C5</text>
+
+            <!-- 3 EVs (Green) -->
+            <rect x="240" y="165" width="35" height="25" rx="4" fill="#10b981"/>
+            <text x="257" y="182" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">E1</text>
+
+            <circle cx="610" cy="50" r="14" fill="#10b981"/>
+            <text x="610" y="54" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">E2</text>
+
+            <circle cx="90" cy="155" r="14" fill="#10b981"/>
+            <text x="90" y="159" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">E3</text>
+
+            <!-- Legend -->
+            <rect x="200" y="205" width="300" height="25" rx="4" fill="#f8fafc" stroke="#e2e8f0" stroke-width="1"/>
+            <rect x="210" y="212" width="12" height="12" fill="#f97316"/>
+            <text x="230" y="222" font-size="10" fill="#334155">Coach (5 units)</text>
+            <rect x="330" y="212" width="12" height="12" fill="#10b981"/>
+            <text x="350" y="222" font-size="10" fill="#334155">Electric (3 units)</text>
+            <text x="440" y="222" font-size="10" fill="#64748b">1 Door per bus</text>
+          </svg>
+          <div class="diagram-caption">Figure 6: Continuous Loop Fleet Distribution (5 Coach and 3 EV units in synchronized transit).</div>
+        </div>
+
+        <h3 data-editable-id="p7-h3-1" contenteditable="true">Fleet Ingress &amp; Capacity Physics</h3>
+        <p data-editable-id="p7-p2" contenteditable="true">
+          Planning models apply a conservative 180s full-coach boarding and 180s alighting dwell. Exact electric bus capacity remains unmeasured. Student headcounts occur at designated staff stations rather than at vehicle doors.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 7 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 8: DTSP Drop-off Logistics & Multi-Bay Dynamics -->
+    <section class="page a4-sheet" id="page-8">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 8 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p8-h2-1" contenteditable="true">9. DTSP Drop-off Zone &amp; Ingress Rules</h2>
+        <p data-editable-id="p8-p1" contenteditable="true">
+          The DTSP drop-off area is a wide straight road and car park capable of docking multiple buses concurrently. Although buses have only one usable door, multiple buses unload at the same time without creating vehicular bottlenecks.
+        </p>
+
+        <div class="callout callout-warning" data-editable-id="p8-callout" contenteditable="true">
+          <strong>Crucial Operational Rule:</strong> Zero door checks at DTSP entrance doors (no ticket or ID screening dwell). Students walk directly into the hall and take their seats. Pre-arrival headcount at hostel departure points eliminates double-screening.
+        </div>
+
+        <h3 data-editable-id="p8-h3-1" contenteditable="true">Drop-Off Bay Management</h3>
+        <p data-editable-id="p8-p2" contenteditable="true">
+          Four dedicated docking bays operate simultaneously outside DTSP. Upon stopping, bus doors open immediately. Empty buses pull forward and begin the return loop to DUP without waiting for trailing vehicles.
+        </p>
+
+        <div class="table-custom table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Docking Bay</th>
+                <th>Vehicle Type</th>
+                <th>Target Disembark Time</th>
+                <th>Discharge Route</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bay 1 (North)</td>
+                <td>Coach (65–80 pax effective)</td>
+                <td>Conservative ~180 s baseline</td>
+                <td>Direct egress to Jalan Universiti</td>
+              </tr>
+              <tr>
+                <td>Bay 2 (Center-North)</td>
+                <td>Coach (65–80 pax effective)</td>
+                <td>Conservative ~180 s baseline</td>
+                <td>Direct egress to Jalan Universiti</td>
+              </tr>
+              <tr>
+                <td>Bay 3 (Center-South)</td>
+                <td>Electric (Capacity unmeasured)</td>
+                <td>Conservative baseline pending trial</td>
+                <td>Turnaround via Roundabout</td>
+              </tr>
+              <tr>
+                <td>Bay 4 (South)</td>
+                <td>Electric (Capacity unmeasured)</td>
+                <td>Conservative baseline pending trial</td>
+                <td>Turnaround via Roundabout</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 data-editable-id="p8-h3-2" contenteditable="true">Pedestrian Safety Measures</h3>
+        <p data-editable-id="p8-p3" contenteditable="true">
+          Physical barriers isolate bus movement lanes from disembarking passenger footpaths. PPSL ushers guide students immediately onto the covered concourse toward DTSP entrance portals.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 8 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 9: DTSP Main Hall & Dewan Budaya G03 Seating (Diagram 7) -->
+    <section class="page a4-sheet" id="page-9">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 9 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p9-h2-1" contenteditable="true">10. Venue Capacities: DTSP &amp; G03 Overflow</h2>
+        <p data-editable-id="p9-p1" contenteditable="true">
+          DTSP full-hall capacity is confirmed at ~3,000 seats. Dewan Budaya G03 serves as the official active secondary overflow venue, providing ~500 seats. Pre-DTSP wait occurs in a nearby lecture hall, never along Jalan Perpustakaan.
+        </p>
+
+        <div class="diagram-box">
+          <!-- DIAGRAM 7: DTSP & Dewan Budaya G03 Venue Allocation -->
+          <svg viewBox="0 0 700 240" class="diagram-svg" aria-label="DTSP and Dewan Budaya G03 Layout Diagram">
+            <!-- DTSP Main Hall Container -->
+            <rect x="30" y="20" width="380" height="190" rx="10" fill="#f8fafc" stroke="#2563eb" stroke-width="2"/>
+            <text x="220" y="45" text-anchor="middle" font-weight="bold" fill="#1e3a8a" font-size="14">Dewan Tuanku Syed Putra (DTSP)</text>
+            <text x="220" y="65" text-anchor="middle" fill="#1d4ed8" font-size="11">Total Full-Hall Capacity: ~3,000 Seats</text>
+
+            <!-- Kawsar Floor vs Balcony -->
+            <rect x="50" y="80" width="340" height="65" rx="6" fill="#dbeafe" stroke="#3b82f6" stroke-width="1.5"/>
+            <text x="220" y="108" text-anchor="middle" font-weight="bold" fill="#1e40af" font-size="12">Kawsar Main Floor (1,338 Seats)</text>
+            <text x="220" y="128" text-anchor="middle" fill="#1e3a8a" font-size="10">Primary student cohort seating</text>
+
+            <rect x="50" y="155" width="340" height="40" rx="6" fill="#e0e7ff" stroke="#6366f1" stroke-width="1"/>
+            <text x="220" y="180" text-anchor="middle" fill="#3730a3" font-size="11">Upper Tier &amp; Balcony Seating (~1,662 Seats)</text>
+
+            <!-- Pre-Wait Lecture Hall -->
+            <rect x="440" y="20" width="230" height="85" rx="8" fill="#fef3c7" stroke="#d97706" stroke-width="1.5"/>
+            <text x="555" y="45" text-anchor="middle" font-weight="bold" fill="#92400e" font-size="12">Pre-DTSP Waiting Hall</text>
+            <text x="555" y="65" text-anchor="middle" fill="#b45309" font-size="10">Adjacent Lecture Hall (Sheltered)</text>
+            <text x="555" y="82" text-anchor="middle" fill="#78350f" font-size="9">(Not Jalan Perpustakaan &bull; Not G03)</text>
+
+            <!-- G03 Overflow Venue -->
+            <rect x="440" y="125" width="230" height="85" rx="8" fill="#ecfdf5" stroke="#059669" stroke-width="2"/>
+            <text x="555" y="150" text-anchor="middle" font-weight="bold" fill="#065f46" font-size="12">Dewan Budaya G03 (Overflow)</text>
+            <text x="555" y="170" text-anchor="middle" fill="#047857" font-size="11">Capacity: ~500 Seats</text>
+            <text x="555" y="188" text-anchor="middle" fill="#064e3b" font-size="9">Authorized Secondary Venue</text>
+          </svg>
+          <div class="diagram-caption">Figure 7: Venue Layout: DTSP Full Hall (3,000 seats), Pre-Wait Hall, and G03 Overflow (500 seats).</div>
+        </div>
+
+        <h3 data-editable-id="p9-h3-1" contenteditable="true">Overflow Trigger Protocol</h3>
+        <p data-editable-id="p9-p2" contenteditable="true">
+          Assignment of cohorts to DTSP versus Dewan Budaya G03 must be fixed pre-event from verified attendance and confirmed venue capacities, and changed only by the named command lead. Dewan Budaya G03 (~500 seats) serves as an active authorized destination.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 9 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 10: Master Operational Timeline Schedule (Diagram 8) -->
+    <section class="page a4-sheet" id="page-10">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 10 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p10-h2-1" contenteditable="true">11. Master Timeline &amp; Milestone Schedule</h2>
+        <p data-editable-id="p10-p1" contenteditable="true">
+          Operations initiate at 06:00:00 (t=0). Total attendance remains unresolved; the operational hard gate requires every assigned student to be seated before default 09:00:00, with detailed dispatch clocks established after rehearsal.
+        </p>
+
+        <div class="diagram-box">
+          <!-- DIAGRAM 8: Master Operational Timeline Schedule -->
+          <svg viewBox="0 0 700 240" class="diagram-svg" aria-label="Master Operational Timeline Schedule Diagram">
+            <!-- Timeline Line -->
+            <line x1="50" y1="120" x2="650" y2="120" stroke="#475569" stroke-width="3"/>
+
+            <!-- Milestones -->
+            <!-- 05:30 -->
+            <circle cx="80" cy="120" r="8" fill="#3b82f6"/>
+            <text x="80" y="95" text-anchor="middle" font-weight="bold" fill="#1e40af" font-size="11">05:30:00</text>
+            <text x="80" y="150" text-anchor="middle" fill="#334155" font-size="10">PPSL Briefing</text>
+            <text x="80" y="165" text-anchor="middle" fill="#64748b" font-size="9">Station Deploy</text>
+
+            <!-- 06:00 (t=0) -->
+            <circle cx="200" cy="120" r="10" fill="#ef4444"/>
+            <text x="200" y="90" text-anchor="middle" font-weight="bold" fill="#b91c1c" font-size="12">06:00:00 (t=0)</text>
+            <text x="200" y="150" text-anchor="middle" font-weight="bold" fill="#0f172a" font-size="10">Hostel Release</text>
+            <text x="200" y="165" text-anchor="middle" fill="#334155" font-size="9">Tekun/Saujana Wave 1</text>
+            <text x="200" y="178" text-anchor="middle" fill="#b45309" font-size="9">Restu Holds Cafe</text>
+
+            <!-- 06:40 -->
+            <circle cx="340" cy="120" r="8" fill="#f59e0b"/>
+            <text x="340" y="95" text-anchor="middle" font-weight="bold" fill="#92400e" font-size="11">06:40:00</text>
+            <text x="340" y="150" text-anchor="middle" fill="#334155" font-size="10">Restu Release</text>
+            <text x="340" y="165" text-anchor="middle" fill="#64748b" font-size="9">Continuous 8-bus loop</text>
+
+            <!-- 07:45 -->
+            <circle cx="480" cy="120" r="8" fill="#10b981"/>
+            <text x="480" y="95" text-anchor="middle" font-weight="bold" fill="#065f46" font-size="11">07:45:00</text>
+            <text x="480" y="150" text-anchor="middle" fill="#334155" font-size="10">Transit Complete</text>
+            <text x="480" y="165" text-anchor="middle" fill="#64748b" font-size="9">DTSP Capacity Reached</text>
+
+            <!-- 09:00 Hard Gate -->
+            <circle cx="610" cy="120" r="8" fill="#8b5cf6"/>
+            <text x="610" y="95" text-anchor="middle" font-weight="bold" fill="#5b21b6" font-size="11">09:00:00</text>
+            <text x="610" y="150" text-anchor="middle" font-weight="bold" fill="#0f172a" font-size="10">Hard Gate (09:00:00)</text>
+            <text x="610" y="165" text-anchor="middle" fill="#64748b" font-size="9">All Assigned Students Seated</text>
+          </svg>
+          <div class="diagram-caption">Figure 8: Master Operational Execution Timeline from t=0 (06:00:00) through Ceremony Launch.</div>
+        </div>
+
+        <h3 data-editable-id="p10-h3-1" contenteditable="true">Pacing Milestones</h3>
+        <p data-editable-id="p10-p2" contenteditable="true">
+          Intermediate pacing milestones are candidate targets. Dispatch intervals and pacing will be calibrated during operational rehearsal to guarantee all students are seated before the 09:00:00 hard gate.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 10 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 11: Contingency Protocols & Risk Matrix -->
+    <section class="page a4-sheet" id="page-11">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 11 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p11-h2-1" contenteditable="true">12. Risk Management &amp; Contingency Protocols</h2>
+        <p data-editable-id="p11-p1" contenteditable="true">
+          Operational resilience requires predetermined countermeasures for inclement weather, vehicle mechanical failure, and venue capacity overflows.
+        </p>
+
+        <div class="table-custom table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Risk Event</th>
+                <th>Probability &amp; Impact</th>
+                <th>Prescribed Action Protocol</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Heavy Tropical Rain</td>
+                <td>High Prob &bull; Med Impact</td>
+                <td>Activate covered walkway pathways. Restu students remain sheltered in Restu cafe until buses dock at covered canopy.</td>
+              </tr>
+              <tr>
+                <td>Vehicle Breakdown (1 Bus)</td>
+                <td>Med Prob &bull; High Impact</td>
+                <td>Remaining 7 buses accelerate loop cycle. Headway interval adjusts from 2.5 min to 3.0 min. Do not add external vehicles.</td>
+              </tr>
+              <tr>
+                <td>DTSP Full Capacity (3,000)</td>
+                <td>High Prob &bull; Med Impact</td>
+                <td>Immediately divert remaining arriving buses to Dewan Budaya G03 (500 seats). Station Charlie PPSL activates video stream link.</td>
+              </tr>
+              <tr>
+                <td>Drop-Off Concourse Surge</td>
+                <td>Med Prob &bull; High Impact</td>
+                <td>Direct disembarked students into the pre-wait lecture hall rather than holding on Jalan Perpustakaan road margins.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 data-editable-id="p11-h3-1" contenteditable="true">Communication Failsafe</h3>
+        <p data-editable-id="p11-p2" contenteditable="true">
+          If radio frequency interference occurs, PPSL leaders communicate via encrypted cellular mobile group channels with designated backup runners stationed at each terminal.
+        </p>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 11 of 12</span>
+      </footer>
+    </section>
+
+    <!-- PAGE 12: Approvals, Sign-off & Appendix -->
+    <section class="page a4-sheet" id="page-12">
+      <header class="sheet-header">
+        <span>Universiti Sains Malaysia &bull; Orientation Transit Operations</span>
+        <span>Page 12 of 12</span>
+      </header>
+      <div class="sheet-content">
+        <h2 data-editable-id="p12-h2-1" contenteditable="true">13. Governance, Sign-Off &amp; Approvals</h2>
+        <p data-editable-id="p12-p1" contenteditable="true">
+          This document represents a candidate proposal submitted for simulation evaluation and field validation. Fleet configuration is fixed at 8 buses (5 coach, 3 electric).
+        </p>
+
+        <div class="callout callout-info" data-editable-id="p12-callout" contenteditable="true">
+          <strong>Candidate Proposal Status:</strong> Under review pending simulation and field validation. Operating parameters must be verified prior to final event approval.
+        </div>
+
+        <div style="margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div style="border-top: 1px solid #94a3b8; padding-top: 6px;">
+            <p style="margin: 0; font-weight: bold;" data-editable-id="p12-sign1-name" contenteditable="true">Director of Student Affairs (BHEPA)</p>
+            <p style="margin: 2px 0; font-size: 10px; color: #64748b;">Universiti Sains Malaysia</p>
+            <p style="margin: 2px 0; font-size: 9px; color: #94a3b8;">Date: 24 September 2026</p>
+          </div>
+          <div style="border-top: 1px solid #94a3b8; padding-top: 6px;">
+            <p style="margin: 0; font-weight: bold;" data-editable-id="p12-sign2-name" contenteditable="true">Head of Security &amp; Transit Division (Jabatan Keselamatan)</p>
+            <p style="margin: 2px 0; font-size: 10px; color: #64748b;">Universiti Sains Malaysia</p>
+            <p style="margin: 2px 0; font-size: 9px; color: #94a3b8;">Date: 24 September 2026</p>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 15px;" data-editable-id="p12-h3-prov" contenteditable="true">Provenance Legend</h3>
+        <div class="table-custom table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Data Category</th>
+                <th>Status</th>
+                <th>Source / Provenance</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Fleet &amp; Hostels</td>
+                <td>Confirmed</td>
+                <td>Fixed 8 buses (5 coach, 3 electric); 06:00 release; Tekun/Saujana first, Restu cafe holding.</td>
+              </tr>
+              <tr>
+                <td>Venues &amp; Staff</td>
+                <td>Confirmed</td>
+                <td>DTSP full hall ~3,000 seats; G03 ~500 overflow; 154 PPSL marshals; zero door checks at DTSP.</td>
+              </tr>
+              <tr>
+                <td>Transit Metrics</td>
+                <td>Candidate / Unmeasured</td>
+                <td>Schematic routes from repo coords; cycle times, speeds, and exact electric capacity pending validation.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 15px;" data-editable-id="p12-h3-unk" contenteditable="true">Operational Unknowns Register</h3>
+        <div class="table-custom table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Unknown Item</th>
+                <th>Owner</th>
+                <th>Measurement Plan</th>
+                <th>Operational Fallback</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Total Student Attendance</td>
+                <td>BHEPA / Hostels</td>
+                <td>Registration portal audit &amp; morning hostel departure headcounts</td>
+                <td>Fixed G03 allocation (~500 seats) for overflow cohorts</td>
+              </tr>
+              <tr>
+                <td>Round-Trip Cycle &amp; Speeds</td>
+                <td>Jabatan Keselamatan</td>
+                <td>Timed vehicle trial runs during orientation dry run</td>
+                <td>Conservative 180s dwell baseline with dynamic staging release</td>
+              </tr>
+              <tr>
+                <td>Radio Channel Allocation</td>
+                <td>PPSL Command</td>
+                <td>Technical radio check before orientation day</td>
+                <td>Designated runner messengers &amp; backup cellular groups</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h3 style="margin-top: 15px;" data-editable-id="p12-h3-1" contenteditable="true">Appendix: Document Revision History</h3>
+        <div class="table-custom table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Version</th>
+                <th>Date</th>
+                <th>Author</th>
+                <th>Summary of Adjustments</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>v1.0.0</td>
+                <td>2026-09-20</td>
+                <td>Transit Planning Unit</td>
+                <td>Initial draft operational scenario</td>
+              </tr>
+              <tr>
+                <td>v2.0.0</td>
+                <td>2026-09-22</td>
+                <td>Operations Review</td>
+                <td>Restu cafe holding &amp; priority Tekun/Saujana sequencing added</td>
+              </tr>
+              <tr>
+                <td>v2.1.0</td>
+                <td>2026-09-24</td>
+                <td>Abraham / Steering Lead</td>
+                <td>Locked 8-bus fleet &amp; confirmed DTSP 3,000 / G03 500 capacity</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <footer class="sheet-footer">
+        <span>Confidential &bull; Universiti Sains Malaysia</span>
+        <span>Page 12 of 12</span>
+      </footer>
+    </section>
+
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

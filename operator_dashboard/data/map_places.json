@@ -1,0 +1,143 @@
+{
+  "source": "usm_sim/campus.py whole-campus places and verified waiting areas",
+  "coord_confidence": "high",
+  "coord_date": "2026-09-21",
+  "places": [
+    {
+      "id": "rst_overpass",
+      "label": "Jejantas Padang Kawad (Covered Overpass)",
+      "role": "overpass",
+      "latitude_deg": 5.356712,
+      "longitude_deg": 100.291946,
+      "status": "verified"
+    },
+    {
+      "id": "rst_bus_wait",
+      "label": "Shared RST bus wait",
+      "role": "road_reservoir",
+      "latitude_deg": 5.356036,
+      "longitude_deg": 100.293640,
+      "status": "estimated"
+    },
+    {
+      "id": "rst_boarding_approach",
+      "label": "Boarding berth",
+      "role": "boarding_berth",
+      "latitude_deg": 5.356012,
+      "longitude_deg": 100.293748,
+      "status": "estimated"
+    },
+    {
+      "id": "rst_rain_shelter",
+      "label": "Restu Cafe (M07) / RST rain shelter",
+      "role": "shelter",
+      "latitude_deg": 5.356461,
+      "longitude_deg": 100.289265,
+      "status": "verified"
+    },
+    {
+      "id": "restu_origin",
+      "label": "Restu Cafe (M07) Origin",
+      "role": "origin",
+      "latitude_deg": 5.356461,
+      "longitude_deg": 100.289265,
+      "status": "verified"
+    },
+    {
+      "id": "dtsp_alighting_area",
+      "label": "Bus drop-off at DTSP",
+      "role": "alighting",
+      "latitude_deg": 5.357215,
+      "longitude_deg": 100.301437,
+      "status": "estimated"
+    },
+    {
+      "id": "dtsp_exterior_gathering",
+      "label": "3-Tier Car Park Waiting Area (RST Bus Alightees Hold)",
+      "role": "road_reservoir",
+      "latitude_deg": 5.357153,
+      "longitude_deg": 100.301749,
+      "status": "verified"
+    },
+    {
+      "id": "dtsp_north_plaza",
+      "label": "Dataran Merah (Shaded Pavilion - Cahaya Gemilang & Bakti Fajar Hold)",
+      "role": "holding_plaza",
+      "latitude_deg": 5.356518,
+      "longitude_deg": 100.303214,
+      "status": "verified"
+    },
+    {
+      "id": "dtsp_south_plaza",
+      "label": "Grass Field in front of G28 Siswaniaga (Indah Kembara, Aman Damai & Fajar Harapan Hold)",
+      "role": "holding_plaza",
+      "latitude_deg": 5.356118,
+      "longitude_deg": 100.302400,
+      "status": "verified"
+    },
+    {
+      "id": "dtsp_walk_approach",
+      "label": "Walking approach to DTSP",
+      "role": "walk_approach",
+      "latitude_deg": 5.35700,
+      "longitude_deg": 100.30190,
+      "status": "estimated"
+    },
+    {
+      "id": "dtsp_door_a",
+      "label": "DTSP Door A (North / Bus Intake)",
+      "role": "door",
+      "latitude_deg": 5.35700,
+      "longitude_deg": 100.30280,
+      "status": "estimated"
+    },
+    {
+      "id": "dtsp_door_b",
+      "label": "DTSP Door B (South / Walkers Intake)",
+      "role": "door",
+      "latitude_deg": 5.35680,
+      "longitude_deg": 100.30300,
+      "status": "estimated"
+    },
+    {
+      "id": "dtsp_foyer",
+      "label": "Foyer Lobby",
+      "role": "foyer",
+      "latitude_deg": 5.35690,
+      "longitude_deg": 100.30305,
+      "status": "estimated"
+    },
+    {
+      "id": "dtsp_seating",
+      "label": "Main Hall Seats",
+      "role": "seats",
+      "latitude_deg": 5.35692,
+      "longitude_deg": 100.30308,
+      "status": "estimated"
+    },
+    {
+      "id": "dtsp_hall_reference",
+      "label": "DTSP hall",
+      "role": "hall",
+      "latitude_deg": 5.35692,
+      "longitude_deg": 100.30308,
+      "status": "estimated"
+    },
+    {
+      "id": "g03_foyer_entrance",
+      "label": "Bangunan G03 Foyer Entrance",
+      "role": "foyer",
+      "latitude_deg": 5.357119,
+      "longitude_deg": 100.302499,
+      "status": "verified"
+    },
+    {
+      "id": "g03_seating",
+      "label": "Bangunan G03 Overflow Seating (DK G/H)",
+      "role": "seats",
+      "latitude_deg": 5.357119,
+      "longitude_deg": 100.302499,
+      "status": "verified"
+    }
+  ]
+}

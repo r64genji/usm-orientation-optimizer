@@ -1,0 +1,1096 @@
+{
+  "fossgis_foot": {
+    "code": "Ok",
+    "routes": [
+      {
+        "index": 0,
+        "distance_m": 2370.9,
+        "duration_s": 1900.7,
+        "duration_min": 31.68,
+        "n_points": 103,
+        "min_dist_to_jejantas_m": 131.6,
+        "uses_jejantas_likely": false,
+        "steps": [
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "depart",
+            "modifier": "left",
+            "distance_m": 132.7,
+            "duration_s": 106.1
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "fork",
+            "modifier": "slight left",
+            "distance_m": 562.3,
+            "duration_s": 449.9
+          },
+          {
+            "name": "Jalan Bukit Gambir",
+            "mode": "walking",
+            "maneuver": "end of road",
+            "modifier": "left",
+            "distance_m": 137.2,
+            "duration_s": 109.7
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 18.8,
+            "duration_s": 15
+          },
+          {
+            "name": "Halaman Bukit Gambir",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 209.1,
+            "duration_s": 167.3
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 66.8,
+            "duration_s": 57.5
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 6.2,
+            "duration_s": 4.9
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 375.3,
+            "duration_s": 300.3
+          },
+          {
+            "name": "Jalan Damai",
+            "mode": "walking",
+            "maneuver": "end of road",
+            "modifier": "left",
+            "distance_m": 5.4,
+            "duration_s": 4.3
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 355.3,
+            "duration_s": 284.3
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 46.7,
+            "duration_s": 37.3
+          },
+          {
+            "name": "Persiaran Sains",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "straight",
+            "distance_m": 149,
+            "duration_s": 119.2
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 60.7,
+            "duration_s": 48.5
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 146.6,
+            "duration_s": 117.4
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 45,
+            "duration_s": 36
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 53.8,
+            "duration_s": 43
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "arrive",
+            "modifier": "right",
+            "distance_m": 0,
+            "duration_s": 0
+          }
+        ]
+      }
+    ]
+  },
+  "fossgis_bike": {
+    "code": "Ok",
+    "routes": [
+      {
+        "index": 0,
+        "distance_m": 2045.7,
+        "duration_s": 608.5,
+        "duration_min": 10.14,
+        "n_points": 96,
+        "min_dist_to_jejantas_m": 25.2,
+        "uses_jejantas_likely": false,
+        "steps": [
+          {
+            "name": "Halaman Bukit Gambir 9",
+            "mode": "cycling",
+            "maneuver": "depart",
+            "modifier": "left",
+            "distance_m": 45.2,
+            "duration_s": 15.2
+          },
+          {
+            "name": "",
+            "mode": "cycling",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 30.7,
+            "duration_s": 11.5
+          },
+          {
+            "name": "",
+            "mode": "cycling",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 103.5,
+            "duration_s": 29
+          },
+          {
+            "name": "Halaman Bukit Gambir 1",
+            "mode": "cycling",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 225.5,
+            "duration_s": 54.8
+          },
+          {
+            "name": "Halaman Bukit Gambir 1",
+            "mode": "cycling",
+            "maneuver": "continue",
+            "modifier": "slight left",
+            "distance_m": 87.2,
+            "duration_s": 24.8
+          },
+          {
+            "name": "Halaman Bukit Gambir",
+            "mode": "cycling",
+            "maneuver": "continue",
+            "modifier": "right",
+            "distance_m": 251.6,
+            "duration_s": 66.2
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "cycling",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 793.3,
+            "duration_s": 194.9
+          },
+          {
+            "name": "",
+            "mode": "cycling",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 46.7,
+            "duration_s": 12.7
+          },
+          {
+            "name": "Persiaran Sains",
+            "mode": "cycling",
+            "maneuver": "turn",
+            "modifier": "straight",
+            "distance_m": 149,
+            "duration_s": 38.5
+          },
+          {
+            "name": "",
+            "mode": "pushing bike",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 29.9,
+            "duration_s": 27.9
+          },
+          {
+            "name": "",
+            "mode": "cycling",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 242.2,
+            "duration_s": 108.6
+          },
+          {
+            "name": "",
+            "mode": "cycling",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 40.8,
+            "duration_s": 24.4
+          },
+          {
+            "name": "",
+            "mode": "cycling",
+            "maneuver": "arrive",
+            "modifier": "right",
+            "distance_m": 0,
+            "duration_s": 0
+          }
+        ]
+      }
+    ]
+  },
+  "project_osrm_foot": {
+    "code": "Ok",
+    "routes": [
+      {
+        "index": 0,
+        "distance_m": 1976.8,
+        "duration_s": 315,
+        "duration_min": 5.25,
+        "n_points": 112,
+        "min_dist_to_jejantas_m": 41.5,
+        "uses_jejantas_likely": false,
+        "steps": [
+          {
+            "name": "Halaman Bukit Gambir 4",
+            "mode": "driving",
+            "maneuver": "depart",
+            "modifier": "right",
+            "distance_m": 492.7,
+            "duration_s": 79.3
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 849.6,
+            "duration_s": 126.4
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "end of road",
+            "modifier": "right",
+            "distance_m": 132.3,
+            "duration_s": 19.9
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "continue",
+            "modifier": "slight left",
+            "distance_m": 391.5,
+            "duration_s": 62.7
+          },
+          {
+            "name": "Jalan Perpustakaan",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 92.1,
+            "duration_s": 22.2
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 18.6,
+            "duration_s": 4.5
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "arrive",
+            "modifier": "left",
+            "distance_m": 0,
+            "duration_s": 0
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "distance_m": 2817.6,
+        "duration_s": 316.2,
+        "duration_min": 5.27,
+        "n_points": 153,
+        "min_dist_to_jejantas_m": 41.5,
+        "uses_jejantas_likely": false,
+        "steps": [
+          {
+            "name": "Halaman Bukit Gambir 4",
+            "mode": "driving",
+            "maneuver": "depart",
+            "modifier": "right",
+            "distance_m": 492.7,
+            "duration_s": 79.3
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 16.9,
+            "duration_s": 2.6
+          },
+          {
+            "name": "Jalan Bukit Gambir",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 428,
+            "duration_s": 37.1
+          },
+          {
+            "name": "Jalan Pekaka 1",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 544,
+            "duration_s": 39.4
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 82.9,
+            "duration_s": 10.1
+          },
+          {
+            "name": "Jalan Sungai Dua",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 721.5,
+            "duration_s": 53
+          },
+          {
+            "name": "Jalan Masjid",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 197.3,
+            "duration_s": 28.6
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "end of road",
+            "modifier": "right",
+            "distance_m": 223.6,
+            "duration_s": 39.4
+          },
+          {
+            "name": "Jalan Perpustakaan",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 92.1,
+            "duration_s": 22.2
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 18.6,
+            "duration_s": 4.5
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "arrive",
+            "modifier": "left",
+            "distance_m": 0,
+            "duration_s": 0
+          }
+        ]
+      }
+    ]
+  },
+  "project_osrm_driving": {
+    "code": "Ok",
+    "routes": [
+      {
+        "index": 0,
+        "distance_m": 1976.8,
+        "duration_s": 315,
+        "duration_min": 5.25,
+        "n_points": 112,
+        "min_dist_to_jejantas_m": 41.5,
+        "uses_jejantas_likely": false,
+        "steps": [
+          {
+            "name": "Halaman Bukit Gambir 4",
+            "mode": "driving",
+            "maneuver": "depart",
+            "modifier": "right",
+            "distance_m": 492.7,
+            "duration_s": 79.3
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 849.6,
+            "duration_s": 126.4
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "end of road",
+            "modifier": "right",
+            "distance_m": 132.3,
+            "duration_s": 19.9
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "continue",
+            "modifier": "slight left",
+            "distance_m": 391.5,
+            "duration_s": 62.7
+          },
+          {
+            "name": "Jalan Perpustakaan",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 92.1,
+            "duration_s": 22.2
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 18.6,
+            "duration_s": 4.5
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "arrive",
+            "modifier": "left",
+            "distance_m": 0,
+            "duration_s": 0
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "distance_m": 2817.6,
+        "duration_s": 316.2,
+        "duration_min": 5.27,
+        "n_points": 153,
+        "min_dist_to_jejantas_m": 41.5,
+        "uses_jejantas_likely": false,
+        "steps": [
+          {
+            "name": "Halaman Bukit Gambir 4",
+            "mode": "driving",
+            "maneuver": "depart",
+            "modifier": "right",
+            "distance_m": 492.7,
+            "duration_s": 79.3
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 16.9,
+            "duration_s": 2.6
+          },
+          {
+            "name": "Jalan Bukit Gambir",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 428,
+            "duration_s": 37.1
+          },
+          {
+            "name": "Jalan Pekaka 1",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 544,
+            "duration_s": 39.4
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 82.9,
+            "duration_s": 10.1
+          },
+          {
+            "name": "Jalan Sungai Dua",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 721.5,
+            "duration_s": 53
+          },
+          {
+            "name": "Jalan Masjid",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 197.3,
+            "duration_s": 28.6
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "driving",
+            "maneuver": "end of road",
+            "modifier": "right",
+            "distance_m": 223.6,
+            "duration_s": 39.4
+          },
+          {
+            "name": "Jalan Perpustakaan",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 92.1,
+            "duration_s": 22.2
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 18.6,
+            "duration_s": 4.5
+          },
+          {
+            "name": "",
+            "mode": "driving",
+            "maneuver": "arrive",
+            "modifier": "left",
+            "distance_m": 0,
+            "duration_s": 0
+          }
+        ]
+      }
+    ]
+  },
+  "fossgis_foot_via_jejantas": {
+    "code": "Ok",
+    "routes": [
+      {
+        "index": 0,
+        "distance_m": 3120.4,
+        "duration_s": 2495.5,
+        "duration_min": 41.59,
+        "n_points": 138,
+        "min_dist_to_jejantas_m": 0.0,
+        "uses_jejantas_likely": true,
+        "steps": [
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "depart",
+            "modifier": "left",
+            "distance_m": 132.7,
+            "duration_s": 106.1
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "fork",
+            "modifier": "slight left",
+            "distance_m": 562.3,
+            "duration_s": 449.9
+          },
+          {
+            "name": "Jalan Bukit Gambir",
+            "mode": "walking",
+            "maneuver": "end of road",
+            "modifier": "left",
+            "distance_m": 137.2,
+            "duration_s": 109.7
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 18.8,
+            "duration_s": 15
+          },
+          {
+            "name": "Halaman Bukit Gambir",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 209.1,
+            "duration_s": 167.3
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "slight right",
+            "distance_m": 6.1,
+            "duration_s": 4.9
+          },
+          {
+            "name": "Halaman Bukit Gambir",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 6.1,
+            "duration_s": 4.8
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "sharp right",
+            "distance_m": 29,
+            "duration_s": 23
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 256.1,
+            "duration_s": 205
+          },
+          {
+            "name": "Jalan Indah Kembara",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 62.2,
+            "duration_s": 49.8
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 19.7,
+            "duration_s": 15.7
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 182.3,
+            "duration_s": 145.7
+          },
+          {
+            "name": "Jalan Dewan",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 40.6,
+            "duration_s": 32.5
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 58.2,
+            "duration_s": 46.4
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "arrive",
+            "modifier": null,
+            "distance_m": 0,
+            "duration_s": 0
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "depart",
+            "modifier": null,
+            "distance_m": 58.2,
+            "duration_s": 46.4
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 40.6,
+            "duration_s": 32.5
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 182.3,
+            "duration_s": 145.7
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 19.7,
+            "duration_s": 15.7
+          },
+          {
+            "name": "Jalan Indah Kembara",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 25,
+            "duration_s": 20
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 6.4,
+            "duration_s": 5.2
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 37.2,
+            "duration_s": 29.8
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 164,
+            "duration_s": 131.2
+          },
+          {
+            "name": "Jalan Damai",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 9.4,
+            "duration_s": 7.5
+          },
+          {
+            "name": "Jalan Universiti",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 355.3,
+            "duration_s": 284.3
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "slight left",
+            "distance_m": 46.7,
+            "duration_s": 37.3
+          },
+          {
+            "name": "Persiaran Sains",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "straight",
+            "distance_m": 149,
+            "duration_s": 119.2
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 60.7,
+            "duration_s": 48.5
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 146.6,
+            "duration_s": 117.4
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "right",
+            "distance_m": 45,
+            "duration_s": 36
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "turn",
+            "modifier": "left",
+            "distance_m": 53.8,
+            "duration_s": 43
+          },
+          {
+            "name": "",
+            "mode": "walking",
+            "maneuver": "arrive",
+            "modifier": "right",
+            "distance_m": 0,
+            "duration_s": 0
+          }
+        ]
+      }
+    ]
+  },
+  "gps_bus_stage": {
+    "n": 186,
+    "length_m": 1078.1,
+    "start_latlon": [
+      5.3560136,
+      100.2936857
+    ],
+    "end_latlon": [
+      5.3576519,
+      100.3012763
+    ],
+    "min_dist_to_jejantas_m": 102.2,
+    "max_speed_raw": 9.609999656677246
+  },
+  "gps_restu_queue": {
+    "n": 2708,
+    "length_m": 750.8,
+    "start_latlon": [
+      5.3573438,
+      100.2903515
+    ],
+    "end_latlon": [
+      5.3560138,
+      100.2936852
+    ]
+  },
+  "comparisons": {
+    "osrm_foot_vs_gps_bus": {
+      "mean_m": 217.1,
+      "max_m": 589.0,
+      "n": 18
+    },
+    "osrm_drive_vs_gps_bus": {
+      "mean_m": 182.5,
+      "max_m": 461.1,
+      "n": 19
+    },
+    "osrm_foot_vs_osrm_drive": {
+      "mean_m": 139.6,
+      "max_m": 378.9,
+      "n": 18
+    },
+    "osrm_foot_via_vs_direct": {
+      "mean_m": 33.3,
+      "max_m": 129.3,
+      "n": 23
+    },
+    "osrm_foot_via_vs_gps_bus": {
+      "mean_m": 170.4,
+      "max_m": 589.0,
+      "n": 23
+    }
+  },
+  "osm_near_jejantas": [
+    {
+      "id": 1030376052,
+      "highway": "footway",
+      "bridge": "yes",
+      "layer": "1",
+      "name": null,
+      "foot": null,
+      "n": 2,
+      "first": {
+        "lat": 5.3564645,
+        "lon": 100.2926561
+      },
+      "last": {
+        "lat": 5.3564397,
+        "lon": 100.2930917
+      }
+    },
+    {
+      "id": 1030376052,
+      "highway": "footway",
+      "bridge": "yes",
+      "layer": "1",
+      "name": null,
+      "foot": null,
+      "n": 2,
+      "first": {
+        "lat": 5.3564645,
+        "lon": 100.2926561
+      },
+      "last": {
+        "lat": 5.3564397,
+        "lon": 100.2930917
+      }
+    },
+    {
+      "id": 1030376053,
+      "highway": "steps",
+      "bridge": null,
+      "layer": null,
+      "name": null,
+      "foot": null,
+      "n": 2,
+      "first": {
+        "lat": 5.3564645,
+        "lon": 100.2926561
+      },
+      "last": {
+        "lat": 5.3564697,
+        "lon": 100.2925642
+      }
+    },
+    {
+      "id": 1030376054,
+      "highway": "steps",
+      "bridge": null,
+      "layer": null,
+      "name": null,
+      "foot": null,
+      "n": 2,
+      "first": {
+        "lat": 5.3564397,
+        "lon": 100.2930917
+      },
+      "last": {
+        "lat": 5.3564322,
+        "lon": 100.2932233
+      }
+    },
+    {
+      "id": 1030376055,
+      "highway": "footway",
+      "bridge": null,
+      "layer": null,
+      "name": null,
+      "foot": null,
+      "n": 2,
+      "first": {
+        "lat": 5.3564322,
+        "lon": 100.2932233
+      },
+      "last": {
+        "lat": 5.3564272,
+        "lon": 100.2933114
+      }
+    },
+    {
+      "id": 1030376056,
+      "highway": "steps",
+      "bridge": null,
+      "layer": null,
+      "name": null,
+      "foot": null,
+      "n": 2,
+      "first": {
+        "lat": 5.3564272,
+        "lon": 100.2933114
+      },
+      "last": {
+        "lat": 5.3564223,
+        "lon": 100.2933979
+      }
+    },
+    {
+      "id": 1030376057,
+      "highway": "footway",
+      "bridge": null,
+      "layer": null,
+      "name": null,
+      "foot": null,
+      "n": 3,
+      "first": {
+        "lat": 5.3564697,
+        "lon": 100.2925642
+      },
+      "last": {
+        "lat": 5.3564134,
+        "lon": 100.292539
+      }
+    },
+    {
+      "id": 1030376058,
+      "highway": "footway",
+      "bridge": null,
+      "layer": null,
+      "name": null,
+      "foot": null,
+      "n": 4,
+      "first": {
+        "lat": 5.3564134,
+        "lon": 100.292539
+      },
+      "last": {
+        "lat": 5.3563527,
+        "lon": 100.2924948
+      }
+    },
+    {
+      "id": 1317248681,
+      "highway": "footway",
+      "bridge": null,
+      "layer": null,
+      "name": null,
+      "foot": null,
+      "n": 8,
+      "first": {
+        "lat": 5.3553023,
+        "lon": 100.2926464
+      },
+      "last": {
+        "lat": 5.3565033,
+        "lon": 100.2928398
+      }
+    }
+  ]
+}

@@ -1,0 +1,746 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "USM Orientation Movement Optimizer MVP Data Dictionary",
+  "version": "1.0.0",
+  "description": "Formal data contract defining required tables, schemas, source classifications, units, and validation rules for the discrete-event movement simulator and batch optimizer.",
+  "meta": {
+    "timezone": "Asia/Kuala_Lumpur",
+    "target_campus": "Universiti Sains Malaysia (USM) Main Campus, Gelugor, Pulau Pinang",
+    "source_enums": [
+      "measured",
+      "official",
+      "osrm",
+      "assumed"
+    ]
+  },
+  "tables": {
+    "places": {
+      "file_pattern": "data/network/places.csv",
+      "format": "csv",
+      "description": "Geographic locations, staging nodes, boarding zones, choke gates, and terminal event halls across USM campus.",
+      "fields": {
+        "place_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "Unique identifier for campus waypoint (e.g. 'place_restu_pavilion', 'place_dtsp_main_hall')."
+        },
+        "name": {
+          "type": "string",
+          "unit": "text",
+          "required": true,
+          "source": "official",
+          "description": "Human-readable official name of the building, pavilion, or junction."
+        },
+        "type": {
+          "type": "string",
+          "unit": "enum",
+          "required": true,
+          "source": "official",
+          "description": "Functional place classification: 'hostel', 'hall', 'bus_stop', 'bottleneck_junction', 'staging_reservoir', 'pedestrian_bridge'."
+        },
+        "lat": {
+          "type": "number",
+          "unit": "degrees",
+          "required": true,
+          "source": "measured",
+          "description": "WGS84 latitude coordinate in decimal degrees (EPSG:4326)."
+        },
+        "lon": {
+          "type": "number",
+          "unit": "degrees",
+          "required": true,
+          "source": "measured",
+          "description": "WGS84 longitude coordinate in decimal degrees (EPSG:4326)."
+        },
+        "elevation_m": {
+          "type": "number",
+          "unit": "meters",
+          "required": false,
+          "source": "osrm",
+          "description": "Elevation above sea level in meters."
+        },
+        "holding_capacity_pax": {
+          "type": "integer",
+          "unit": "persons",
+          "required": true,
+          "source": "measured",
+          "description": "Maximum safe holding capacity before crowding spills onto active vehicular road lanes."
+        },
+        "is_shaded": {
+          "type": "boolean",
+          "unit": "boolean",
+          "required": true,
+          "source": "measured",
+          "description": "True if physical canopy, walkway roof, or building awning shields waiting students from sun and rain."
+        },
+        "seating_available": {
+          "type": "boolean",
+          "unit": "boolean",
+          "required": true,
+          "source": "measured",
+          "description": "True if fixed benches or auditorium seating exist at this waypoint."
+        },
+        "entry_gates_count": {
+          "type": "integer",
+          "unit": "lanes",
+          "required": false,
+          "source": "official",
+          "description": "Number of parallel doorway openings or admission inspection lanes active."
+        },
+        "service_rate_pax_min": {
+          "type": "number",
+          "unit": "persons_per_minute",
+          "required": false,
+          "source": "measured",
+          "description": "Measured or calibrated student throughput per minute across all active lanes."
+        }
+      }
+    },
+    "routes": {
+      "file_pattern": "data/network/routes.json",
+      "format": "geojson_or_json",
+      "description": "Directed transport and walking corridors between origins and destinations derived via OSM road geometry and OSRM routing.",
+      "fields": {
+        "route_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "osrm",
+          "description": "Unique route ID (e.g. 'route_restu_dtsp_walk_direct', 'route_restu_dtsp_bus_shuttle')."
+        },
+        "origin_place_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "Foreign key referencing places.place_id for trip start."
+        },
+        "destination_place_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "Foreign key referencing places.place_id for trip termination."
+        },
+        "mode": {
+          "type": "string",
+          "unit": "enum",
+          "required": true,
+          "source": "official",
+          "description": "Transit mode: 'walking' or 'bus_shuttle'."
+        },
+        "distance_m": {
+          "type": "number",
+          "unit": "meters",
+          "required": true,
+          "source": "osrm",
+          "description": "Total route network distance calculated along physical paths/roads."
+        },
+        "expected_duration_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "osrm",
+          "description": "Free-flow baseline travel duration with zero queue congestion."
+        },
+        "free_flow_speed_kmh": {
+          "type": "number",
+          "unit": "km_per_h",
+          "required": true,
+          "source": "osrm",
+          "description": "Unimpeded transit speed (e.g. 4.8 km/h walking, 30.0 km/h bus in-motion)."
+        },
+        "elevation_gain_m": {
+          "type": "number",
+          "unit": "meters",
+          "required": false,
+          "source": "osrm",
+          "description": "Cumulative elevation climbing meters along the route."
+        },
+        "narrow_chokepoints_count": {
+          "type": "integer",
+          "unit": "count",
+          "required": true,
+          "source": "measured",
+          "description": "Number of bottlenecks (elevated walkway stairs, single-file curbs, unpaved shoulders) along route."
+        },
+        "is_pedestrian_segregated": {
+          "type": "boolean",
+          "unit": "boolean",
+          "required": true,
+          "source": "measured",
+          "description": "True if students walk on grade-separated sidewalks rather than vehicular road shoulders."
+        },
+        "waypoints_geojson": {
+          "type": "object",
+          "unit": "geojson_geometry",
+          "required": true,
+          "source": "osrm",
+          "description": "GeoJSON LineString containing ordered [lon, lat] coordinates."
+        }
+      }
+    },
+    "hostels_and_batches": {
+      "file_pattern": "data/cohorts/hostels_batches.csv",
+      "format": "csv",
+      "description": "Desasiswa accommodation complexes, cohort demand allocations, and scheduled batch release groups.",
+      "fields": {
+        "hostel_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "Unique hostel code (e.g. 'desasiswa_restu', 'desasiswa_saujana', 'desasiswa_tekun')."
+        },
+        "hostel_name": {
+          "type": "string",
+          "unit": "text",
+          "required": true,
+          "source": "official",
+          "description": "Official USM Desasiswa title."
+        },
+        "cluster": {
+          "type": "string",
+          "unit": "text",
+          "required": false,
+          "source": "official",
+          "description": "Hostel grouping identifier (e.g. 'RST' for Restu-Saujana-Tekun cluster)."
+        },
+        "total_freshmen_pax": {
+          "type": "integer",
+          "unit": "persons",
+          "required": true,
+          "source": "official",
+          "description": "Verified number of new orientation students resident in this hostel."
+        },
+        "batch_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "assumed",
+          "description": "Batch designation token (e.g. 'BATCH_RESTU_01')."
+        },
+        "batch_size_pax": {
+          "type": "integer",
+          "unit": "persons",
+          "required": true,
+          "source": "assumed",
+          "description": "Target number of students grouped in this release wave (e.g. 40-50 pax for bus, 100 pax for walking platoon)."
+        },
+        "scheduled_departure_time": {
+          "type": "string",
+          "unit": "iso_time",
+          "required": true,
+          "source": "assumed",
+          "description": "Scheduled departure time from hostel staging area (HH:MM:SS in Asia/Kuala_Lumpur)."
+        },
+        "assigned_route_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "assumed",
+          "description": "Foreign key referencing routes.route_id."
+        },
+        "assigned_mode": {
+          "type": "string",
+          "unit": "enum",
+          "required": true,
+          "source": "assumed",
+          "description": "'walking' or 'bus_shuttle'."
+        },
+        "destination_place_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "Target hall destination (e.g. 'place_dtsp_main_hall')."
+        },
+        "target_arrival_time": {
+          "type": "string",
+          "unit": "iso_time",
+          "required": true,
+          "source": "official",
+          "description": "Mandatory orientation seated check-in deadline (HH:MM:SS in Asia/Kuala_Lumpur)."
+        }
+      }
+    },
+    "workers_and_stations": {
+      "file_pattern": "data/operations/worker_stations.csv",
+      "format": "csv",
+      "description": "PPSL (Pembimbing Program Siswa Lestari) facilitators and marshal checkpoints regulating batch departures, crosswalk safety, and hall admissions.",
+      "fields": {
+        "station_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "assumed",
+          "description": "Unique marshal checkpoint ID (e.g. 'stn_restu_bus_stop', 'stn_dtsp_curb_reservoir', 'stn_dtsp_north_door')."
+        },
+        "place_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "Foreign key referencing places.place_id."
+        },
+        "name": {
+          "type": "string",
+          "unit": "text",
+          "required": true,
+          "source": "official",
+          "description": "Descriptive marshal station post name."
+        },
+        "role": {
+          "type": "string",
+          "unit": "enum",
+          "required": true,
+          "source": "official",
+          "description": "Operational duties: 'batch_headcount', 'bus_boarding_metering', 'crosswalk_traffic_control', 'hall_entry_admission', 'reservoir_flow_hold'."
+        },
+        "priority_rank": {
+          "type": "integer",
+          "unit": "ordinal_rank",
+          "required": true,
+          "source": "assumed",
+          "description": "1-indexed priority ranking for staff assignment when marshal resources are constrained."
+        },
+        "required_headcount_ppsl": {
+          "type": "integer",
+          "unit": "persons",
+          "required": true,
+          "source": "assumed",
+          "description": "Number of PPSL marshals required to operate this station effectively."
+        },
+        "service_capacity_pax_min": {
+          "type": "number",
+          "unit": "persons_per_minute",
+          "required": true,
+          "source": "measured",
+          "description": "Maximum student processing rate across station boundary before upstream queue forms."
+        },
+        "headcount_delay_s_per_batch": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Time overhead penalty spent taking nominal roll or verifying batch counts before clearing movement."
+        },
+        "has_radio_link": {
+          "type": "boolean",
+          "unit": "boolean",
+          "required": true,
+          "source": "measured",
+          "description": "True if station possesses walkie-talkie link for upstream pause throttling."
+        }
+      }
+    },
+    "vehicles": {
+      "file_pattern": "data/operations/vehicles.csv",
+      "format": "csv",
+      "description": "USM campus transit shuttle coach fleet capacity, cycle times, and boarding dynamics.",
+      "fields": {
+        "vehicle_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "Bus registration or fleet unit identifier."
+        },
+        "vehicle_type": {
+          "type": "string",
+          "unit": "enum",
+          "required": true,
+          "source": "official",
+          "description": "Type of vehicle: 'coach_bus', 'coaster_minibus', 'commuter_van'."
+        },
+        "seated_capacity_pax": {
+          "type": "integer",
+          "unit": "seats",
+          "required": true,
+          "source": "official",
+          "description": "Total passenger seating capacity (44 seats verified on USM standard coach)."
+        },
+        "standing_capacity_pax": {
+          "type": "integer",
+          "unit": "passengers",
+          "required": true,
+          "source": "official",
+          "description": "Permitted standees (0 for orientation long-distance coach SOP)."
+        },
+        "boarding_time_s_per_pax": {
+          "type": "number",
+          "unit": "seconds_per_passenger",
+          "required": true,
+          "source": "measured",
+          "description": "Measured dwell time per boarding student through single front door (calibrated at 2.5s)."
+        },
+        "alighting_time_s_per_pax": {
+          "type": "number",
+          "unit": "seconds_per_passenger",
+          "required": true,
+          "source": "measured",
+          "description": "Measured discharge time per alighting passenger at destination stop (calibrated at 1.2s)."
+        },
+        "active_fleet_size": {
+          "type": "integer",
+          "unit": "vehicles",
+          "required": true,
+          "source": "official",
+          "description": "Number of operating shuttle buses dedicated to the specific hostel route."
+        },
+        "round_trip_cycle_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Total round trip duration including transit out, dropoff, return leg, and layover."
+        }
+      }
+    },
+    "observed_traces": {
+      "file_pattern": "data/observations/observed_traces.jsonl",
+      "format": "jsonl",
+      "description": "Empirical field records combining timestamped GPS fixes, pedometer counts, motion states, and video-derived queue metrics.",
+      "fields": {
+        "trace_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "measured",
+          "description": "Unique identifier for the recording session."
+        },
+        "subject_hash": {
+          "type": "string",
+          "unit": "hash",
+          "required": true,
+          "source": "measured",
+          "description": "Pseudonymous SHA-256 hash of device/student ID to ensure zero PII in public git."
+        },
+        "timestamp_iso": {
+          "type": "string",
+          "unit": "iso_8601",
+          "required": true,
+          "source": "measured",
+          "description": "Exact observation timestamp formatted as YYYY-MM-DDTHH:MM:SS+08:00 (Asia/Kuala_Lumpur)."
+        },
+        "lat": {
+          "type": "number",
+          "unit": "degrees",
+          "required": true,
+          "source": "measured",
+          "description": "WGS84 latitude from mobile GNSS."
+        },
+        "lon": {
+          "type": "number",
+          "unit": "degrees",
+          "required": true,
+          "source": "measured",
+          "description": "WGS84 longitude from mobile GNSS."
+        },
+        "speed_kmh": {
+          "type": "number",
+          "unit": "km_per_h",
+          "required": true,
+          "source": "measured",
+          "description": "Instantaneous ground speed in km/h."
+        },
+        "horizontal_accuracy_m": {
+          "type": "number",
+          "unit": "meters",
+          "required": true,
+          "source": "measured",
+          "description": "Reported GNSS horizontal accuracy radius (records with >25m discarded for queue analysis)."
+        },
+        "activity_mode": {
+          "type": "string",
+          "unit": "enum",
+          "required": true,
+          "source": "measured",
+          "description": "Core physical state: 'stationary', 'walking', 'automotive', 'unknown'."
+        },
+        "cumulative_steps": {
+          "type": "integer",
+          "unit": "steps",
+          "required": false,
+          "source": "measured",
+          "description": "Cumulative pedometer steps since recording origin."
+        },
+        "media_clip_ref": {
+          "type": "string",
+          "unit": "filename",
+          "required": false,
+          "source": "measured",
+          "description": "Associated timestamped video/image file if visual verification was captured at this fix."
+        },
+        "visible_headcount_min": {
+          "type": "integer",
+          "unit": "persons",
+          "required": false,
+          "source": "measured",
+          "description": "Lower bound of visible students in frame (calibrated field-of-view sample only, not a census)."
+        },
+        "visible_headcount_max": {
+          "type": "integer",
+          "unit": "persons",
+          "required": false,
+          "source": "measured",
+          "description": "Upper bound of visible students in frame."
+        },
+        "queue_density_pax_m2": {
+          "type": "number",
+          "unit": "persons_per_m2",
+          "required": false,
+          "source": "measured",
+          "description": "Estimated local spatial density (e.g. 0.5 for loose column, 3.5 for compacted road reservoir)."
+        },
+        "flow_state": {
+          "type": "string",
+          "unit": "enum",
+          "required": false,
+          "source": "measured",
+          "description": "Local dynamic condition: 'static_standstill', 'crawl_advance', 'steady_walk', 'in_vehicle_transit'."
+        }
+      }
+    },
+    "baseline_run": {
+      "file_pattern": "data/benchmarks/baseline_run.json",
+      "format": "json",
+      "description": "Locked empirical benchmark representing the unoptimized status-quo commute of 2026-09-17 against which candidate plans are tested.",
+      "fields": {
+        "baseline_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "measured",
+          "description": "Canonical benchmark ID (e.g. 'BASELINE_2026-09-17_RESTU_DTSP')."
+        },
+        "date": {
+          "type": "string",
+          "unit": "date",
+          "required": true,
+          "source": "measured",
+          "description": "Calendar date '2026-09-17'."
+        },
+        "origin_place_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "'place_desasiswa_restu'."
+        },
+        "destination_place_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "official",
+          "description": "'place_dtsp_main_hall'."
+        },
+        "total_door_to_seat_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Total elapsed time: 9,105.6 seconds (151.8 minutes)."
+        },
+        "active_commute_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Active commute duration outside hostel room: 3,546 seconds (59.1 minutes)."
+        },
+        "bus_ride_moving_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Actual in-vehicle transit time: 185 seconds (3.1 minutes)."
+        },
+        "hostel_bus_queue_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Stationary and crawl queue duration at Restu pavilion: 1,470 seconds (24.5 minutes)."
+        },
+        "exterior_dtsp_queue_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Stationary holding reservoir duration in open sun outside DTSP: 1,885 seconds (31.4 minutes)."
+        },
+        "total_queue_delay_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Sum of hostel queue and DTSP reservoir wait: 3,355 seconds (55.9 minutes)."
+        },
+        "idle_to_motion_ratio": {
+          "type": "number",
+          "unit": "ratio",
+          "required": true,
+          "source": "measured",
+          "description": "Calibrated idle-to-motion factor (9.27x during 07:34-08:37 active commute window)."
+        },
+        "effective_transit_speed_kmh": {
+          "type": "number",
+          "unit": "km_per_h",
+          "required": true,
+          "source": "measured",
+          "description": "Effective point-to-point velocity across commute: 0.58 km/h."
+        },
+        "peak_transit_speed_kmh": {
+          "type": "number",
+          "unit": "km_per_h",
+          "required": true,
+          "source": "measured",
+          "description": "Maximum recorded vehicle speed: 34.6 km/h."
+        },
+        "pax_sun_exposure_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "measured",
+          "description": "Duration spent queuing without overhead shade: 1,885 seconds (31.4 minutes)."
+        }
+      }
+    },
+    "candidate_plan": {
+      "file_pattern": "data/plans/candidate_plan_*.json",
+      "format": "json",
+      "description": "Optimization solution specifying staggered batch releases, mode splits, routing corridors, and prioritized PPSL worker posts.",
+      "fields": {
+        "plan_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "assumed",
+          "description": "Candidate optimization plan identifier (e.g. 'PLAN_OPT_2026_V1')."
+        },
+        "created_timestamp": {
+          "type": "string",
+          "unit": "iso_8601",
+          "required": true,
+          "source": "assumed",
+          "description": "Generation timestamp in Asia/Kuala_Lumpur."
+        },
+        "walking_modal_share_pct": {
+          "type": "number",
+          "unit": "percent",
+          "required": true,
+          "source": "assumed",
+          "description": "Percentage of total student cohort assigned to escorted walking platoons."
+        },
+        "shuttle_modal_share_pct": {
+          "type": "number",
+          "unit": "percent",
+          "required": true,
+          "source": "assumed",
+          "description": "Percentage of student cohort assigned to bus transit."
+        },
+        "batches": {
+          "type": "array",
+          "unit": "list_of_objects",
+          "required": true,
+          "source": "assumed",
+          "description": "List of dispatch instructions: [{batch_id, origin_id, departure_time, route_id, mode, pax_count}]."
+        },
+        "worker_station_allocations": {
+          "type": "array",
+          "unit": "list_of_objects",
+          "required": true,
+          "source": "assumed",
+          "description": "Ordered ranked deployment of PPSL staff: [{station_id, priority_rank, marshals_assigned, mandate}]."
+        }
+      }
+    },
+    "simulation_result": {
+      "file_pattern": "data/sim_results/sim_result_*.json",
+      "format": "json",
+      "description": "Evaluation metrics produced by running the discrete-event simulator on a candidate plan.",
+      "fields": {
+        "sim_run_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "assumed",
+          "description": "Unique simulation execution ID."
+        },
+        "evaluated_plan_id": {
+          "type": "string",
+          "unit": "id",
+          "required": true,
+          "source": "assumed",
+          "description": "Foreign key referencing candidate_plan.plan_id."
+        },
+        "total_students_simulated": {
+          "type": "integer",
+          "unit": "persons",
+          "required": true,
+          "source": "assumed",
+          "description": "Total students processed across simulation run."
+        },
+        "mean_door_to_seat_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "assumed",
+          "description": "Average duration from room departure to seated hall admission."
+        },
+        "p95_door_to_seat_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "assumed",
+          "description": "95th-percentile door-to-seat duration across cohort."
+        },
+        "total_queue_waiting_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "assumed",
+          "description": "Aggregate non-productive queue time per student."
+        },
+        "max_dtsp_exterior_reservoir_pax": {
+          "type": "integer",
+          "unit": "persons",
+          "required": true,
+          "source": "assumed",
+          "description": "Peak queue size outside DTSP entry gates (must remain below 120 pax threshold)."
+        },
+        "late_arrivals_count": {
+          "type": "integer",
+          "unit": "persons",
+          "required": true,
+          "source": "assumed",
+          "description": "Number of students seated after the official induction cutoff time."
+        },
+        "unshaded_exposure_mean_s": {
+          "type": "number",
+          "unit": "seconds",
+          "required": true,
+          "source": "assumed",
+          "description": "Average duration students were held in direct sunlight."
+        },
+        "queue_reduction_vs_baseline_pct": {
+          "type": "number",
+          "unit": "percent",
+          "required": true,
+          "source": "assumed",
+          "description": "Percentage reduction in idle queue waiting compared to baseline_run.total_queue_delay_s."
+        },
+        "bottleneck_alerts": {
+          "type": "array",
+          "unit": "list_of_strings",
+          "required": true,
+          "source": "assumed",
+          "description": "List of station choke warnings where arrival rate exceeded service capacity."
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,1590 @@
+{
+  "version": "1.0.0",
+  "description": "Deterministic physics-based routing and bottleneck analysis for USM Kampus Induk",
+  "matrix": [
+    {
+      "hostel_id": "aman_damai",
+      "variant": "accessible_step_free",
+      "distance_m": 1295.0,
+      "elev_drop_m": 0.0,
+      "column_walk_min": 29.2,
+      "window_min": [
+        27.7,
+        35.0
+      ],
+      "shaded_pct": 0.0,
+      "critical_capacity_pax_min": 120.0,
+      "primary_bottleneck": "None",
+      "is_measured": false
+    },
+    {
+      "hostel_id": "aman_damai",
+      "variant": "standard",
+      "distance_m": 1080.0,
+      "elev_drop_m": 0.0,
+      "column_walk_min": 24.9,
+      "window_min": [
+        23.6,
+        29.8
+      ],
+      "shaded_pct": 0.0,
+      "critical_capacity_pax_min": 90.0,
+      "primary_bottleneck": "Internal Residential Walkways between K Blocks",
+      "is_measured": false
+    },
+    {
+      "hostel_id": "bakti_fajar_permai",
+      "variant": "standard",
+      "distance_m": 615.0,
+      "elev_drop_m": 7.0,
+      "column_walk_min": 12.8,
+      "window_min": [
+        12.2,
+        15.4
+      ],
+      "shaded_pct": 89.4,
+      "critical_capacity_pax_min": 58.8,
+      "primary_bottleneck": "Chemical Sciences Terraced Stairs",
+      "is_measured": false
+    },
+    {
+      "hostel_id": "cahaya_gemilang",
+      "variant": "standard",
+      "distance_m": 650.0,
+      "elev_drop_m": 9.0,
+      "column_walk_min": 14.2,
+      "window_min": [
+        13.4,
+        17.0
+      ],
+      "shaded_pct": 54.6,
+      "critical_capacity_pax_min": 63.0,
+      "primary_bottleneck": "Dewan Kuliah Foyer Stairs",
+      "is_measured": false
+    },
+    {
+      "hostel_id": "fajar_harapan",
+      "variant": "standard",
+      "distance_m": 580.0,
+      "elev_drop_m": 7.0,
+      "column_walk_min": 13.2,
+      "window_min": [
+        12.6,
+        15.9
+      ],
+      "shaded_pct": 0.0,
+      "critical_capacity_pax_min": 50.4,
+      "primary_bottleneck": "Fajar Residential Terrace Steps to Eureka Path",
+      "is_measured": false
+    },
+    {
+      "hostel_id": "indah_kembara",
+      "variant": "standard",
+      "distance_m": 1090.0,
+      "elev_drop_m": 0.0,
+      "column_walk_min": 24.5,
+      "window_min": [
+        23.3,
+        29.5
+      ],
+      "shaded_pct": 16.5,
+      "critical_capacity_pax_min": 100.0,
+      "primary_bottleneck": "Junction Jabatan Keselamatan Crossing",
+      "is_measured": false
+    },
+    {
+      "hostel_id": "restu",
+      "variant": "standard",
+      "distance_m": 1770.0,
+      "elev_drop_m": 37.0,
+      "column_walk_min": 46.1,
+      "window_min": [
+        43.8,
+        55.3
+      ],
+      "shaded_pct": 4.0,
+      "critical_capacity_pax_min": 45.0,
+      "primary_bottleneck": "DUD (M08) to Jejantas Overpass (Road Shoulder)",
+      "is_measured": true
+    },
+    {
+      "hostel_id": "saujana",
+      "variant": "standard",
+      "distance_m": 1650.0,
+      "elev_drop_m": 34.0,
+      "column_walk_min": 41.5,
+      "window_min": [
+        39.5,
+        49.9
+      ],
+      "shaded_pct": 3.9,
+      "critical_capacity_pax_min": 45.0,
+      "primary_bottleneck": "Connecting Ridge Road to Jejantas Overpass",
+      "is_measured": false
+    },
+    {
+      "hostel_id": "tekun",
+      "variant": "standard",
+      "distance_m": 1655.0,
+      "elev_drop_m": 42.0,
+      "column_walk_min": 38.8,
+      "window_min": [
+        36.9,
+        46.6
+      ],
+      "shaded_pct": 0.0,
+      "critical_capacity_pax_min": 45.0,
+      "primary_bottleneck": "Ridge Stair Flight descending to Hub Padang Kawad",
+      "is_measured": false
+    }
+  ],
+  "routes": {
+    "restu:standard": {
+      "hostel_id": "restu",
+      "hostel_name": "Desasiswa Restu",
+      "variant": "standard",
+      "is_measured": true,
+      "measured_reference": "Sensor Logger 2026-09-17 trace + GPS Session 3 cafe origin",
+      "origin_coords": {
+        "lat": 5.356461,
+        "lon": 100.289265
+      },
+      "destination_id": "dtsp_exterior_gathering",
+      "destination_coords": {
+        "lat": 5.357153,
+        "lon": 100.301749
+      },
+      "metrics": {
+        "total_distance_m": 1770.0,
+        "elevation_gain_m": 9.0,
+        "elevation_loss_m": 37.0,
+        "shaded_distance_m": 70.0,
+        "shaded_percentage": 4.0,
+        "critical_flow_capacity_pax_min": 45.0,
+        "segment_count": 9
+      },
+      "timings": {
+        "free_flow_s": 1704,
+        "free_flow_min": 28.4,
+        "supervised_column_s": 2763,
+        "supervised_column_min": 46.1,
+        "congested_s": 4904,
+        "congested_min": 81.7,
+        "recommended_window_s": [
+          2625,
+          3316
+        ],
+        "recommended_window_min": [
+          43.8,
+          55.3
+        ]
+      },
+      "bottlenecks": [
+        {
+          "segment_id": "rst_seg_2",
+          "name": "DUD (M08) to Jejantas Overpass (Road Shoulder)",
+          "bottleneck_type": "single_file",
+          "max_flow_pax_min": 45.0,
+          "severity": "critical",
+          "description": "Strict single-file column restriction: max 45.0 pax/min.",
+          "mitigation_options": [
+            "Pace upstream release in batches of 40-50 students",
+            "Assign dedicated PPSL marshall at entrance to prevent bunching"
+          ]
+        },
+        {
+          "segment_id": "rst_seg_4",
+          "name": "Jejantas Padang Kawad Descent Stairs",
+          "bottleneck_type": "single_file",
+          "max_flow_pax_min": 45.0,
+          "severity": "critical",
+          "description": "Strict single-file column restriction: max 45.0 pax/min.",
+          "mitigation_options": [
+            "Pace upstream release in batches of 40-50 students",
+            "Assign dedicated PPSL marshall at entrance to prevent bunching"
+          ]
+        },
+        {
+          "segment_id": "rst_seg_5",
+          "name": "Padang Kawad Roundabout Crossing",
+          "bottleneck_type": "road_crossing",
+          "max_flow_pax_min": 100.0,
+          "severity": "medium",
+          "description": "Unsignalized vehicular carriageway crossing at Padang Kawad Roundabout Crossing.",
+          "mitigation_options": [
+            "Station PPSL road wardens with baton/whistle to halt vehicle traffic",
+            "Pulse crossing in coherent platoons rather than trickle flow"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "segment_id": "rst_seg_1",
+          "name": "Restu Cafe (M07) to DUD Forecourt",
+          "distance_m": 130.0,
+          "elevation_start_m": 47.0,
+          "elevation_end_m": 47.0,
+          "surface": "paved",
+          "width_m": 4.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": "Start at Restu Cafe upon release / 06:30, walk north to DUD forecourt assembly"
+        },
+        {
+          "segment_id": "rst_seg_2",
+          "name": "DUD (M08) to Jejantas Overpass (Road Shoulder)",
+          "distance_m": 210.0,
+          "elevation_start_m": 47.0,
+          "elevation_end_m": 36.0,
+          "surface": "curb_shoulder",
+          "width_m": 1.2,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": true,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": "Strict single file enforced on curb from DUD to overpass to keep carriageway clear"
+        },
+        {
+          "segment_id": "rst_seg_3",
+          "name": "Jejantas Padang Kawad Footbridge Approach",
+          "distance_m": 45.0,
+          "elevation_start_m": 36.0,
+          "elevation_end_m": 38.0,
+          "surface": "footbridge",
+          "width_m": 1.8,
+          "is_covered": true,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": 1030376052,
+          "notes": ""
+        },
+        {
+          "segment_id": "rst_seg_4",
+          "name": "Jejantas Padang Kawad Descent Stairs",
+          "distance_m": 25.0,
+          "elevation_start_m": 38.0,
+          "elevation_end_m": 14.0,
+          "surface": "stairway",
+          "width_m": 1.2,
+          "is_covered": true,
+          "is_stairs": true,
+          "step_count": 48,
+          "single_file_enforced": true,
+          "crosses_road": false,
+          "osm_way_id": 1030376053,
+          "notes": ""
+        },
+        {
+          "segment_id": "rst_seg_5",
+          "name": "Padang Kawad Roundabout Crossing",
+          "distance_m": 30.0,
+          "elevation_start_m": 14.0,
+          "elevation_end_m": 13.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": true,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "rst_seg_6",
+          "name": "Jalan Universiti Arterial Footway (West)",
+          "distance_m": 650.0,
+          "elevation_start_m": 13.0,
+          "elevation_end_m": 16.0,
+          "surface": "paved",
+          "width_m": 2.2,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "rst_seg_7",
+          "name": "Jalan Universiti Arterial Footway (East Shared Spine)",
+          "distance_m": 450.0,
+          "elevation_start_m": 16.0,
+          "elevation_end_m": 18.0,
+          "surface": "paved",
+          "width_m": 2.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "rst_seg_8",
+          "name": "Jalan Perpustakaan Entrance Ramp",
+          "distance_m": 140.0,
+          "elevation_start_m": 18.0,
+          "elevation_end_m": 20.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "rst_seg_9",
+          "name": "DTSP Arrival Basin & 3-Tier Car Park Apron",
+          "distance_m": 90.0,
+          "elevation_start_m": 20.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 6.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    },
+    "tekun:standard": {
+      "hostel_id": "tekun",
+      "hostel_name": "Desasiswa Tekun",
+      "variant": "standard",
+      "is_measured": false,
+      "measured_reference": null,
+      "origin_coords": {
+        "lat": 5.35564,
+        "lon": 100.291293
+      },
+      "destination_id": "dtsp_exterior_gathering",
+      "destination_coords": {
+        "lat": 5.357153,
+        "lon": 100.301749
+      },
+      "metrics": {
+        "total_distance_m": 1655.0,
+        "elevation_gain_m": 7.0,
+        "elevation_loss_m": 42.0,
+        "shaded_distance_m": 0,
+        "shaded_percentage": 0.0,
+        "critical_flow_capacity_pax_min": 45.0,
+        "segment_count": 6
+      },
+      "timings": {
+        "free_flow_s": 1264,
+        "free_flow_min": 21.1,
+        "supervised_column_s": 2330,
+        "supervised_column_min": 38.8,
+        "congested_s": 4592,
+        "congested_min": 76.5,
+        "recommended_window_s": [
+          2214,
+          2796
+        ],
+        "recommended_window_min": [
+          36.9,
+          46.6
+        ]
+      },
+      "bottlenecks": [
+        {
+          "segment_id": "tek_seg_2",
+          "name": "Ridge Stair Flight descending to Hub Padang Kawad",
+          "bottleneck_type": "single_file",
+          "max_flow_pax_min": 45.0,
+          "severity": "critical",
+          "description": "Strict single-file column restriction: max 45.0 pax/min.",
+          "mitigation_options": [
+            "Pace upstream release in batches of 40-50 students",
+            "Assign dedicated PPSL marshall at entrance to prevent bunching"
+          ]
+        },
+        {
+          "segment_id": "tek_seg_4",
+          "name": "Padang Kawad North Gate Crossing",
+          "bottleneck_type": "road_crossing",
+          "max_flow_pax_min": 100.0,
+          "severity": "medium",
+          "description": "Unsignalized vehicular carriageway crossing at Padang Kawad North Gate Crossing.",
+          "mitigation_options": [
+            "Station PPSL road wardens with baton/whistle to halt vehicle traffic",
+            "Pulse crossing in coherent platoons rather than trickle flow"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "segment_id": "tek_seg_1",
+          "name": "Tekun M05 Forecourt & Departure Plaza",
+          "distance_m": 70.0,
+          "elevation_start_m": 54.0,
+          "elevation_end_m": 52.0,
+          "surface": "paved",
+          "width_m": 3.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "tek_seg_2",
+          "name": "Ridge Stair Flight descending to Hub Padang Kawad",
+          "distance_m": 40.0,
+          "elevation_start_m": 52.0,
+          "elevation_end_m": 22.0,
+          "surface": "stairway",
+          "width_m": 1.1,
+          "is_covered": false,
+          "is_stairs": true,
+          "step_count": 65,
+          "single_file_enforced": true,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "tek_seg_3",
+          "name": "Hub Padang Kawad Perimeter Path",
+          "distance_m": 180.0,
+          "elevation_start_m": 22.0,
+          "elevation_end_m": 12.0,
+          "surface": "paved",
+          "width_m": 2.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "tek_seg_4",
+          "name": "Padang Kawad North Gate Crossing",
+          "distance_m": 35.0,
+          "elevation_start_m": 12.0,
+          "elevation_end_m": 12.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": true,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "tek_seg_5",
+          "name": "Jalan Universiti Spine (Shared Section)",
+          "distance_m": 1100.0,
+          "elevation_start_m": 12.0,
+          "elevation_end_m": 18.0,
+          "surface": "paved",
+          "width_m": 2.2,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "tek_seg_6",
+          "name": "Jalan Perpustakaan Approach to DTSP Car Park",
+          "distance_m": 230.0,
+          "elevation_start_m": 18.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 3.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    },
+    "saujana:standard": {
+      "hostel_id": "saujana",
+      "hostel_name": "Desasiswa Saujana",
+      "variant": "standard",
+      "is_measured": false,
+      "measured_reference": null,
+      "origin_coords": {
+        "lat": 5.356536,
+        "lon": 100.28976
+      },
+      "destination_id": "dtsp_exterior_gathering",
+      "destination_coords": {
+        "lat": 5.357153,
+        "lon": 100.301749
+      },
+      "metrics": {
+        "total_distance_m": 1650.0,
+        "elevation_gain_m": 7.0,
+        "elevation_loss_m": 34.0,
+        "shaded_distance_m": 65.0,
+        "shaded_percentage": 3.9,
+        "critical_flow_capacity_pax_min": 45.0,
+        "segment_count": 6
+      },
+      "timings": {
+        "free_flow_s": 1534,
+        "free_flow_min": 25.6,
+        "supervised_column_s": 2492,
+        "supervised_column_min": 41.5,
+        "congested_s": 4443,
+        "congested_min": 74.1,
+        "recommended_window_s": [
+          2368,
+          2991
+        ],
+        "recommended_window_min": [
+          39.5,
+          49.9
+        ]
+      },
+      "bottlenecks": [
+        {
+          "segment_id": "sau_seg_2",
+          "name": "Connecting Ridge Road to Jejantas Overpass",
+          "bottleneck_type": "single_file",
+          "max_flow_pax_min": 45.0,
+          "severity": "critical",
+          "description": "Strict single-file column restriction: max 45.0 pax/min.",
+          "mitigation_options": [
+            "Pace upstream release in batches of 40-50 students",
+            "Assign dedicated PPSL marshall at entrance to prevent bunching"
+          ]
+        },
+        {
+          "segment_id": "sau_seg_3",
+          "name": "Jejantas Padang Kawad Overpass & Stairs",
+          "bottleneck_type": "single_file",
+          "max_flow_pax_min": 45.0,
+          "severity": "critical",
+          "description": "Strict single-file column restriction: max 45.0 pax/min.",
+          "mitigation_options": [
+            "Pace upstream release in batches of 40-50 students",
+            "Assign dedicated PPSL marshall at entrance to prevent bunching"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "segment_id": "sau_seg_1",
+          "name": "Saujana M03/M04 Courtyard Assembly",
+          "distance_m": 60.0,
+          "elevation_start_m": 46.0,
+          "elevation_end_m": 45.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "sau_seg_2",
+          "name": "Connecting Ridge Road to Jejantas Overpass",
+          "distance_m": 190.0,
+          "elevation_start_m": 45.0,
+          "elevation_end_m": 38.0,
+          "surface": "curb_shoulder",
+          "width_m": 1.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": true,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "sau_seg_3",
+          "name": "Jejantas Padang Kawad Overpass & Stairs",
+          "distance_m": 65.0,
+          "elevation_start_m": 38.0,
+          "elevation_end_m": 14.0,
+          "surface": "stairway",
+          "width_m": 1.2,
+          "is_covered": true,
+          "is_stairs": true,
+          "step_count": 48,
+          "single_file_enforced": true,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "sau_seg_4",
+          "name": "Padang Kawad East Connector Path",
+          "distance_m": 210.0,
+          "elevation_start_m": 14.0,
+          "elevation_end_m": 12.0,
+          "surface": "paved",
+          "width_m": 2.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "sau_seg_5",
+          "name": "Jalan Universiti Central Arterial Walkway",
+          "distance_m": 980.0,
+          "elevation_start_m": 12.0,
+          "elevation_end_m": 18.0,
+          "surface": "paved",
+          "width_m": 2.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "sau_seg_6",
+          "name": "DTSP West Access Ramp",
+          "distance_m": 145.0,
+          "elevation_start_m": 18.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 3.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    },
+    "indah_kembara:standard": {
+      "hostel_id": "indah_kembara",
+      "hostel_name": "Desasiswa Indah Kembara",
+      "variant": "standard",
+      "is_measured": false,
+      "measured_reference": null,
+      "origin_coords": {
+        "lat": 5.356031,
+        "lon": 100.296045
+      },
+      "destination_id": "dtsp_south_plaza",
+      "destination_coords": {
+        "lat": 5.356118,
+        "lon": 100.3024
+      },
+      "metrics": {
+        "total_distance_m": 1090.0,
+        "elevation_gain_m": 7.0,
+        "elevation_loss_m": 0.0,
+        "shaded_distance_m": 180.0,
+        "shaded_percentage": 16.5,
+        "critical_flow_capacity_pax_min": 100.0,
+        "segment_count": 5
+      },
+      "timings": {
+        "free_flow_s": 812,
+        "free_flow_min": 13.5,
+        "supervised_column_s": 1473,
+        "supervised_column_min": 24.5,
+        "congested_s": 2950,
+        "congested_min": 49.2,
+        "recommended_window_s": [
+          1399,
+          1767
+        ],
+        "recommended_window_min": [
+          23.3,
+          29.5
+        ]
+      },
+      "bottlenecks": [
+        {
+          "segment_id": "ik_seg_3",
+          "name": "Junction Jabatan Keselamatan Crossing",
+          "bottleneck_type": "road_crossing",
+          "max_flow_pax_min": 100.0,
+          "severity": "medium",
+          "description": "Unsignalized vehicular carriageway crossing at Junction Jabatan Keselamatan Crossing.",
+          "mitigation_options": [
+            "Station PPSL road wardens with baton/whistle to halt vehicle traffic",
+            "Pulse crossing in coherent platoons rather than trickle flow"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "segment_id": "ik_seg_1",
+          "name": "Indah Kembara L07 Forecourt Assembly",
+          "distance_m": 50.0,
+          "elevation_start_m": 12.0,
+          "elevation_end_m": 12.0,
+          "surface": "paved",
+          "width_m": 3.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ik_seg_2",
+          "name": "Jalan Indah Kembara Sidewalk",
+          "distance_m": 310.0,
+          "elevation_start_m": 12.0,
+          "elevation_end_m": 14.0,
+          "surface": "paved",
+          "width_m": 1.8,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ik_seg_3",
+          "name": "Junction Jabatan Keselamatan Crossing",
+          "distance_m": 30.0,
+          "elevation_start_m": 14.0,
+          "elevation_end_m": 14.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": true,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ik_seg_4",
+          "name": "Jalan Universiti East Arterial (Flat Valley)",
+          "distance_m": 520.0,
+          "elevation_start_m": 14.0,
+          "elevation_end_m": 17.0,
+          "surface": "paved",
+          "width_m": 2.2,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ik_seg_5",
+          "name": "Pusat Bahasa Walkway to G28 Siswaniaga Field",
+          "distance_m": 180.0,
+          "elevation_start_m": 17.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 2.5,
+          "is_covered": true,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    },
+    "aman_damai:standard": {
+      "hostel_id": "aman_damai",
+      "hostel_name": "Desasiswa Aman Damai",
+      "variant": "standard",
+      "is_measured": false,
+      "measured_reference": null,
+      "origin_coords": {
+        "lat": 5.354304,
+        "lon": 100.296202
+      },
+      "destination_id": "dtsp_south_plaza",
+      "destination_coords": {
+        "lat": 5.356118,
+        "lon": 100.3024
+      },
+      "metrics": {
+        "total_distance_m": 1080.0,
+        "elevation_gain_m": 5.0,
+        "elevation_loss_m": 0.0,
+        "shaded_distance_m": 0,
+        "shaded_percentage": 0.0,
+        "critical_flow_capacity_pax_min": 90.0,
+        "segment_count": 6
+      },
+      "timings": {
+        "free_flow_s": 800,
+        "free_flow_min": 13.3,
+        "supervised_column_s": 1491,
+        "supervised_column_min": 24.9,
+        "congested_s": 2987,
+        "congested_min": 49.8,
+        "recommended_window_s": [
+          1417,
+          1789
+        ],
+        "recommended_window_min": [
+          23.6,
+          29.8
+        ]
+      },
+      "bottlenecks": [
+        {
+          "segment_id": "ad_seg_2",
+          "name": "Internal Residential Walkways between K Blocks",
+          "bottleneck_type": "narrow_passage",
+          "max_flow_pax_min": 90.0,
+          "severity": "medium",
+          "description": "Narrow passage width (1.2m): max 90.0 pax/min.",
+          "mitigation_options": [
+            "Prohibit overtaking; maintain steady walking interval"
+          ]
+        },
+        {
+          "segment_id": "ad_seg_4",
+          "name": "Jalan Sungai Dua Gate Road Crossing",
+          "bottleneck_type": "road_crossing",
+          "max_flow_pax_min": 100.0,
+          "severity": "medium",
+          "description": "Unsignalized vehicular carriageway crossing at Jalan Sungai Dua Gate Road Crossing.",
+          "mitigation_options": [
+            "Station PPSL road wardens with baton/whistle to halt vehicle traffic",
+            "Pulse crossing in coherent platoons rather than trickle flow"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "segment_id": "ad_seg_1",
+          "name": "Damai Cafeteria K10 Gathering Forecourt",
+          "distance_m": 45.0,
+          "elevation_start_m": 14.0,
+          "elevation_end_m": 14.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ad_seg_2",
+          "name": "Internal Residential Walkways between K Blocks",
+          "distance_m": 180.0,
+          "elevation_start_m": 14.0,
+          "elevation_end_m": 15.0,
+          "surface": "paved",
+          "width_m": 1.2,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": "Narrow residential sidewalk"
+        },
+        {
+          "segment_id": "ad_seg_3",
+          "name": "Jalan Damai Egress to Sports Complex",
+          "distance_m": 220.0,
+          "elevation_start_m": 15.0,
+          "elevation_end_m": 15.0,
+          "surface": "paved",
+          "width_m": 2.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ad_seg_4",
+          "name": "Jalan Sungai Dua Gate Road Crossing",
+          "distance_m": 35.0,
+          "elevation_start_m": 15.0,
+          "elevation_end_m": 15.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": true,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ad_seg_5",
+          "name": "Jalan Universiti South Sidewalk to Pusat Bahasa",
+          "distance_m": 480.0,
+          "elevation_start_m": 15.0,
+          "elevation_end_m": 18.0,
+          "surface": "paved",
+          "width_m": 2.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ad_seg_6",
+          "name": "Siswaniaga Grass Field Assembly Buffer",
+          "distance_m": 120.0,
+          "elevation_start_m": 18.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 3.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    },
+    "bakti_fajar_permai:standard": {
+      "hostel_id": "bakti_fajar_permai",
+      "hostel_name": "Desasiswa Bakti Fajar Permai",
+      "variant": "standard",
+      "is_measured": false,
+      "measured_reference": null,
+      "origin_coords": {
+        "lat": 5.357763,
+        "lon": 100.300499
+      },
+      "destination_id": "dtsp_north_plaza",
+      "destination_coords": {
+        "lat": 5.356518,
+        "lon": 100.303214
+      },
+      "metrics": {
+        "total_distance_m": 615.0,
+        "elevation_gain_m": 0.0,
+        "elevation_loss_m": 7.0,
+        "shaded_distance_m": 550.0,
+        "shaded_percentage": 89.4,
+        "critical_flow_capacity_pax_min": 58.8,
+        "segment_count": 6
+      },
+      "timings": {
+        "free_flow_s": 457,
+        "free_flow_min": 7.6,
+        "supervised_column_s": 768,
+        "supervised_column_min": 12.8,
+        "congested_s": 1494,
+        "congested_min": 24.9,
+        "recommended_window_s": [
+          730,
+          922
+        ],
+        "recommended_window_min": [
+          12.2,
+          15.4
+        ]
+      },
+      "bottlenecks": [
+        {
+          "segment_id": "bfp_seg_4",
+          "name": "Chemical Sciences Terraced Stairs",
+          "bottleneck_type": "staircase",
+          "max_flow_pax_min": 58.8,
+          "severity": "high",
+          "description": "Stair flight with 22 steps, width 1.4m: max 58.8 pax/min.",
+          "mitigation_options": [
+            "Use accessible step-free alternative for large cohorts",
+            "Enforce 2-abreast descent with handrail clearance"
+          ]
+        },
+        {
+          "segment_id": "bfp_seg_2",
+          "name": "Persiaran Sains Road Crossing",
+          "bottleneck_type": "road_crossing",
+          "max_flow_pax_min": 100.0,
+          "severity": "medium",
+          "description": "Unsignalized vehicular carriageway crossing at Persiaran Sains Road Crossing.",
+          "mitigation_options": [
+            "Station PPSL road wardens with baton/whistle to halt vehicle traffic",
+            "Pulse crossing in coherent platoons rather than trickle flow"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "segment_id": "bfp_seg_1",
+          "name": "H10 Cafeteria Courtyard Assembly",
+          "distance_m": 40.0,
+          "elevation_start_m": 26.0,
+          "elevation_end_m": 25.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "bfp_seg_2",
+          "name": "Persiaran Sains Road Crossing",
+          "distance_m": 25.0,
+          "elevation_start_m": 25.0,
+          "elevation_end_m": 25.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": true,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "bfp_seg_3",
+          "name": "Pusat Sejahtera Pedestrian Spine",
+          "distance_m": 160.0,
+          "elevation_start_m": 25.0,
+          "elevation_end_m": 23.0,
+          "surface": "paved",
+          "width_m": 2.5,
+          "is_covered": true,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "bfp_seg_4",
+          "name": "Chemical Sciences Terraced Stairs",
+          "distance_m": 30.0,
+          "elevation_start_m": 23.0,
+          "elevation_end_m": 20.0,
+          "surface": "stairway",
+          "width_m": 1.4,
+          "is_covered": true,
+          "is_stairs": true,
+          "step_count": 22,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": 1354565634,
+          "notes": ""
+        },
+        {
+          "segment_id": "bfp_seg_5",
+          "name": "Covered Academic Walkway past School of Physics",
+          "distance_m": 220.0,
+          "elevation_start_m": 20.0,
+          "elevation_end_m": 19.0,
+          "surface": "covered_walkway",
+          "width_m": 2.0,
+          "is_covered": true,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "bfp_seg_6",
+          "name": "Lengkok Perpustakaan to Dataran Merah North Plaza",
+          "distance_m": 140.0,
+          "elevation_start_m": 19.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 4.0,
+          "is_covered": true,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    },
+    "cahaya_gemilang:standard": {
+      "hostel_id": "cahaya_gemilang",
+      "hostel_name": "Desasiswa Cahaya Gemilang",
+      "variant": "standard",
+      "is_measured": false,
+      "measured_reference": null,
+      "origin_coords": {
+        "lat": 5.360424,
+        "lon": 100.303549
+      },
+      "destination_id": "dtsp_north_plaza",
+      "destination_coords": {
+        "lat": 5.356518,
+        "lon": 100.303214
+      },
+      "metrics": {
+        "total_distance_m": 650.0,
+        "elevation_gain_m": 0.0,
+        "elevation_loss_m": 9.0,
+        "shaded_distance_m": 355.0,
+        "shaded_percentage": 54.6,
+        "critical_flow_capacity_pax_min": 63.0,
+        "segment_count": 6
+      },
+      "timings": {
+        "free_flow_s": 475,
+        "free_flow_min": 7.9,
+        "supervised_column_s": 849,
+        "supervised_column_min": 14.2,
+        "congested_s": 1662,
+        "congested_min": 27.7,
+        "recommended_window_s": [
+          807,
+          1019
+        ],
+        "recommended_window_min": [
+          13.4,
+          17.0
+        ]
+      },
+      "bottlenecks": [
+        {
+          "segment_id": "cg_seg_4",
+          "name": "Dewan Kuliah Foyer Stairs",
+          "bottleneck_type": "staircase",
+          "max_flow_pax_min": 63.0,
+          "severity": "high",
+          "description": "Stair flight with 18 steps, width 1.5m: max 63.0 pax/min.",
+          "mitigation_options": [
+            "Use accessible step-free alternative for large cohorts",
+            "Enforce 2-abreast descent with handrail clearance"
+          ]
+        },
+        {
+          "segment_id": "cg_seg_3",
+          "name": "Jalan Mahasiswa Crossing at C23 DK Complex",
+          "bottleneck_type": "road_crossing",
+          "max_flow_pax_min": 100.0,
+          "severity": "medium",
+          "description": "Unsignalized vehicular carriageway crossing at Jalan Mahasiswa Crossing at C23 DK Complex.",
+          "mitigation_options": [
+            "Station PPSL road wardens with baton/whistle to halt vehicle traffic",
+            "Pulse crossing in coherent platoons rather than trickle flow"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "segment_id": "cg_seg_1",
+          "name": "H33-H35 Forecourt Assembly",
+          "distance_m": 50.0,
+          "elevation_start_m": 28.0,
+          "elevation_end_m": 27.0,
+          "surface": "paved",
+          "width_m": 3.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "cg_seg_2",
+          "name": "Jalan Gemilang Sidewalk",
+          "distance_m": 210.0,
+          "elevation_start_m": 27.0,
+          "elevation_end_m": 24.0,
+          "surface": "paved",
+          "width_m": 2.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "cg_seg_3",
+          "name": "Jalan Mahasiswa Crossing at C23 DK Complex",
+          "distance_m": 35.0,
+          "elevation_start_m": 24.0,
+          "elevation_end_m": 23.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": true,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "cg_seg_4",
+          "name": "Dewan Kuliah Foyer Stairs",
+          "distance_m": 25.0,
+          "elevation_start_m": 23.0,
+          "elevation_end_m": 20.0,
+          "surface": "stairway",
+          "width_m": 1.5,
+          "is_covered": true,
+          "is_stairs": true,
+          "step_count": 18,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": 1354921230,
+          "notes": ""
+        },
+        {
+          "segment_id": "cg_seg_5",
+          "name": "Lengkok Sastera Covered Walkway",
+          "distance_m": 240.0,
+          "elevation_start_m": 20.0,
+          "elevation_end_m": 19.0,
+          "surface": "covered_walkway",
+          "width_m": 2.2,
+          "is_covered": true,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "cg_seg_6",
+          "name": "PHS 1 Perimeter Path into Dataran Merah",
+          "distance_m": 90.0,
+          "elevation_start_m": 19.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 3.5,
+          "is_covered": true,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    },
+    "fajar_harapan:standard": {
+      "hostel_id": "fajar_harapan",
+      "hostel_name": "Desasiswa Fajar Harapan",
+      "variant": "standard",
+      "is_measured": false,
+      "measured_reference": null,
+      "origin_coords": {
+        "lat": 5.354996,
+        "lon": 100.299797
+      },
+      "destination_id": "dtsp_south_plaza",
+      "destination_coords": {
+        "lat": 5.356118,
+        "lon": 100.3024
+      },
+      "metrics": {
+        "total_distance_m": 580.0,
+        "elevation_gain_m": 1.0,
+        "elevation_loss_m": 7.0,
+        "shaded_distance_m": 0,
+        "shaded_percentage": 0.0,
+        "critical_flow_capacity_pax_min": 50.4,
+        "segment_count": 5
+      },
+      "timings": {
+        "free_flow_s": 429,
+        "free_flow_min": 7.1,
+        "supervised_column_s": 793,
+        "supervised_column_min": 13.2,
+        "congested_s": 1571,
+        "congested_min": 26.2,
+        "recommended_window_s": [
+          754,
+          952
+        ],
+        "recommended_window_min": [
+          12.6,
+          15.9
+        ]
+      },
+      "bottlenecks": [
+        {
+          "segment_id": "fh_seg_2",
+          "name": "Fajar Residential Terrace Steps to Eureka Path",
+          "bottleneck_type": "staircase",
+          "max_flow_pax_min": 50.4,
+          "severity": "high",
+          "description": "Stair flight with 24 steps, width 1.2m: max 50.4 pax/min.",
+          "mitigation_options": [
+            "Use accessible step-free alternative for large cohorts",
+            "Enforce 2-abreast descent with handrail clearance"
+          ]
+        }
+      ],
+      "segments": [
+        {
+          "segment_id": "fh_seg_1",
+          "name": "F27 Kantin Harapan Gathering Court",
+          "distance_m": 45.0,
+          "elevation_start_m": 25.0,
+          "elevation_end_m": 24.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "fh_seg_2",
+          "name": "Fajar Residential Terrace Steps to Eureka Path",
+          "distance_m": 25.0,
+          "elevation_start_m": 24.0,
+          "elevation_end_m": 20.0,
+          "surface": "stairway",
+          "width_m": 1.2,
+          "is_covered": false,
+          "is_stairs": true,
+          "step_count": 24,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": 1354561992,
+          "notes": ""
+        },
+        {
+          "segment_id": "fh_seg_3",
+          "name": "Kompleks Eureka Access Road",
+          "distance_m": 190.0,
+          "elevation_start_m": 20.0,
+          "elevation_end_m": 18.0,
+          "surface": "paved",
+          "width_m": 2.2,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "fh_seg_4",
+          "name": "Tasik USM Lakeside Path",
+          "distance_m": 210.0,
+          "elevation_start_m": 18.0,
+          "elevation_end_m": 18.0,
+          "surface": "paved",
+          "width_m": 1.8,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": "Narrow pathway adjacent to central lake"
+        },
+        {
+          "segment_id": "fh_seg_5",
+          "name": "Dewan Budaya Approach Path to G28 Field",
+          "distance_m": 110.0,
+          "elevation_start_m": 18.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    },
+    "aman_damai:accessible_step_free": {
+      "hostel_id": "aman_damai",
+      "hostel_name": "Desasiswa Aman Damai (Step-Free)",
+      "variant": "accessible_step_free",
+      "is_measured": false,
+      "measured_reference": null,
+      "origin_coords": {
+        "lat": 5.354304,
+        "lon": 100.296202
+      },
+      "destination_id": "dtsp_south_plaza",
+      "destination_coords": {
+        "lat": 5.356118,
+        "lon": 100.3024
+      },
+      "metrics": {
+        "total_distance_m": 1295.0,
+        "elevation_gain_m": 5.0,
+        "elevation_loss_m": 0.0,
+        "shaded_distance_m": 0,
+        "shaded_percentage": 0.0,
+        "critical_flow_capacity_pax_min": 120.0,
+        "segment_count": 5
+      },
+      "timings": {
+        "free_flow_s": 938,
+        "free_flow_min": 15.6,
+        "supervised_column_s": 1752,
+        "supervised_column_min": 29.2,
+        "congested_s": 3546,
+        "congested_min": 59.1,
+        "recommended_window_s": [
+          1664,
+          2102
+        ],
+        "recommended_window_min": [
+          27.7,
+          35.0
+        ]
+      },
+      "bottlenecks": [],
+      "segments": [
+        {
+          "segment_id": "ad_acc_1",
+          "name": "Damai Cafeteria K10 Egress",
+          "distance_m": 45.0,
+          "elevation_start_m": 14.0,
+          "elevation_end_m": 14.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ad_acc_2",
+          "name": "Vehicular Carriageway bypassing block stairs",
+          "distance_m": 280.0,
+          "elevation_start_m": 14.0,
+          "elevation_end_m": 15.0,
+          "surface": "paved",
+          "width_m": 3.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ad_acc_3",
+          "name": "Pusat Sukan Ramp Access to Jalan Universiti",
+          "distance_m": 310.0,
+          "elevation_start_m": 15.0,
+          "elevation_end_m": 16.0,
+          "surface": "paved",
+          "width_m": 2.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ad_acc_4",
+          "name": "Jalan Universiti Paved Sidewalk",
+          "distance_m": 520.0,
+          "elevation_start_m": 16.0,
+          "elevation_end_m": 18.0,
+          "surface": "paved",
+          "width_m": 2.5,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        },
+        {
+          "segment_id": "ad_acc_5",
+          "name": "Siswaniaga Wheelchair-Accessible Ramp",
+          "distance_m": 140.0,
+          "elevation_start_m": 18.0,
+          "elevation_end_m": 19.0,
+          "surface": "paved",
+          "width_m": 3.0,
+          "is_covered": false,
+          "is_stairs": false,
+          "step_count": 0,
+          "single_file_enforced": false,
+          "crosses_road": false,
+          "osm_way_id": null,
+          "notes": ""
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "engine": "Gemini 3 Flash (multimodal native video understanding)",
+  "analysis_timestamp": "2026-09-17T11:00:00+08:00",
+  "summary": {
+    "total_videos_analyzed": 4,
+    "total_images_analyzed": 1,
+    "primary_system_detected": "Multi-stage batched gatekeeper with upstream reservoir queues and next-station status reporting",
+    "primary_bottlenecks": [
+      "Bus boarding narrow portal (single-door coach entry)",
+      "Physical hall entry gatekeeping at Dewan Tuanku Syed Putra (DTSP)",
+      "Open-air road shoulder holding without weather protection or seating"
+    ]
+  },
+  "items": [
+    {
+      "file_name": "2026-09-17_0737_road_shoulder_queue.mp4",
+      "original_name": "video_15608a256edc.mp4",
+      "recorded_time": "2026-09-17 07:37:46 MYT",
+      "location": "Hostel road shoulder near Desasiswa Restu",
+      "duration_seconds": 3.25,
+      "headcount_estimate": "100-150 students visible (20-30 in immediate foreground, 40-50 in trailing line, 50+ in downstream batch)",
+      "density": "Moderate (0.5 to 1.0 m spacing, orderly, no crushing)",
+      "queue_formation": "Double-file to loose column along road shoulder bounded by guardrail and grass embankment",
+      "movement_dynamics": "Static wait-and-pulse; held upstream awaiting clearance from the boarding point",
+      "bottleneck_source": "Downstream staging gate before transit vehicle boarding",
+      "student_profile": "Smart casual polo/collared shirts, orientation lanyards, backpacks, water bottles, mobile phones"
+    },
+    {
+      "file_name": "2026-09-17_0747_pavilion_boarding_pulse.mp4",
+      "original_name": "video_d9bffd781295.mp4",
+      "recorded_time": "2026-09-17 07:47:38 MYT",
+      "location": "Covered pavilion staging area to asphalt boarding zone",
+      "duration_seconds": 3.72,
+      "headcount_estimate": "70-100 students (12-15 under immediate shelter, 60+ snaking across tarmac)",
+      "density": "Low to moderate, arm's length spacing",
+      "queue_formation": "Single-file under covered shelter transitioning into condensed tarmac column",
+      "movement_dynamics": "Active pulsing movement; students advancing steadily toward bus boarding berths",
+      "bottleneck_source": "Batch pulse synchronization: students only move when bus doors open for loading",
+      "student_profile": "Informal dark/black group shirts, orientation lanyards, backpacks, orientation marshals present in purple shirts"
+    },
+    {
+      "file_name": "2026-09-17_0749_bus_boarding_queue.mp4",
+      "original_name": "video_904e64840a87.mp4",
+      "recorded_time": "2026-09-17 07:49:10 MYT",
+      "location": "Bus boarding berth along USM campus route",
+      "duration_seconds": 3.25,
+      "headcount_estimate": "55-80 students (15-20 in foreground, 40-60 trailing back in queue)",
+      "density": "Orderly arm's length spacing",
+      "queue_formation": "Strict single-file line along road shoulder beside official USM shuttle bus",
+      "movement_dynamics": "Static buffer queue awaiting coach batch loading (~40 passengers per vehicle)",
+      "bottleneck_source": "Bus entrance narrow door step and passenger seating cycle time",
+      "student_profile": "White/light orientation shirts, backpacks, early morning overcast diffuse light"
+    },
+    {
+      "file_name": "2026-09-17_0806_dtsp_exterior_reservoir.mp4",
+      "original_name": "video_fedd16a3e55d.mp4",
+      "recorded_time": "2026-09-17 08:06:43 MYT",
+      "location": "Exterior access road outside Dewan Tuanku Syed Putra (DTSP)",
+      "duration_seconds": 6.73,
+      "headcount_estimate": "300-400+ students (60-80 in immediate road pan, several hundred clustered in deep background reservoir)",
+      "density": "High (3-4 persons/m² in congested clusters, standing shoulder-to-shoulder)",
+      "queue_formation": "Multi-column reservoir block along road edge; center lane kept clear for vehicle/staff passage",
+      "movement_dynamics": "Completely static holding reservoir; awaiting next-station hall door admission signal",
+      "bottleneck_source": "Main DTSP entry hall security/registration check-in gates",
+      "student_profile": "Formal Batik shirts, orientation badges/lanyards, standing in unshaded road sun with water bottles"
+    },
+    {
+      "file_name": "2026-09-17_0737_queue_perspective.jpg",
+      "original_name": "img_9edf946ea34d.jpg",
+      "recorded_time": "2026-09-17 07:37:46 MYT",
+      "location": "Roadway approaching elevated pedestrian bridge",
+      "type": "still_photograph",
+      "headcount_estimate": "15-25 students visible in immediate segment; line continues toward elevated walkway",
+      "density": "Orderly single-file line along painted curb",
+      "queue_formation": "Single file hugging road shoulder to keep vehicular carriage clear",
+      "movement_dynamics": "Static wait with low-angle morning sun and hazy atmosphere",
+      "bottleneck_source": "Pedestrian walkway constriction leading toward complex crossing",
+      "student_profile": "Backpacks, water bottles, orientation lanyards"
+    }
+  ]
+}

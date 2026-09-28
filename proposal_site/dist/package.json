@@ -1,0 +1,13 @@
+{
+  "name": "proposal_site",
+  "version": "1.0.0",
+  "description": "USM Transit Operations Proposal A4 Editor",
+  "type": "module",
+  "scripts": {
+    "test": "node tests/verify.mjs",
+    "build": "node scripts/build.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

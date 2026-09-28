@@ -1,0 +1,105 @@
+{
+  "metadata": {
+    "device": "DNP-NX9 (Android)",
+    "date": "2026-09-17",
+    "start_time_local": "06:47:12",
+    "end_time_local": "09:18:57",
+    "total_elapsed_minutes": 151.76,
+    "start_coords": [
+      5.3572768,
+      100.2898076
+    ],
+    "end_coords": [
+      5.3568866,
+      100.3030831
+    ],
+    "straight_line_distance_m": 1470.4,
+    "estimated_cumulative_track_distance_m": 3786.9,
+    "total_steps": 1867,
+    "max_speed_kmh": 34.6
+  },
+  "activity_counts": {
+    "unknown": 254,
+    "stationary": 373,
+    "tilting": 71,
+    "walking": 48,
+    "cycling": 3,
+    "automotive": 28
+  },
+  "stages": [
+    {
+      "stage_id": 1,
+      "name": "Hostel Preparation & Departure Queue",
+      "start": "06:47:10",
+      "end": "07:34:00",
+      "start_epoch": 1789598830,
+      "end_epoch": 1789601640,
+      "location": "Desasiswa Restu",
+      "mode": "stationary/gathering",
+      "description": "Waking up (~06:30), prep, gathering with students at Desasiswa Restu hostel grounds.",
+      "duration_seconds": 2810,
+      "duration_minutes": 46.8
+    },
+    {
+      "stage_id": 2,
+      "name": "Walk & Wait at Bus Stop",
+      "start": "07:34:00",
+      "end": "07:58:30",
+      "start_epoch": 1789601640,
+      "end_epoch": 1789603110,
+      "location": "Restu Perimeter Road to Bus Stop",
+      "mode": "walking & static queue",
+      "description": "Slow walk along hostel road shoulder, queueing at boarding pavilion for shuttle bus.",
+      "duration_seconds": 1470,
+      "duration_minutes": 24.5
+    },
+    {
+      "stage_id": 3,
+      "name": "Bus Shuttle Transit",
+      "start": "07:58:30",
+      "end": "08:01:35",
+      "start_epoch": 1789603110,
+      "end_epoch": 1789603295,
+      "location": "Campus Transit Corridor",
+      "mode": "automotive (bus)",
+      "description": "Rapid vehicular transit on campus shuttle bus (speeds up to 34.6 km/h).",
+      "duration_seconds": 185,
+      "duration_minutes": 3.1
+    },
+    {
+      "stage_id": 4,
+      "name": "Exterior DTSP Queue & Batching Reservoir",
+      "start": "08:01:35",
+      "end": "08:33:00",
+      "start_epoch": 1789603295,
+      "end_epoch": 1789605180,
+      "location": "Roadway outside Dewan Tuanku Syed Putra (DTSP)",
+      "mode": "static queue (open sun)",
+      "description": "Massive holding queue on road shoulder outside DTSP hall. 300-400+ students held in batches awaiting hall clearance.",
+      "duration_seconds": 1885,
+      "duration_minutes": 31.4
+    },
+    {
+      "stage_id": 5,
+      "name": "Batch Admission & Hall Seating",
+      "start": "08:33:00",
+      "end": "09:18:57",
+      "start_epoch": 1789605180,
+      "end_epoch": 1789607937,
+      "location": "Dewan Tuanku Syed Putra (DTSP) Interior",
+      "mode": "batch walk & seated",
+      "description": "Pulsed movement through entrance gates into hall, seated for orientation ceremonies.",
+      "duration_seconds": 2757,
+      "duration_minutes": 46.0
+    }
+  ],
+  "bottleneck_kpis": {
+    "origin_to_destination_crow_distance_km": 1.47,
+    "total_door_to_seat_time_minutes": 151.8,
+    "active_transit_moving_time_minutes": 3.1,
+    "walking_and_short_movement_minutes": 28.5,
+    "queueing_and_idle_waiting_minutes": 120.2,
+    "queue_to_movement_ratio": "3.8:1 wait-to-motion ratio",
+    "effective_commute_speed_kmh": 0.58
+  }
+}

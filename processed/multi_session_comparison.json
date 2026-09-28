@@ -1,0 +1,104 @@
+[
+  {
+    "session_id": "session_1_2026-09-17_morning_M08_to_DTSP",
+    "metadata": {
+      "date": "2026-09-17",
+      "start_time_local": "06:47:12",
+      "end_time_local": "09:18:57",
+      "origin": "Desasiswa Restu (M08 Pavilion)",
+      "destination": "Dewan Tuanku Syed Putra (DTSP)",
+      "direction": "TO_DTSP",
+      "condition": "Sunny morning induction transit (queue bottleneck)",
+      "total_elapsed_minutes": 151.78,
+      "straight_line_distance_m": 1470.8,
+      "raw_cumulative_distance_m": 4310.3,
+      "filtered_cumulative_distance_m": 2224.0,
+      "jitter_noise_reduction_pct": 48.4,
+      "total_steps": 1867,
+      "max_gps_speed_kmh": 34.6,
+      "max_filtered_speed_kmh": 1073.3
+    },
+    "state_durations_minutes": {
+      "STATIONARY_WAITING": 126.51,
+      "QUEUE_SHUFFLE": 10.99,
+      "WALKING": 11.53,
+      "VEHICLE_TRANSIT": 2.73
+    },
+    "kpis": {
+      "idle_queue_shelter_minutes": 137.5,
+      "active_motion_minutes": 14.26,
+      "idle_to_motion_ratio": "9.64x",
+      "percent_time_stationary": 90.6,
+      "percent_time_moving": 9.4
+    },
+    "stages_count": 41
+  },
+  {
+    "session_id": "session_2_2026-09-17_evening_Persiaran_Sains_from_DTSP",
+    "metadata": {
+      "date": "2026-09-17",
+      "start_time_local": "17:36:21",
+      "end_time_local": "17:37:44",
+      "origin": "Dewan Tuanku Syed Putra / Dataran Merah",
+      "destination": "Persiaran Sains (Westbound)",
+      "direction": "FROM_DTSP",
+      "condition": "Evening post-induction dispersal walk",
+      "total_elapsed_minutes": 1.39,
+      "straight_line_distance_m": 6.2,
+      "raw_cumulative_distance_m": 110.9,
+      "filtered_cumulative_distance_m": 56.0,
+      "jitter_noise_reduction_pct": 49.5,
+      "total_steps": 88,
+      "max_gps_speed_kmh": 6.3,
+      "max_filtered_speed_kmh": 80.1
+    },
+    "state_durations_minutes": {
+      "STATIONARY_WAITING": 0.82,
+      "QUEUE_SHUFFLE": 0.07,
+      "WALKING": 0.5,
+      "VEHICLE_TRANSIT": 0.0
+    },
+    "kpis": {
+      "idle_queue_shelter_minutes": 0.89,
+      "active_motion_minutes": 0.5,
+      "idle_to_motion_ratio": "1.78x",
+      "percent_time_stationary": 64.0,
+      "percent_time_moving": 36.0
+    },
+    "stages_count": 3
+  },
+  {
+    "session_id": "session_3_2026-09-18_morning_M01_Rainy_to_DTSP",
+    "metadata": {
+      "date": "2026-09-18",
+      "start_time_local": "06:19:03",
+      "end_time_local": "08:43:53",
+      "origin": "Desasiswa Restu (M01 Complex) via RST Cafeteria",
+      "destination": "Dewan Tuanku Syed Putra (DTSP)",
+      "direction": "TO_DTSP",
+      "condition": "Rainy morning delay: 118-min weather shelter in cafeteria, then transit",
+      "total_elapsed_minutes": 144.85,
+      "straight_line_distance_m": 1529.1,
+      "raw_cumulative_distance_m": 4884.0,
+      "filtered_cumulative_distance_m": 2468.9,
+      "jitter_noise_reduction_pct": 49.4,
+      "total_steps": 2063,
+      "max_gps_speed_kmh": 37.7,
+      "max_filtered_speed_kmh": 1794.7
+    },
+    "state_durations_minutes": {
+      "STATIONARY_WAITING": 121.29,
+      "QUEUE_SHUFFLE": 3.58,
+      "WALKING": 17.67,
+      "VEHICLE_TRANSIT": 2.31
+    },
+    "kpis": {
+      "idle_queue_shelter_minutes": 124.87,
+      "active_motion_minutes": 19.98,
+      "idle_to_motion_ratio": "6.25x",
+      "percent_time_stationary": 86.2,
+      "percent_time_moving": 13.8
+    },
+    "stages_count": 17
+  }
+]

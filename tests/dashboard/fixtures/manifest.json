@@ -1,0 +1,25 @@
+{
+  "source_commit": "6cc0e32f35ada4a9e2483bdbedeaad6a5075d7ca",
+  "engine_base": "203b7741caa6e7a5be0e9ee1d19e517108c1977f",
+  "fixtures": [
+    {
+      "file": "artificial_seed42_full.json",
+      "case": "artificial",
+      "seed": 42,
+      "mode": "full"
+    },
+    {
+      "file": "artificial_seed42_compact.json",
+      "case": "artificial",
+      "seed": 42,
+      "mode": "compact"
+    },
+    {
+      "file": "artificial_unfinished_full.json",
+      "case": "artificial",
+      "seed": 42,
+      "mode": "full",
+      "note": "simulation_end_s=75 via --input copy of artificial"
+    }
+  ]
+}

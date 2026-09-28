@@ -1,0 +1,25 @@
+name: Bug report
+description: Create a report to help us improve the simulator or dashboard
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to report an issue!
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Also tell us what you expected to happen
+      placeholder: Describe the problem clearly...
+    validations:
+      required: true
+  - type: input
+    id: reproduction
+    attributes:
+      label: Reproduction command
+      description: e.g. python -m usm_sim simulate --case artificial
+      placeholder: python -m usm_sim simulate --case ...
+    validations:
+      required: false

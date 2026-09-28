@@ -1,0 +1,1112 @@
+{
+  "command": "simulate",
+  "ok": true,
+  "result": {
+    "accuracy_checks": [],
+    "active_holds": [],
+    "background_demand": null,
+    "checkpoint_coverage": {
+      "missing": [],
+      "performed": [],
+      "required": [],
+      "satisfied": [],
+      "unresolved": []
+    },
+    "count_outcomes": [],
+    "delay_explanations": [
+      {
+        "affected_count": 1,
+        "cause": "waiting_for_server",
+        "duration_s": 10.0,
+        "part_id": "part_origin~s2",
+        "place_id": "entrance",
+        "primary_cause": "waiting_for_server",
+        "related_event_ids": [
+          "evt_000007"
+        ],
+        "resource_id": null
+      },
+      {
+        "affected_count": 1,
+        "cause": "waiting_for_server",
+        "duration_s": 15.0,
+        "part_id": "part_origin~s3",
+        "place_id": "entrance",
+        "primary_cause": "waiting_for_server",
+        "related_event_ids": [
+          "evt_000003",
+          "evt_000004",
+          "evt_000005",
+          "evt_000006",
+          "evt_000007"
+        ],
+        "resource_id": null
+      },
+      {
+        "affected_count": 1,
+        "cause": "waiting_for_server",
+        "duration_s": 15.0,
+        "part_id": "part_origin~s4",
+        "place_id": "entrance",
+        "primary_cause": "waiting_for_server",
+        "related_event_ids": [
+          "evt_000003",
+          "evt_000004",
+          "evt_000005",
+          "evt_000006",
+          "evt_000007"
+        ],
+        "resource_id": null
+      }
+    ],
+    "delivered_reports": [],
+    "destination": null,
+    "event_trace": [
+      {
+        "affected_group_id": "g_walk",
+        "affected_part_id": "part_origin",
+        "event_id": "evt_000001",
+        "event_type": "part_ready",
+        "hostel_composition": {
+          "synthetic": 4
+        },
+        "leg_id": null,
+        "place_id": "origin",
+        "primary_cause": "initial_presence",
+        "related_event_ids": [],
+        "resource_ids": [],
+        "stage_id": null,
+        "student_count": 4,
+        "time_local": "2026-01-01T00:00:00+08:00",
+        "time_ms": 0
+      },
+      {
+        "affected_group_id": "g_walk",
+        "affected_part_id": "part_origin",
+        "escort_ids": [],
+        "event_id": "evt_000002",
+        "event_type": "departure",
+        "hostel_composition": {
+          "synthetic": 4
+        },
+        "leg_id": "walk_1",
+        "place_id": "origin",
+        "primary_cause": "walk",
+        "related_event_ids": [
+          "evt_000001"
+        ],
+        "resource_ids": [],
+        "stage_id": "walk",
+        "student_count": 4,
+        "time_local": "2026-01-01T00:00:00+08:00",
+        "time_ms": 0,
+        "worker_ids": []
+      },
+      {
+        "affected_group_id": "g_walk",
+        "affected_part_id": "part_origin",
+        "escort_ids": [],
+        "event_id": "evt_000003",
+        "event_type": "arrival",
+        "hostel_composition": {
+          "synthetic": 4
+        },
+        "leg_id": "walk_1",
+        "passengers_aboard": false,
+        "place_id": "entrance",
+        "primary_cause": "physical_arrival",
+        "related_event_ids": [
+          "evt_000002"
+        ],
+        "resource_ids": [],
+        "stage_id": "walk",
+        "student_count": 4,
+        "time_local": "2026-01-01T00:01:00+08:00",
+        "time_ms": 60000
+      },
+      {
+        "affected_group_id": "g_walk",
+        "affected_part_id": "part_origin~s1",
+        "event_id": "evt_000004",
+        "event_type": "service_start",
+        "hostel_composition": {
+          "synthetic": 1
+        },
+        "leg_id": null,
+        "place_id": "entrance",
+        "primary_cause": "single_server_available",
+        "related_event_ids": [],
+        "resource_ids": [],
+        "stage_id": "entrance_service",
+        "student_count": 1,
+        "time_local": "2026-01-01T00:01:00+08:00",
+        "time_ms": 60000
+      },
+      {
+        "affected_group_id": "g_walk",
+        "affected_part_id": "part_origin~s1",
+        "event_id": "evt_000005",
+        "event_type": "service_complete",
+        "hostel_composition": {
+          "synthetic": 1
+        },
+        "leg_id": null,
+        "place_id": "entrance",
+        "primary_cause": "service_duration_elapsed",
+        "related_event_ids": [
+          "evt_000004"
+        ],
+        "resource_ids": [],
+        "stage_id": "entrance_service",
+        "student_count": 1,
+        "time_local": "2026-01-01T00:01:10+08:00",
+        "time_ms": 70000
+      },
+      {
+        "affected_group_id": "g_walk",
+        "affected_part_id": "part_origin~s1",
+        "event_id": "evt_000006",
+        "event_type": "stage_complete",
+        "hostel_composition": {
+          "synthetic": 1
+        },
+        "leg_id": null,
+        "place_id": "entrance",
+        "primary_cause": "required_endpoint_reached",
+        "related_event_ids": [
+          "evt_000005"
+        ],
+        "resource_ids": [],
+        "stage_id": "entrance_service",
+        "student_count": 1,
+        "time_local": "2026-01-01T00:01:10+08:00",
+        "time_ms": 70000
+      },
+      {
+        "affected_group_id": "g_walk",
+        "affected_part_id": "part_origin~s2",
+        "event_id": "evt_000007",
+        "event_type": "service_start",
+        "hostel_composition": {
+          "synthetic": 1
+        },
+        "leg_id": null,
+        "place_id": "entrance",
+        "primary_cause": "single_server_available",
+        "related_event_ids": [],
+        "resource_ids": [],
+        "stage_id": "entrance_service",
+        "student_count": 1,
+        "time_local": "2026-01-01T00:01:10+08:00",
+        "time_ms": 70000
+      }
+    ],
+    "event_trace_retained": true,
+    "group_count_totals": [],
+    "input_snapshot": {
+      "policy": {
+        "destination_rule": {
+          "type": "service_then_complete"
+        },
+        "grouping": {
+          "mode": "explicit_parts"
+        },
+        "policy_id": "artificial_fcfs_v1",
+        "policy_version": "1",
+        "random_seed": 42,
+        "release_rule": {
+          "type": "immediate"
+        },
+        "required_endpoint": "service_complete",
+        "vehicle_dispatch_rule": {
+          "type": "none"
+        }
+      },
+      "scenario": {
+        "accuracy_references": [],
+        "calendars": [],
+        "data_version": "ticket-01-artificial-v1",
+        "deadline_s": 75,
+        "decisions": [
+          {
+            "category": "decision",
+            "id": "single_server",
+            "note": "one server, 10 s per student",
+            "value": 1
+          }
+        ],
+        "event_date": "2026-01-01",
+        "format_version": "usm-sim-scenario-v1",
+        "initial_state": {
+          "hall_occupancy_students": 0,
+          "queues": [],
+          "students": [
+            {
+              "group_id": "g_walk",
+              "hostel_composition": {
+                "synthetic": 4
+              },
+              "hostel_id": "synthetic",
+              "members": [
+                {
+                  "queue_tie_key": "00",
+                  "student_key": "s1"
+                },
+                {
+                  "queue_tie_key": "01",
+                  "student_key": "s2"
+                },
+                {
+                  "queue_tie_key": "02",
+                  "student_key": "s3"
+                },
+                {
+                  "queue_tie_key": "03",
+                  "student_key": "s4"
+                }
+              ],
+              "part_id": "part_origin",
+              "place_id": "origin",
+              "source_unit_id": "su_origin"
+            }
+          ],
+          "vehicles": [],
+          "workers": []
+        },
+        "max_events_per_run": 10000,
+        "measured_facts": [],
+        "operating_rules": {
+          "bag_check": false,
+          "direct_walk_permitted": false,
+          "mechanical_clicker": false,
+          "qr_scan": false,
+          "required_endpoint": "service_complete",
+          "seating_modeled": false,
+          "security_service": false
+        },
+        "places": [
+          {
+            "capacity_constraint": "unbounded",
+            "capacity_from_gps_scatter": false,
+            "capacity_note": "explicit unbounded artificial origin",
+            "id": "origin",
+            "latitude_deg": 0.0,
+            "longitude_deg": 0.0,
+            "meaning": "artificial origin"
+          },
+          {
+            "capacity_constraint": "unbounded",
+            "capacity_from_gps_scatter": false,
+            "capacity_note": "explicit unbounded artificial entrance",
+            "id": "entrance",
+            "latitude_deg": 0.001,
+            "longitude_deg": 0.0,
+            "meaning": "single-server entrance"
+          }
+        ],
+        "route_legs": [
+          {
+            "duration_s": 60,
+            "from_place_id": "origin",
+            "id": "walk_1",
+            "mode": "walk",
+            "shared_resource_ids": [],
+            "to_place_id": "entrance"
+          }
+        ],
+        "route_stages": [
+          {
+            "id": "walk",
+            "kind": "travel",
+            "leg_id": "walk_1"
+          },
+          {
+            "id": "entrance_service",
+            "kind": "queue_service",
+            "place_id": "entrance",
+            "queue_discipline": "fcfs",
+            "server_count": 1,
+            "service_duration_s": 10
+          }
+        ],
+        "scenario_id": "artificial_single_server_v1",
+        "simulation_end_s": 75,
+        "source_records": [
+          {
+            "category": "assumed",
+            "confidence": "high",
+            "date": "2026-01-01",
+            "field": "route_legs.walk_1.duration_s",
+            "method": "hand-calculated example from spec section 21",
+            "observation_ref": "spec.md#concrete-time-accounting-example",
+            "unit": "s",
+            "value": 60
+          },
+          {
+            "category": "decision",
+            "confidence": "high",
+            "date": "2026-01-01",
+            "field": "route_stages.entrance_service.service_duration_s",
+            "method": "hand-calculated example from spec section 21",
+            "observation_ref": "spec.md#concrete-time-accounting-example",
+            "unit": "s",
+            "value": 10
+          },
+          {
+            "category": "assumed",
+            "confidence": "high",
+            "date": "2026-01-01",
+            "field": "source_units.su_origin.resolved_attendance",
+            "method": "hand-calculated example",
+            "observation_ref": "spec.md#concrete-time-accounting-example",
+            "unit": "persons",
+            "value": 4
+          }
+        ],
+        "source_units": [
+          {
+            "actual_reporting_s": 0,
+            "estimated_attendance": 4,
+            "hostel_id": "synthetic",
+            "id": "su_origin",
+            "layout_link": "assumed_single_unit",
+            "readiness_s": 0,
+            "resolved_attendance": 4
+          }
+        ],
+        "start_time_local": "00:00:00",
+        "timezone": "Asia/Kuala_Lumpur",
+        "uncertain_assumptions": [
+          {
+            "category": "assumed",
+            "id": "walk_duration",
+            "note": "hand-calculated case: students arrive together at 60 s",
+            "unit": "s",
+            "value": 60
+          }
+        ],
+        "uncertainty_case_id": "artificial_base"
+      }
+    },
+    "limits_reached": [
+      "simulation_end_s"
+    ],
+    "measures": {
+      "accounted_students": 4,
+      "assembly_leftover_events": 0,
+      "assembly_leftover_students": 0,
+      "assembly_student_s": 0.0,
+      "attending_students": 4,
+      "by_campus": {
+        "assembly_leftover_events": 0,
+        "assembly_leftover_students": 0,
+        "catch_up_time_saved_student_s": 0.0,
+        "catch_up_walk_students": 0,
+        "deviation_attempt_students": 0,
+        "hall_area_late_students": 0,
+        "hall_area_lateness_student_s": 0.0,
+        "late_students": 0,
+        "mean_wait_s": 10.0,
+        "missed_pulse_students": 0,
+        "non_attendance_students": 0,
+        "p95_wait_s": 15.0,
+        "path_skip_students": 0,
+        "queue_jump_attempt_students": 0,
+        "queue_jump_enacted_students": 0,
+        "reporting_late_students": 0,
+        "reporting_lateness_student_s": 0.0,
+        "station_intercept_students": 0,
+        "station_intercept_students_by_place": {},
+        "station_miss_students": 0,
+        "station_miss_students_by_place": {},
+        "total_lateness_s": 0,
+        "total_required_journey_student_s": 70.0,
+        "total_student_waiting_student_s": 40.0,
+        "unfinished_leftover_students": 0,
+        "unfinished_students": 3,
+        "unsupervised_flow_students": 0,
+        "wait_denominator_students": 4
+      },
+      "by_hostel": [
+        {
+          "completed_students": 1,
+          "hostel_id": "synthetic",
+          "late_students": 0,
+          "mean_wait_s": 10.0,
+          "p95_wait_s": 15.0,
+          "student_count": 4,
+          "total_waiting_student_s": 40.0,
+          "unfinished_students": 0,
+          "wait_denominator_students": 4
+        },
+        {
+          "completed_students": 0,
+          "hostel_id": "unknown",
+          "late_students": 0,
+          "mean_wait_s": 0.0,
+          "p95_wait_s": 0.0,
+          "student_count": 3,
+          "total_waiting_student_s": 0.0,
+          "unfinished_students": 3,
+          "wait_denominator_students": 3
+        }
+      ],
+      "catch_up_time_saved_student_s": 0.0,
+      "catch_up_walk_students": 0,
+      "completed_students": 1,
+      "coordination": {
+        "active_station_count": 1,
+        "active_stations": [
+          "entrance"
+        ],
+        "distinct_operating_rule_ids": [
+          "grouping_mode:explicit_parts",
+          "release:immediate"
+        ],
+        "distinct_operating_rules": 2,
+        "handovers": 0,
+        "physical_regrouping_actions": 0,
+        "policy_decisions": 0,
+        "reports_requiring_action": 0
+      },
+      "counting_student_s": 0.0,
+      "denied_entry_students": 0,
+      "deviation_attempt_students": 0,
+      "earlier_reporting_burden_student_s": 0.0,
+      "early_arrival_idle_student_s": 0.0,
+      "fairness": {
+        "comparison": "campus_mean_wait",
+        "disadvantaged_hostels": [],
+        "evaluated": false,
+        "limit_configured": false,
+        "limit_s": null,
+        "max_hostel_mean_wait_s": 10.0,
+        "passed": null,
+        "worst_hostel_id": "synthetic"
+      },
+      "free_time_before_reporting_student_s": 0.0,
+      "hall_area_late_students": 0,
+      "hall_area_lateness_student_s": 0.0,
+      "headcount_actions": 0,
+      "late_students": 0,
+      "max_hostel_mean_wait_s": 10.0,
+      "max_lateness_s": 0.0,
+      "max_queue_students": 4,
+      "mean_wait_s": 10.0,
+      "missed_pulse_students": 0,
+      "non_attendance_students": 0,
+      "numerical_rounding_limit_s": 0.001,
+      "operating_limit_exceedance": {
+        "by_place": [],
+        "duration_s": 0.0,
+        "max_excess_students": 0,
+        "max_occupancy_students": 0
+      },
+      "outdoor_waiting": {
+        "exposed_student_s": 0.0,
+        "measured_medical_risk": false,
+        "shaded_student_s": 0.0,
+        "sheltered_student_s": 0.0
+      },
+      "outdoor_waiting_student_s": {
+        "exposed": 0.0,
+        "shaded": 0.0,
+        "sheltered": 0.0
+      },
+      "p95_wait_s": 15.0,
+      "p95_weighting": "student_count",
+      "path_skip_students": 0,
+      "peak_concurrent_workers": 0,
+      "post_completion_stationary_student_s": 0.0,
+      "queue_jump_attempt_students": 0,
+      "queue_jump_enacted_students": 0,
+      "recounts": 0,
+      "reporting_late_students": 0,
+      "reporting_lateness_student_s": 0.0,
+      "required_stationary_service_student_s": 20.0,
+      "station_intercept_students": 0,
+      "station_intercept_students_by_place": {},
+      "station_miss_students": 0,
+      "station_miss_students_by_place": {},
+      "total_hold_waiting_student_s": 0.0,
+      "total_lateness_s": 0,
+      "total_queue_waiting_student_s": 40.0,
+      "total_required_journey_s": 70.0,
+      "total_required_journey_student_s": 70.0,
+      "total_service_student_s": 20.0,
+      "total_student_waiting_student_s": 40.0,
+      "unfinished_in_wait_denominator": 3,
+      "unfinished_leftover_students": 0,
+      "unfinished_students": 3,
+      "unresolved_counts": 0,
+      "unsupervised_flow_students": 0,
+      "unused_service_is_student_waiting": false,
+      "unused_service_s": 0.0,
+      "vehicles": {
+        "busy_s": 0.0,
+        "by_vehicle": [],
+        "held_s": 0.0,
+        "idle_s": 0.0,
+        "waiting_to_alight_s": 0.0
+      },
+      "wait_denominator_students": 4,
+      "waiting_student_s_by_cause": {
+        "waiting_for_server": 40.0
+      },
+      "waiting_student_s_by_class": {
+        "denied_entry": 0.0,
+        "intentional_hold": 0.0,
+        "physical_blocking": 0.0,
+        "queue_waiting": 40.0,
+        "resource_waiting": 0.0,
+        "synchronization": 0.0
+      },
+      "withdrawn_students": 0,
+      "worker_count_s": 0.0,
+      "worker_duty_s": 0.0,
+      "worker_escort_s": 0.0,
+      "worker_handover_s": 0.0,
+      "worker_overlap_double_counted": false,
+      "worker_reserved_s": 0.0,
+      "worker_standby_s": 0.0,
+      "worker_station_s": 0.0,
+      "worker_travel_s": 0.0,
+      "worker_unused_availability_s": 0.0,
+      "worst_hostel_id": "synthetic"
+    },
+    "occupancy_history": [
+      {
+        "direction": "in",
+        "occupancy_after": 4,
+        "part_id": "part_origin",
+        "place_id": "origin",
+        "reserved_after": 0,
+        "student_count": 4,
+        "time_ms": 0
+      },
+      {
+        "direction": "out",
+        "occupancy_after": 0,
+        "part_id": "part_origin",
+        "place_id": "origin",
+        "reserved_after": 0,
+        "student_count": 4,
+        "time_ms": 0
+      },
+      {
+        "direction": "in",
+        "occupancy_after": 4,
+        "part_id": "part_origin",
+        "place_id": "entrance",
+        "reserved_after": 0,
+        "student_count": 4,
+        "time_ms": 60000
+      },
+      {
+        "direction": "out",
+        "occupancy_after": 3,
+        "part_id": "part_origin~s1",
+        "place_id": "entrance",
+        "reserved_after": 0,
+        "student_count": 1,
+        "time_ms": 70000
+      }
+    ],
+    "occupancy_integrity": {
+      "double_occupancy_events": [],
+      "physical_excess_events": []
+    },
+    "outcomes": {
+      "campus": {
+        "completed_students": 1,
+        "late_students": 0,
+        "max_hostel_mean_wait_s": 10.0,
+        "mean_wait_s": 10.0,
+        "p95_wait_s": 15.0,
+        "unfinished_students": 3,
+        "wait_denominator_students": 4,
+        "worst_hostel_id": "synthetic"
+      },
+      "groups": [
+        {
+          "actual_reporting_s": 0.0,
+          "assembly_finish_s": null,
+          "assembly_start_s": null,
+          "completed_students": 1,
+          "entrance_completion_s": null,
+          "expected_count": 4,
+          "group_id": "g_walk",
+          "hall_area_arrival_s": null,
+          "hostel_ids": [
+            "synthetic"
+          ],
+          "late_students": 0,
+          "observed_count": 1,
+          "parent_group_id": "g_walk",
+          "readiness_s": 0.0,
+          "release_s": 0.0,
+          "required_reporting_s": 0.0,
+          "seated_completion_s": null,
+          "service_times": [
+            {
+              "duration_s": 10.0,
+              "end_s": 70.0,
+              "kind": "service",
+              "part_id": "part_origin~s1",
+              "place_id": "entrance",
+              "start_s": 60.0
+            }
+          ],
+          "source_unit_ids": [
+            "su_origin"
+          ],
+          "stage_arrivals": [
+            {
+              "event_type": "arrival",
+              "place_id": "entrance",
+              "stage_id": "walk",
+              "time_s": 60.0
+            },
+            {
+              "event_type": "service_start",
+              "place_id": "entrance",
+              "stage_id": "entrance_service",
+              "time_s": 60.0
+            }
+          ],
+          "status": "partial",
+          "supported_completion_points": [],
+          "total_waiting_student_s": 40.0,
+          "unfinished_students": 3,
+          "unknown_completion_points": [
+            "hall_area_arrival",
+            "entrance_completion",
+            "seated_completion"
+          ]
+        }
+      ],
+      "per_group": [
+        {
+          "actual_reporting_s": 0.0,
+          "assembly_finish_s": null,
+          "assembly_start_s": null,
+          "completed_students": 1,
+          "entrance_completion_s": null,
+          "expected_count": 4,
+          "group_id": "g_walk",
+          "hall_area_arrival_s": null,
+          "hostel_ids": [
+            "synthetic"
+          ],
+          "late_students": 0,
+          "observed_count": 1,
+          "parent_group_id": "g_walk",
+          "readiness_s": 0.0,
+          "release_s": 0.0,
+          "required_reporting_s": 0.0,
+          "seated_completion_s": null,
+          "service_times": [
+            {
+              "duration_s": 10.0,
+              "end_s": 70.0,
+              "kind": "service",
+              "part_id": "part_origin~s1",
+              "place_id": "entrance",
+              "start_s": 60.0
+            }
+          ],
+          "source_unit_ids": [
+            "su_origin"
+          ],
+          "stage_arrivals": [
+            {
+              "event_type": "arrival",
+              "place_id": "entrance",
+              "stage_id": "walk",
+              "time_s": 60.0
+            },
+            {
+              "event_type": "service_start",
+              "place_id": "entrance",
+              "stage_id": "entrance_service",
+              "time_s": 60.0
+            }
+          ],
+          "status": "partial",
+          "supported_completion_points": [],
+          "total_waiting_student_s": 40.0,
+          "unfinished_students": 3,
+          "unknown_completion_points": [
+            "hall_area_arrival",
+            "entrance_completion",
+            "seated_completion"
+          ]
+        }
+      ],
+      "per_hostel": [
+        {
+          "completed_students": 1,
+          "hostel_id": "synthetic",
+          "late_students": 0,
+          "mean_wait_s": 10.0,
+          "p95_wait_s": 15.0,
+          "student_count": 4,
+          "total_waiting_student_s": 40.0,
+          "unfinished_students": 0,
+          "wait_denominator_students": 4
+        },
+        {
+          "completed_students": 0,
+          "hostel_id": "unknown",
+          "late_students": 0,
+          "mean_wait_s": 0.0,
+          "p95_wait_s": 0.0,
+          "student_count": 3,
+          "total_waiting_student_s": 0.0,
+          "unfinished_students": 3,
+          "wait_denominator_students": 3
+        }
+      ],
+      "per_source_unit": [
+        {
+          "actual_reporting_s": 0.0,
+          "assembly_finish_s": null,
+          "assembly_leftover_events": 0,
+          "assembly_leftover_students": 0,
+          "assembly_start_s": null,
+          "availability_s": 0.0,
+          "catch_up_time_saved_student_s": 0.0,
+          "catch_up_walk_students": 0,
+          "completed_students": 1,
+          "deviation_attempt_students": 0,
+          "entrance_completion_s": null,
+          "expected_count": 4,
+          "hall_area_arrival_s": null,
+          "hall_area_late_students": 0,
+          "hall_area_lateness_student_s": 0.0,
+          "hostel_id": "synthetic",
+          "late_students": 0,
+          "missed_pulse_students": 0,
+          "non_attendance_students": 0,
+          "observed_count": 1,
+          "path_skip_students": 0,
+          "queue_jump_attempt_students": 0,
+          "queue_jump_enacted_students": 0,
+          "readiness_s": 0.0,
+          "release_s": 0.0,
+          "reporting_late_students": 0,
+          "reporting_lateness_student_s": 0.0,
+          "required_reporting_s": 0.0,
+          "seated_completion_s": null,
+          "service_times": [
+            {
+              "duration_s": 10.0,
+              "end_s": 70.0,
+              "kind": "service",
+              "part_id": "part_origin~s1",
+              "place_id": "entrance",
+              "start_s": 60.0
+            }
+          ],
+          "source_unit_id": "su_origin",
+          "stage_arrivals": [
+            {
+              "event_type": "arrival",
+              "place_id": "entrance",
+              "stage_id": "walk",
+              "time_s": 60.0
+            },
+            {
+              "event_type": "service_start",
+              "place_id": "entrance",
+              "stage_id": "entrance_service",
+              "time_s": 60.0
+            }
+          ],
+          "station_intercept_students": 0,
+          "station_miss_students": 0,
+          "status": "partial",
+          "supported_completion_points": [],
+          "total_waiting_student_s": 40.0,
+          "unfinished_leftover_students": 0,
+          "unfinished_students": 3,
+          "unknown_completion_points": [
+            "hall_area_arrival",
+            "entrance_completion",
+            "seated_completion"
+          ],
+          "unsupervised_flow_students": 0,
+          "withdrawn_students": 0
+        }
+      ],
+      "source_units": [
+        {
+          "actual_reporting_s": 0.0,
+          "assembly_finish_s": null,
+          "assembly_leftover_events": 0,
+          "assembly_leftover_students": 0,
+          "assembly_start_s": null,
+          "availability_s": 0.0,
+          "catch_up_time_saved_student_s": 0.0,
+          "catch_up_walk_students": 0,
+          "completed_students": 1,
+          "deviation_attempt_students": 0,
+          "entrance_completion_s": null,
+          "expected_count": 4,
+          "hall_area_arrival_s": null,
+          "hall_area_late_students": 0,
+          "hall_area_lateness_student_s": 0.0,
+          "hostel_id": "synthetic",
+          "late_students": 0,
+          "missed_pulse_students": 0,
+          "non_attendance_students": 0,
+          "observed_count": 1,
+          "path_skip_students": 0,
+          "queue_jump_attempt_students": 0,
+          "queue_jump_enacted_students": 0,
+          "readiness_s": 0.0,
+          "release_s": 0.0,
+          "reporting_late_students": 0,
+          "reporting_lateness_student_s": 0.0,
+          "required_reporting_s": 0.0,
+          "seated_completion_s": null,
+          "service_times": [
+            {
+              "duration_s": 10.0,
+              "end_s": 70.0,
+              "kind": "service",
+              "part_id": "part_origin~s1",
+              "place_id": "entrance",
+              "start_s": 60.0
+            }
+          ],
+          "source_unit_id": "su_origin",
+          "stage_arrivals": [
+            {
+              "event_type": "arrival",
+              "place_id": "entrance",
+              "stage_id": "walk",
+              "time_s": 60.0
+            },
+            {
+              "event_type": "service_start",
+              "place_id": "entrance",
+              "stage_id": "entrance_service",
+              "time_s": 60.0
+            }
+          ],
+          "station_intercept_students": 0,
+          "station_miss_students": 0,
+          "status": "partial",
+          "supported_completion_points": [],
+          "total_waiting_student_s": 40.0,
+          "unfinished_leftover_students": 0,
+          "unfinished_students": 3,
+          "unknown_completion_points": [
+            "hall_area_arrival",
+            "entrance_completion",
+            "seated_completion"
+          ],
+          "unsupervised_flow_students": 0,
+          "withdrawn_students": 0
+        }
+      ],
+      "student_completions": [
+        {
+          "completion_time_ms": 70000,
+          "completion_time_s": 70.0,
+          "count_record_ids": [],
+          "covered_checkpoint_ids": [],
+          "endpoint": "service_complete",
+          "group_id": "g_walk",
+          "hostel_id": "synthetic",
+          "late_s": 0.0,
+          "part_id": "part_origin~s1",
+          "reporting_lateness_s": 0.0,
+          "required_journey_s": 70.0,
+          "source_unit_id": "su_origin",
+          "student_key": "s1",
+          "wait_s": 0.0
+        }
+      ]
+    },
+    "place_occupancy": [
+      {
+        "occupancy_students": 3,
+        "occupancy_vehicles": 0,
+        "place_id": "entrance",
+        "reserved_students": 0
+      },
+      {
+        "occupancy_students": 0,
+        "occupancy_vehicles": 0,
+        "place_id": "origin",
+        "reserved_students": 0
+      }
+    ],
+    "policy_decisions": [],
+    "policy_id": "artificial_fcfs_v1",
+    "queue_summaries": [
+      {
+        "place_id": "entrance",
+        "queued_parts": 2,
+        "queued_students": 2,
+        "server_count": 1,
+        "servers_busy": 1
+      }
+    ],
+    "random_seed": 42,
+    "reconciliation_status": "not_required",
+    "reporting_assumptions": {
+      "actual_reporting_s_by_unit": {
+        "su_origin": 0.0
+      },
+      "attendance_response_rule": {
+        "type": "fixed"
+      },
+      "availability_s_by_unit": {
+        "su_origin": 0.0
+      },
+      "exogenous_availability_retained": true,
+      "reporting_window": null,
+      "required_reporting_is_search_choice": false,
+      "required_reporting_s_by_unit": {
+        "su_origin": 0.0
+      }
+    },
+    "reports": [],
+    "resource_summaries": [],
+    "result_id": "artificial_single_server_v1::artificial_fcfs_v1::0.7.0-6df8fee-fleet-8-loop",
+    "scenario_id": "artificial_single_server_v1",
+    "status": "incomplete",
+    "student_time_intervals": [
+      {
+        "duration_s": 10.0,
+        "end_ms": 70000,
+        "part_id": "part_origin~s2",
+        "place_id": "entrance",
+        "primary_activity": "waiting",
+        "primary_waiting_cause": "waiting_for_server",
+        "resource_id": null,
+        "secondary_reasons": [],
+        "start_ms": 60000,
+        "student_count": 1
+      },
+      {
+        "duration_s": 15.0,
+        "end_ms": 75000,
+        "part_id": "part_origin~s3",
+        "place_id": "entrance",
+        "primary_activity": "waiting",
+        "primary_waiting_cause": "waiting_for_server",
+        "resource_id": null,
+        "secondary_reasons": [],
+        "start_ms": 60000,
+        "student_count": 1
+      },
+      {
+        "duration_s": 15.0,
+        "end_ms": 75000,
+        "part_id": "part_origin~s4",
+        "place_id": "entrance",
+        "primary_activity": "waiting",
+        "primary_waiting_cause": "waiting_for_server",
+        "resource_id": null,
+        "secondary_reasons": [],
+        "start_ms": 60000,
+        "student_count": 1
+      },
+      {
+        "duration_s": 60.0,
+        "end_ms": 60000,
+        "part_id": "part_origin",
+        "place_id": "origin",
+        "primary_activity": "travel",
+        "primary_waiting_cause": null,
+        "related_event_ids": [
+          "evt_000002",
+          "evt_000003"
+        ],
+        "resource_id": null,
+        "secondary_reasons": [],
+        "start_ms": 0,
+        "student_count": 4
+      },
+      {
+        "duration_s": 10.0,
+        "end_ms": 70000,
+        "part_id": "part_origin~s1",
+        "place_id": "entrance",
+        "primary_activity": "service",
+        "primary_waiting_cause": null,
+        "related_event_ids": [
+          "evt_000004",
+          "evt_000005"
+        ],
+        "resource_id": null,
+        "secondary_reasons": [],
+        "start_ms": 60000,
+        "student_count": 1
+      }
+    ],
+    "termination_cause": "simulation_end_s",
+    "uncertainty_case_id": "artificial_base",
+    "unfinished_demand": [
+      {
+        "count_record_ids": [],
+        "covered_checkpoint_ids": [],
+        "group_id": "g_walk",
+        "parent_part_id": "part_origin",
+        "part_id": "part_origin~s2",
+        "place_id": "entrance",
+        "root_part_id": "part_origin",
+        "stage_id": "entrance_service",
+        "status": "in_service",
+        "student_count": 1
+      },
+      {
+        "count_record_ids": [],
+        "covered_checkpoint_ids": [],
+        "group_id": "g_walk",
+        "parent_part_id": "part_origin",
+        "part_id": "part_origin~s3",
+        "place_id": "entrance",
+        "root_part_id": "part_origin",
+        "stage_id": "entrance_service",
+        "status": "queued",
+        "student_count": 1
+      },
+      {
+        "count_record_ids": [],
+        "covered_checkpoint_ids": [],
+        "group_id": "g_walk",
+        "parent_part_id": "part_origin",
+        "part_id": "part_origin~s4",
+        "place_id": "entrance",
+        "root_part_id": "part_origin",
+        "stage_id": "entrance_service",
+        "status": "queued",
+        "student_count": 1
+      }
+    ],
+    "versions": {
+      "data_version": "ticket-01-artificial-v1",
+      "engine_version": "0.7.0-6df8fee-fleet-8-loop",
+      "format_version": "usm-sim-scenario-v1",
+      "policy_version": "1",
+      "software_revision": "6df8fee-fleet-8-loop"
+    },
+    "violations": [],
+    "visible_assumptions": [
+      {
+        "category": "assumed",
+        "id": "walk_duration",
+        "note": "hand-calculated case: students arrive together at 60 s",
+        "unit": "s",
+        "value": 60
+      }
+    ],
+    "worker_assignments": [],
+    "worker_summaries": []
+  }
+}

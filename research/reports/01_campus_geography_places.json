@@ -1,0 +1,214 @@
+[
+  {
+    "name": "Dewan Tuanku Syed Putra (DTSP)",
+    "aliases": [
+      "DTSP",
+      "G01 Dewan Tuanku Syed Putra",
+      "Main Convocation Hall"
+    ],
+    "lat": 5.3569539,
+    "lon": 100.3031112,
+    "osm_id": 896393762,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/896393762",
+    "confidence": "high",
+    "notes": "Primary indoor venue for USM Minggu Siswa Lestari (MSL) induction; 3,000-3,500 seat capacity."
+  },
+  {
+    "name": "Perpustakaan Hamzah Sendut 1 (PHS 1)",
+    "aliases": [
+      "PHS",
+      "PHS 1",
+      "G02 Perpustakaan Hamzah Sendut 1"
+    ],
+    "lat": 5.3574508,
+    "lon": 100.3030457,
+    "osm_id": 208697647,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/208697647",
+    "confidence": "high",
+    "notes": "Immediate north-adjacent landmark to DTSP; pedestrian plaza connects PHS 1 and DTSP."
+  },
+  {
+    "name": "Perpustakaan Hamzah Sendut 2 (PHS 2)",
+    "aliases": [
+      "PHS 2",
+      "E41 Perpustakaan Hamzah Sendut 2"
+    ],
+    "lat": 5.3547031,
+    "lon": 100.3036029,
+    "osm_id": 205875602,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/205875602",
+    "confidence": "high",
+    "notes": "Secondary library building south of DTSP near Dewan Budaya."
+  },
+  {
+    "name": "Desasiswa Restu",
+    "aliases": [
+      "Restu",
+      "M01 Desasiswa Restu"
+    ],
+    "lat": 5.3558402,
+    "lon": 100.2891963,
+    "osm_id": 139062076,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/139062076",
+    "confidence": "high",
+    "notes": "Western ridge high-rise student accommodation complex; houses ~1,700 students."
+  },
+  {
+    "name": "Restu Bus Stop / Departure Pavilion",
+    "aliases": [
+      "Restu Staging Pavilion",
+      "M08 Dewan Utama (Restu) Forecourt"
+    ],
+    "lat": 5.3572768,
+    "lon": 100.2898076,
+    "osm_id": 275415002,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/275415002",
+    "confidence": "high",
+    "notes": "Staging point where Restu students queue along road shoulder to board shuttle coaches. Coordinates locked from GPS telemetry start point."
+  },
+  {
+    "name": "Desasiswa Tekun",
+    "aliases": [
+      "Tekun",
+      "M05 Desasiswa Tekun"
+    ],
+    "lat": 5.3556294,
+    "lon": 100.2912928,
+    "osm_id": 275414999,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/275414999",
+    "confidence": "high",
+    "notes": "RST cluster western hostel located immediately east of Restu on Tekun ridge."
+  },
+  {
+    "name": "Desasiswa Saujana",
+    "aliases": [
+      "Saujana",
+      "Desasiswa RST",
+      "Saujana Student Residence"
+    ],
+    "lat": 5.3564,
+    "lon": 100.2905,
+    "osm_id": null,
+    "osm_type": "node",
+    "source_url": "https://maps.usm.my/main",
+    "confidence": "medium",
+    "notes": "Part of RST triplet between Restu and Tekun. Often shares pavilion and amenities with Restu/Tekun."
+  },
+  {
+    "name": "Desasiswa Indah Kembara",
+    "aliases": [
+      "Indah Kembara",
+      "L05/L06/L07 Desasiswa Indah Kembara"
+    ],
+    "lat": 5.356033,
+    "lon": 100.2960407,
+    "osm_id": 275404588,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/275404588",
+    "confidence": "high",
+    "notes": "Central-western campus hostel adjacent to Padang Kawad and Jalan Indah Kembara."
+  },
+  {
+    "name": "Desasiswa Aman Damai",
+    "aliases": [
+      "Aman Damai",
+      "K10 Desasiswa Aman Damai"
+    ],
+    "lat": 5.3543055,
+    "lon": 100.2961546,
+    "osm_id": 1030965779,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/1030965779",
+    "confidence": "high",
+    "notes": "South-western hostel cluster south of Padang Kawad."
+  },
+  {
+    "name": "Desasiswa Bakti Permai",
+    "aliases": [
+      "Bakti Permai",
+      "H10 Desasiswa Bakti Permai"
+    ],
+    "lat": 5.3577556,
+    "lon": 100.3005464,
+    "osm_id": 275403376,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/275403376",
+    "confidence": "high",
+    "notes": "Northern-central hostel adjacent to Pusat Sejahtera and science schools."
+  },
+  {
+    "name": "Desasiswa Cahaya Gemilang",
+    "aliases": [
+      "Cahaya Gemilang",
+      "H33 Desasiswa Cahaya Gemilang"
+    ],
+    "lat": 5.3604563,
+    "lon": 100.3035977,
+    "osm_id": 275403540,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/275403540",
+    "confidence": "high",
+    "notes": "North-eastern perimeter hostel near Pusat Sukan Minden and Bukit Gambir gate."
+  },
+  {
+    "name": "Desasiswa Fajar Harapan",
+    "aliases": [
+      "Fajar Harapan",
+      "F27 Desasiswa Harapan"
+    ],
+    "lat": 5.3550006,
+    "lon": 100.2997724,
+    "osm_id": 275403371,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/275403371",
+    "confidence": "high",
+    "notes": "Central-southern hostel near Eureka complex and chemical science faculty."
+  },
+  {
+    "name": "DTSP Drop-Off Curb & Holding Reservoir",
+    "aliases": [
+      "DTSP Bus Drop-off",
+      "DTSP Forecourt"
+    ],
+    "lat": 5.3568866,
+    "lon": 100.3030831,
+    "osm_id": 896393762,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/896393762",
+    "confidence": "high",
+    "notes": "Kerbside drop-off zone and open roadway staging reservoir where 300-400 students wait under open sun."
+  },
+  {
+    "name": "Padang Kawad USM (Central Parade Ground / Transit Hub)",
+    "aliases": [
+      "Padang Kawad",
+      "Hub Padang Kawad"
+    ],
+    "lat": 5.3560678,
+    "lon": 100.2941582,
+    "osm_id": 11880869101,
+    "osm_type": "node",
+    "source_url": "https://www.openstreetmap.org/node/11880869101",
+    "confidence": "high",
+    "notes": "Central transit junction and bus hub connecting western residential ridge to central academic core."
+  },
+  {
+    "name": "Jejantas Padang Kawad / Indah Kembara Pedestrian Footbridge",
+    "aliases": [
+      "Pedestrian Bridge Restu-Padang Kawad Spine"
+    ],
+    "lat": 5.3564521,
+    "lon": 100.2928739,
+    "osm_id": 1030376052,
+    "osm_type": "way",
+    "source_url": "https://www.openstreetmap.org/way/1030376052",
+    "confidence": "high",
+    "notes": "Pedestrian bridge connecting the Tekun/Restu ridge down toward Padang Kawad."
+  }
+]

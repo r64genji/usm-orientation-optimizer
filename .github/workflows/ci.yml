@@ -1,0 +1,95 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main, public-release]
+  pull_request:
+    branches: [master, main, public-release]
+
+jobs:
+  test-simulation:
+    name: Simulation Engine (Python ${{ matrix.python-version }})
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.11", "3.12", "3.13"]
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev,dashboard]"
+
+      - name: Lint with Ruff
+        run: |
+          ruff check .
+
+      - name: Run fast invariant test suite
+        run: |
+          pytest -q -m "not benchmark and not slow"
+
+      - name: Audit privacy and export compliance
+        run: |
+          python scripts/prepare_public_export.py --verify-only
+
+  test-dashboard:
+    name: Operator Dashboard & Web UI
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: "npm"
+          cache-dependency-path: operator_dashboard/web/package-lock.json
+
+      - name: Install Python dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev,dashboard]"
+
+      - name: Install frontend dependencies and build
+        run: |
+          npm --prefix operator_dashboard/web ci
+          npm --prefix operator_dashboard/web run build
+
+      - name: Run dashboard Python tests
+        run: |
+          python -m pytest -q tests/dashboard
+  verify-proposal-site:
+    name: Proposal A4 Site Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify and build A4 proposal site
+        run: |
+          node proposal_site/tests/verify.mjs
+          node proposal_site/scripts/build.mjs

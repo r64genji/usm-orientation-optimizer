@@ -1,0 +1,106 @@
+[
+  {
+    "name": "Desasiswa Restu",
+    "origin_lat": 5.3558402,
+    "origin_lon": 100.2891963,
+    "pickup_notes": "Restu Staging Pavilion / M08 Dewan Utama Forecourt (5.3572768, 100.2898076) and lower road shoulder boarding berth near Padang Kawad perimeter (5.356013, 100.293685). Primary origin for morning coach shuttles.",
+    "walk_notes": "2,282 m (~30-34 min walk). Descends steep western ridge via Halaman Bukit Gambir 4, crossing the elevated covered concrete footbridge (Jejantas Padang Kawad, OSM way 1030376052) down to Padang Kawad, then east along the primary arterial spine Jalan Universiti to Jalan Perpustakaan and DTSP pedestrian plaza. Bottlenecks: steep ridge gradient, bottleneck stairs at bridge descent, narrow roadside shoulders without continuous shade along Jalan Universiti, vehicle conflict at Padang Kawad roundabout.",
+    "sources": [
+      "https://www.openstreetmap.org/way/139062076",
+      "https://www.openstreetmap.org/way/1030376052",
+      "https://www.facebook.com/mppusm.official/photos/laluan-bas-e-laluan-ungujejantas-tekun-m07-saujana-m01-restu-jejantas/1020040901450894",
+      "raw_data/media/videos/2026-09-17_0749_bus_boarding_queue.mp4",
+      "raw_data/media/videos/2026-09-17_0737_road_shoulder_queue.mp4"
+    ]
+  },
+  {
+    "name": "Desasiswa Saujana",
+    "origin_lat": 5.3564,
+    "origin_lon": 100.2905,
+    "pickup_notes": "Shares the central RST transport staging pavilion and M07 Saujana forecourt pick-up loop with Restu and Tekun. Shuttle buses loop through RST via Laluan Ungu / Route E.",
+    "walk_notes": "1,782 m (~24-27 min walk). Traverses eastward down Saujana ridge road to connect directly with the covered pedestrian bridge (Jejantas Padang Kawad) over the perimeter roadway to Hub Padang Kawad, continuing along Jalan Universiti to DTSP. Bottlenecks: steep descent, covered bridge step choke points, road crossings at Jalan Universiti.",
+    "sources": [
+      "https://maps.usm.my/main",
+      "https://www.facebook.com/mppusm.official/photos/laluan-bas-e-laluan-ungujejantas-tekun-m07-saujana-m01-restu-jejantas/1020040901450894",
+      "https://www.tiktok.com/@mpdtekun/video/7598181484171857160"
+    ]
+  },
+  {
+    "name": "Desasiswa Tekun",
+    "origin_lat": 5.3556294,
+    "origin_lon": 100.2912928,
+    "pickup_notes": "Tekun ridge forecourt / M05 boarding berth, merging into the upper RST loop before descending to Padang Kawad. Serviced by Route E (Laluan Ungu) and dedicated MSL orientation charter coaches.",
+    "walk_notes": "2,599 m (~35-39 min walk). Exits Tekun ridge south-east onto Halaman Bukit Gambir 4 or north toward Jejantas Tekun/Saujana footbridge, descending via stair towers to Padang Kawad perimeter sidewalk, then east along the main spine of Jalan Universiti to DTSP. Bottlenecks: highest elevation in western cluster, narrow multi-flight concrete stairs, exposed roadside pavement along Jalan Universiti, morning vehicle congestion during campus peak.",
+    "sources": [
+      "https://www.openstreetmap.org/way/275414999",
+      "https://www.tiktok.com/@mpdtekun/video/7598181484171857160",
+      "https://www.tiktok.com/@mpdtekun/video/7650107444038880519",
+      "https://www.facebook.com/mppusm.official/photos/laluan-bas-e-laluan-ungujejantas-tekun-m07-saujana-m01-restu-jejantas/1020040901450894"
+    ]
+  },
+  {
+    "name": "Desasiswa Indah Kembara",
+    "origin_lat": 5.356033,
+    "origin_lon": 100.2960407,
+    "pickup_notes": "Hub Padang Kawad / Bus Stop Desasiswa Indah Kembara (OSM node 1129299988 / 11880869101, ref 12003018). Multi-bay bus shelter directly adjacent to Padang Kawad.",
+    "walk_notes": "1,414 m (~19-21 min walk). Flat walk eastbound along Jalan Indah Kembara to merge into Jalan Universiti, past Jabatan Keselamatan and Pusat Penyelidikan Biologi, continuing straight to Jalan Perpustakaan and DTSP north concourse. Bottlenecks: minimal elevation change; bottleneck occurs at unsignalized pedestrian crossing near Padang Kawad junction and unshaded open sidewalk stretches along Jalan Universiti under intense morning sun.",
+    "sources": [
+      "https://www.openstreetmap.org/way/275404588",
+      "https://www.openstreetmap.org/node/1129299988",
+      "https://www.tiktok.com/@desasiswaindahkembara/video/7547337528458710279"
+    ]
+  },
+  {
+    "name": "Desasiswa Aman Damai",
+    "origin_lat": 5.3543055,
+    "origin_lon": 100.2961546,
+    "pickup_notes": "Bus Stop Aman-Damai / Komuter Bus Stop K10 (OSM node 1129300447 / 11880869102, ref 3 / 12003028). Single-vehicle kerbside pull-in with metal roof shelter.",
+    "walk_notes": "1,136 m (~15-17 min walk). Path leads from Damai cafeteria (K10) along Jalan Damai to cross onto Jalan Universiti sidewalk near Jabatan Keselamatan (node 11880869103), proceeding east along Jalan Universiti to Jalan Perpustakaan, then up the pedestrian ramp/stairs to DTSP. Bottlenecks: narrow internal residential walkways between K blocks, pedestrian conflict at vehicle exit towards Jalan Sungai Dua gate, lack of continuous canopy shade along Jalan Universiti.",
+    "sources": [
+      "https://www.openstreetmap.org/way/1030965779",
+      "https://www.openstreetmap.org/node/1129300447",
+      "https://www.instagram.com/p/DdLpeiek6bt",
+      "https://www.instagram.com/reel/DdV02AeTOG6",
+      "https://www.tiktok.com/@amandamai.usm"
+    ]
+  },
+  {
+    "name": "Desasiswa Bakti Permai",
+    "origin_lat": 5.3577556,
+    "origin_lon": 100.3005464,
+    "pickup_notes": "Desasiswa Bakti Fajar Permai Petas Bus Stop (OSM node 9498085667, ref 12003021) and Pusat Sejahtera Bus Stop (OSM node 11880869105, ref 12003022) along Persiaran Sains. Due to short distance, cohorts are almost entirely escorted on foot by PPSL.",
+    "walk_notes": "972 m (~13-15 min walk). Eastbound pedestrian route exits H10 cafeteria block, crossing Persiaran Sains via internal campus pathways through the School of Chemical Sciences / Pusat Sejahtera precinct to join Jalan Perpustakaan directly into DTSP north-west entrance plaza. Bottlenecks: multiple short concrete staircase flights (e.g. OSM way 1354565634, 1354565641) navigating terrain elevation steps, narrow covered walkway links between academic blocks.",
+    "sources": [
+      "https://www.openstreetmap.org/way/275403376",
+      "https://www.openstreetmap.org/node/9498085667",
+      "https://www.instagram.com/bfpusm",
+      "https://www.tiktok.com/@bfp.ontiktok/video/7657955778611137813"
+    ]
+  },
+  {
+    "name": "Desasiswa Cahaya Gemilang",
+    "origin_lat": 5.3604563,
+    "origin_lon": 100.3035977,
+    "pickup_notes": "Kompleks Dewan Kuliah C23 bus shelter (OSM node 11880869106, ref 12003023) and Minden sports field bus bay. Bus boarding is typically bypassed during MSL orientation due to proximity to DTSP.",
+    "walk_notes": "784 m (~10-12 min walk). Direct southward stroll from H33/H34/H35 along Jalan Gemilang and Jalan Mahasiswa, past DK Foyer and Kompleks Dewan Kuliah C23, turning onto Lengkok Sastera to Jalan Perpustakaan and the DTSP northern plaza/PHS1. Bottlenecks: pedestrian descent steps near DK complex (OSM way 1354921230, 1354673739), merging of Humanities/Science foot traffic near PHS 1 library perimeter.",
+    "sources": [
+      "https://www.openstreetmap.org/way/275403540",
+      "https://www.openstreetmap.org/node/11880869106",
+      "https://www.youtube.com/watch?v=7fHzYMX1orw",
+      "https://www.tiktok.com/@byeaeryn/video/7110435329269632282"
+    ]
+  },
+  {
+    "name": "Desasiswa Fajar Harapan",
+    "origin_lat": 5.3550006,
+    "origin_lon": 100.2997724,
+    "pickup_notes": "Desasiswa Fajar Harapan Bus Stop (OSM node 1129298776, ref 12003026) and Stor Pusat Kimia Universiti (OSM node 12191248268, ref 12003020) on Jalan Universiti / Eureka loop. Walk is standard for MSL cohorts.",
+    "walk_notes": "680 m (~9-10 min walk). Closest hostel cluster south of DTSP. Pedestrian route proceeds northeast from block F26/F27 past Kompleks Eureka and the USM central lake (Tasik USM), merging onto Jalan Perpustakaan to arrive at the DTSP southern portico and Dewan Budaya. Bottlenecks: grade separation steps (OSM way 1354561992, 1353883015) connecting lower Fajar residential terraces to upper Eureka access roads; narrow pathways around lake edge.",
+    "sources": [
+      "https://www.openstreetmap.org/way/275403371",
+      "https://www.openstreetmap.org/node/1129298776",
+      "https://www.youtube.com/watch?v=GiWQBPcljoI",
+      "https://www.facebook.com/USMOfficial1969/posts/1114284630738285"
+    ]
+  }
+]

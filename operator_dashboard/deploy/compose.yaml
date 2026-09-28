@@ -1,0 +1,24 @@
+services:
+  usm-dashboard:
+    build:
+      context: ../..
+      dockerfile: operator_dashboard/deploy/Dockerfile
+    image: usm-operator-dashboard:local
+    restart: unless-stopped
+    environment:
+      DASHBOARD_AUTH_TOKEN: ${DASHBOARD_AUTH_TOKEN}
+      DASHBOARD_DATA_DIR: /data
+      DASHBOARD_ACCESS_EMAIL: ${DASHBOARD_ACCESS_EMAIL:-}
+      SOURCE_COMMIT: ${SOURCE_COMMIT:-}
+    volumes:
+      - usm_dashboard_data:/data
+    ports:
+      - "127.0.0.1:8866:8866"
+    healthcheck:
+      test: ["CMD", "python", "-c", "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8866/healthz')"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+volumes:
+  usm_dashboard_data:
